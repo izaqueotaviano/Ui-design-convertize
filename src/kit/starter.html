@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novo protótipo · Convertize</title>
+<!-- 1. Fontes: Inter na interface e nos números, Tenor Sans só em títulos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tenor+Sans&display=swap">
+<!-- 2. Kit: tokens, ícones e componentes cz-* -->
+<link rel="stylesheet" href="convertize.css">
+<style>
+  /* Só o layout desta página. Os componentes vêm do kit. */
+  body{display:flex;min-height:100vh}
+  .app-side.cz-sidebar{position:sticky;top:0;height:100vh}
+  .app-main{flex:1;min-width:0;padding:28px clamp(16px,4vw,48px) 64px}
+  .app-top{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+  .app-top h1{font:400 34px/1.1 var(--font-display);margin-right:auto}
+  .app-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px}
+  .app-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0 12px}
+  .app-bar .cz-tabs{margin-right:auto}
+  @media (max-width:700px){.app-side.cz-sidebar{position:fixed;z-index:60}.app-main{padding-left:68px}
+    .app-top{flex-wrap:wrap}.app-top h1{flex-basis:100%;font-size:28px}.app-top .cz-cmd-trigger{flex:1}}
+</style>
+</head>
+<body>
+
+<aside class="cz-sidebar app-side" aria-label="Menu principal">
+  <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Recolher menu" aria-expanded="true">{{i:sidebar}}</button></div>
+  <button class="cz-side-item">{{i:home}}<span class="lbl">Início</span></button>
+  <button class="cz-side-item" aria-current="page">{{i:catalog}}<span class="lbl">Produtos</span></button>
+  <button class="cz-side-item">{{i:bag}}<span class="lbl">Pedidos</span></button>
+  <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+  <button class="cz-side-item">{{i:analytics}}<span class="lbl">Relatórios</span></button>
+  <div class="cz-sidebar-spacer"></div>
+  <button class="cz-side-item">{{i:sliders}}<span class="lbl">Configurações</span></button>
+</aside>
+
+<main class="app-main">
+  <header class="app-top">
+    <h1>Produtos</h1>
+    <button type="button" class="cz-cmd-trigger" data-cmd aria-label="Buscar, atalho Ctrl K" data-cmd-placeholder="Produto, pedido ou ação"
+      data-cmd-items='[{"title":"Vaso Terra","desc":"FRM-002, 2 em estoque","cat":"Produto","icon":"box"},{"title":"Pedido #CV-2051","desc":"Ana Beatriz Lima, R$ 229,90","cat":"Pedido","icon":"bag"},{"title":"Criar cupom","desc":"Desconto em percentual ou valor fixo","cat":"Ação","icon":"percent"}]'><span class="lbl">Buscar...</span>{{i:search}}</button>
+    <button class="cz-icon-btn" data-theme-toggle aria-label="Alternar tema claro e escuro"><span data-theme-icon="light">{{i:moon}}</span><span data-theme-icon="dark" hidden>{{i:sun}}</span></button>
+    <button class="cz-btn" data-open="dlg-novo">{{i:plus}}Novo produto</button>
+  </header>
+
+  <div class="app-stats">
+    <div class="cz-stat"><span class="lbl">{{i:bag:i-sm}}Pedidos</span><span class="val">248</span><span class="delta up">{{i:arrow-up-right:i-sm}}8,1% <span>vs. agosto</span></span><svg class="spark" data-spark="12,14,11,16,15,18,17,19,22,21"></svg></div>
+    <div class="cz-stat"><span class="lbl">{{i:percent:i-sm}}Conversão</span><span class="val">2,8%</span><span class="delta down">{{i:arrow-down:i-sm}}0,3 p.p. <span>vs. agosto</span></span><svg class="spark" data-spark="3.4,3.2,3.3,3.1,3.0,3.1,2.9,2.9,2.8,2.8"></svg></div>
+    <div class="cz-stat"><span class="lbl">{{i:box:i-sm}}Sem estoque</span><span class="val">3</span><span class="delta down">{{i:arrow-up-right:i-sm}}+1 <span>vs. agosto</span></span><svg class="spark" data-spark="1,1,2,1,2,2,3,2,2,3"></svg></div>
+  </div>
+
+  <div data-tabs>
+    <div class="app-bar">
+      <div class="cz-tabs" role="tablist" aria-label="Status">
+        <button class="cz-tab" role="tab" aria-selected="true" aria-controls="tab-todos" id="t-todos">Todos <span class="cz-count-badge">4</span></button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="tab-esgotados" id="t-esgotados" tabindex="-1">Esgotados</button>
+      </div>
+      <div class="cz-pop">
+        <button class="cz-btn cz-btn--secondary" data-menu-trigger data-select-menu="Ordenar: " aria-haspopup="listbox" aria-expanded="false"><span>Ordenar: Mais vendidos</span>{{i:chev-down:i-sm}}</button>
+        <div class="cz-menu" role="listbox" hidden>
+          <button class="cz-menu-item" role="option" aria-selected="true">Mais vendidos</button>
+          <button class="cz-menu-item" role="option" aria-selected="false">Menor preço</button>
+          <button class="cz-menu-item" role="option" aria-selected="false">Mais recentes</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-todos" role="tabpanel" aria-labelledby="t-todos">
+      <div class="cz-table-scroll">
+        <table class="cz-table">
+          <thead><tr><th>Produto</th><th class="r">Preço</th><th class="r">Estoque</th><th>Status</th><th class="r">Ações</th></tr></thead>
+          <tbody>
+            <tr><td><b>Vaso Terra</b></td><td class="r num">R$ 229,90</td><td class="r num">2</td><td><span class="cz-badge cz-badge--warning"><span class="d"></span>Baixo estoque</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-002" aria-label="Copiar SKU">{{i:copy:i-sm}}</button></td></tr>
+            <tr><td><b>Luminária Círculo</b></td><td class="r num">R$ 64,90</td><td class="r num">8</td><td><span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-001" aria-label="Copiar SKU">{{i:copy:i-sm}}</button></td></tr>
+            <tr><td><b>Caixa Essencial</b></td><td class="r num">R$ 39,90</td><td class="r num">0</td><td><span class="cz-badge cz-badge--danger"><span class="d"></span>Esgotado</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-003" aria-label="Copiar SKU">{{i:copy:i-sm}}</button></td></tr>
+            <tr><td><b>Caderno Linho</b></td><td class="r num">R$ 54,90</td><td class="r num">120</td><td><span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-006" aria-label="Copiar SKU">{{i:copy:i-sm}}</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="tab-esgotados" role="tabpanel" aria-labelledby="t-esgotados" hidden>
+      <div class="cz-empty">{{i:box:i-lg}}<h4>Só um produto esgotado</h4><p>Caixa Essencial está sem estoque desde 20/09.</p></div>
+    </div>
+  </div>
+</main>
+
+<!-- Diálogo: abre com data-open="id", fecha com data-close, Esc ou clique fora -->
+<div class="cz-scrim" id="dlg-novo" hidden>
+  <div class="cz-dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-novo-t">
+    <div class="cz-dialog-head"><h3 id="dlg-novo-t">Novo produto</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <form class="cz-dialog-body" id="form-novo" data-validate novalidate>
+      <div class="cz-field"><label for="np-nome">Nome</label><input class="cz-input" id="np-nome" required data-msg="Dê um nome ao produto."></div>
+      <div class="cz-field"><label for="np-preco">Preço</label><div class="cz-input-wrap"><span class="cz-prefix">R$</span><input class="cz-input num" id="np-preco" inputmode="decimal" required data-msg="Informe o preço."></div></div>
+    </form>
+    <div class="cz-dialog-foot">
+      <button class="cz-btn cz-btn--ghost" data-close>Cancelar</button>
+      <button class="cz-btn" type="submit" form="form-novo">Salvar produto</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Comportamento dos componentes (inclui o sprite de ícones) -->
+<script src="convertize.js"></script>
+<script>
+  // A busca funciona só com data-cmd no botão (sem código). Itens do JSON sem link avisam por cz:cmd-pick.
+  document.addEventListener('cz:cmd-pick', function (e) {
+    if (!e.detail.item.el) Convertize.toast('success', e.detail.item.title, 'Aberto a partir da busca.');
+  });
+
+  // Formulário válido: o kit dispara cz:valid. Aqui o protótipo não envia de verdade.
+  document.getElementById('form-novo').addEventListener('cz:valid', function (e) {
+    e.preventDefault();
+    Convertize.closeDialog();
+    Convertize.toast('success', 'Produto salvo', document.getElementById('np-nome').value + ' entrou no catálogo.', true);
+    e.target.reset();
+  });
+</script>
+</body>
+</html>

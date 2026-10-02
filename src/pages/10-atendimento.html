@@ -1,0 +1,67 @@
+<section class="ds-page" id="chat" data-title="Chat" data-group="Atendimento" data-keys="chat conversa mensagens composer bolha anexo ferramenta streaming" hidden>
+  <p class="ds-crumb">Atendimento</p>
+  <h1>Chat</h1>
+  <p class="ds-lead">Mensagens, anexos, chamadas de ferramenta e o composer com seus estados. As mensagens de quem atende ficam à direita, em laranja suave. Escreva uma mensagem abaixo para ver a resposta chegando.</p>
+  <div class="ds-grid two" style="margin-top:24px;align-items:start">
+    <div class="cz-chat" data-chat>
+      <div class="cz-chat-head"><span class="cz-avatar cz-avatar--heather">EM<span class="st"></span></span><div><b>Eriton Muniz</b><small>Farmácia Brito · online</small></div><div style="margin-left:auto" class="ds-row"><button class="cz-btn cz-btn--ghost cz-btn--sm">Transferir</button><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Mais opções">{{i:more}}</button></div></div>
+      <div class="cz-chat-body" data-chat-body>
+        <span class="cz-msg-sys">Hoje</span>
+        <div class="cz-msg cz-msg--them">Oi! Preciso de ajuda com a integração da loja. O estoque não está atualizando no Mercado Livre.<small>16:38</small></div>
+        <div class="cz-attach">{{i:file}}<div><b>erro-sincronizacao.png</b><small>Imagem · 240 KB</small></div></div>
+        <div class="cz-msg cz-msg--me">Claro, Eriton. Vou verificar o token da sua loja agora.<small>Marina · 16:39</small></div>
+        <div class="cz-tool"><span class="cz-spinner cz-spinner--sm" data-tool-spin></span><span data-tool-text>Consultando integração Mercado Livre…</span></div>
+      </div>
+      <div class="cz-quick"><button class="cz-chip" data-quick>O token expirou</button><button class="cz-chip" data-quick>Pode reconectar?</button></div>
+      <form class="cz-composer" data-composer>
+        <button type="button" class="cz-icon-btn cz-icon-btn--sm" aria-label="Anexar arquivo">{{i:paperclip}}</button>
+        <textarea rows="1" placeholder="Escreva uma resposta" aria-label="Mensagem"></textarea>
+        <button type="submit" class="send" aria-label="Enviar" disabled>{{i:send}}</button>
+      </form>
+    </div>
+    <div style="display:grid;gap:16px">
+      <div><p class="ds-label">Composer · em repouso</p><div class="cz-composer" style="margin:0"><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Anexar">{{i:paperclip}}</button><textarea rows="1" placeholder="Converse com a Convertize" aria-label="Exemplo em repouso"></textarea><button class="send" disabled aria-label="Enviar">{{i:send}}</button></div></div>
+      <div><p class="ds-label">Composer · respondendo</p><div class="cz-composer" style="margin:0"><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Anexar">{{i:paperclip}}</button><textarea rows="1" aria-label="Exemplo respondendo" disabled placeholder="A Convertize está escrevendo…"></textarea><button class="send stop" aria-label="Parar resposta">{{i:stop}}</button></div></div>
+      <div><p class="ds-label">Digitando</p><div class="cz-typing" aria-label="Digitando"><i></i><i></i><i></i></div></div>
+      <div><p class="ds-label">Chamada de ferramenta concluída</p><div class="cz-tool">{{i:check-circle:ok}}<span>Ateliê Forma · 3 produtos encontrados</span></div></div>
+      <div><p class="ds-label">Controles de resposta</p><div class="ds-row" style="gap:2px"><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Copiar">{{i:copy}}</button><button class="cz-icon-btn cz-icon-btn--sm" data-toggle aria-pressed="false" aria-label="Resposta útil">{{i:thumb-up}}</button><button class="cz-icon-btn cz-icon-btn--sm" data-toggle aria-pressed="false" aria-label="Resposta não ajudou">{{i:thumb-down}}</button><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Tentar de novo">{{i:refresh}}</button></div></div>
+      <div><p class="ds-label">Sugestões de início</p><div class="ds-row"><button class="cz-chip">Quais são os mais vendidos?</button><button class="cz-chip">Pedidos atrasados hoje</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-page" id="ticket" data-title="Ticket de atendimento" data-group="Atendimento" data-keys="ticket suporte atendimento chamado prioridade" hidden>
+  <p class="ds-crumb">Atendimento</p>
+  <h1>Ticket de atendimento</h1>
+  <p class="ds-lead">O padrão completo do kit: contexto do cliente à esquerda, conversa ao centro e ações de resolução no cabeçalho.</p>
+  <div class="demo-app" style="margin-top:24px">
+    <aside class="cz-sidebar is-collapsed" data-sidebar>
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Expandir menu" aria-expanded="false">{{i:sidebar}}</button></div>
+      <button class="cz-side-item">{{i:home}}<span class="lbl">Visão geral</span></button>
+      <button class="cz-side-item">{{i:bag}}<span class="lbl">Pedidos</span></button>
+      <button class="cz-side-item" aria-current="page">{{i:headset}}<span class="lbl">Atendimento</span></button>
+      <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+      <div class="cz-sidebar-spacer"></div><button class="cz-sidebar-foot" aria-label="Marina Prado, Suporte"><span class="cz-avatar cz-avatar--brand">MP</span><div>Marina Prado<small>Suporte</small></div>{{i:chev-down}}</button>
+    </aside>
+    <main>
+      <div class="cz-topbar"><div style="min-width:0"><div class="cz-help">Atendimento · #2026081100029</div><h3>Integração da loja</h3></div><div class="grow"></div><span class="cz-badge cz-badge--warning"><span class="d"></span>Aberto há 2 h</span><button class="cz-btn cz-btn--sm" data-toast="success" data-title="Ticket resolvido" data-msg="Eriton recebe uma pesquisa de satisfação.">{{i:check:i-sm}}Resolver</button></div>
+      <div class="content demo-ticket">
+        <div style="display:grid;gap:14px;align-content:start;font-size:14px">
+          <div><b>Farmácia Brito</b><div class="cz-help">Plano Platinum · cliente desde 2023</div></div>
+          <div class="cz-field"><label for="tk-cat">Categoria</label><select class="cz-select" id="tk-cat"><option>Integração</option><option>Pagamentos</option><option>Frete</option></select></div>
+          <div class="cz-field"><label for="tk-pri">Prioridade</label><select class="cz-select" id="tk-pri"><option>Alta</option><option>Média</option><option>Baixa</option></select></div>
+          <div class="cz-field"><span class="cz-label">Responsável</span><span class="cz-chip" style="justify-self:start"><span class="cz-avatar cz-avatar--brand">MP</span>Marina Prado</span></div>
+          <div class="ds-row"><span class="cz-tag">Chat</span><span class="cz-tag">Mercado Livre</span></div>
+        </div>
+        <div class="cz-chat" style="min-height:0">
+          <div class="cz-chat-body">
+            <div class="cz-msg cz-msg--them">Preciso de ajuda com a integração.<small>16:38</small></div>
+            <div class="cz-msg cz-msg--me">Claro. Vou verificar o token da sua loja.<small>Marina · 16:39</small></div>
+            <div class="cz-tool">{{i:check-circle:ok}}<span>Token renovado · estoque sincronizado</span></div>
+          </div>
+          <div class="cz-composer"><textarea rows="1" placeholder="Escreva uma resposta" aria-label="Resposta"></textarea><button class="send" aria-label="Enviar">{{i:send}}</button></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>

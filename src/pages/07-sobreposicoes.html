@@ -1,0 +1,177 @@
+<section class="ds-page" id="dialogo" data-title="Diálogo" data-group="Sobreposições" data-keys="modal dialog janela diálogo formulário" hidden>
+  <p class="ds-crumb">Sobreposições</p>
+  <h1>Diálogo</h1>
+  <p class="ds-lead">Interrompe a tela para uma tarefa curta e focada. O foco entra no diálogo, fica preso nele e volta ao botão de origem ao fechar. Esc e o botão de fechar sempre funcionam.</p>
+  <h2>Experimente</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn" data-open="dlg-basic">Criar cupom</button>
+    <button class="cz-btn cz-btn--secondary" data-open="dlg-large">Editar variação</button>
+  </div></div>
+  <h2>Anatomia</h2>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="cz-dialog cz-dialog--static">
+      <div class="cz-dialog-head"><h3>Criar cupom</h3><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Fechar">{{i:x}}</button></div>
+      <div class="cz-dialog-body"><p>O cupom vale para toda a loja até a data de término.</p><div class="cz-field"><label for="an-cod">Código</label><input class="cz-input" id="an-cod" value="PRIMAVERA15"></div></div>
+      <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost">Cancelar</button><button class="cz-btn">Criar cupom</button></div>
+    </div>
+  </div><div class="ds-cap"><span>Título em Tenor Sans · corpo · rodapé com a ação principal à direita</span><b>Raio 20</b></div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-scrim">
+  <div class="cz-dialog" role="dialog" aria-modal="true" aria-labelledby="titulo">
+    <div class="cz-dialog-head"><h3 id="titulo">Criar cupom</h3><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Fechar">…</button></div>
+    <div class="cz-dialog-body">…</div>
+    <div class="cz-dialog-foot">
+      <button class="cz-btn cz-btn--ghost">Cancelar</button>
+      <button class="cz-btn">Criar cupom</button>
+    </div>
+  </div>
+</div></script>
+</section>
+
+<section class="ds-page" id="confirmacao" data-title="Confirmação destrutiva" data-group="Sobreposições" data-keys="confirmar excluir delete destrutivo perigo" hidden>
+  <p class="ds-crumb">Sobreposições</p>
+  <h1>Confirmação destrutiva</h1>
+  <p class="ds-lead">Antes de algo que não tem volta, diga exatamente o que será perdido. Para exclusões grandes, peça que a pessoa digite o nome do item: o botão só libera quando confere.</p>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn cz-btn--danger" data-open="dlg-delete">{{i:trash:i-sm}}Excluir catálogo</button>
+    <button class="cz-btn cz-btn--secondary" data-open="dlg-leave">Sair sem salvar</button>
+  </div></div>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="cz-dialog cz-dialog--static">
+      <div class="cz-dialog-head"><span class="cz-dialog-icon">{{i:trash}}</span><h3>Excluir arquivo?</h3></div>
+      <div class="cz-dialog-body"><p><b>catalogo-forma.pdf</b> será removido de 3 produtos e da conversa com o cliente. Essa ação não pode ser desfeita.</p></div>
+      <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost">Manter arquivo</button><button class="cz-btn cz-btn--danger-solid">Excluir arquivo</button></div>
+    </div>
+  </div></div>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Repita o verbo no botão: “Excluir arquivo”.</li><li>Dê à opção segura um rótulo claro: “Manter arquivo”.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>“Tem certeza?” com botões “Sim” e “Não”.</li><li>Pedir confirmação para ações que podem ser desfeitas: prefira um toast com “Desfazer”.</li></ul></div>
+  </div>
+</section>
+
+<section class="ds-page" id="drawer" data-title="Drawer" data-group="Sobreposições" data-keys="drawer side sheet painel lateral filtros detalhes" hidden>
+  <p class="ds-crumb">Sobreposições</p>
+  <h1>Drawer</h1>
+  <p class="ds-lead">Painel que desliza da direita para detalhes, filtros ou edição rápida sem perder o contexto da lista por trás.</p>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn" data-open="drw-order">{{i:bag:i-sm}}Ver pedido #CV-2048</button>
+    <button class="cz-btn cz-btn--secondary" data-open="drw-filter">{{i:filter:i-sm}}Filtros</button>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-scrim cz-drawer-scrim">
+  <aside class="cz-drawer" role="dialog" aria-modal="true" aria-labelledby="t">
+    <div class="cz-drawer-head"><h3 id="t">Pedido #CV-2048</h3>…</div>
+    <div class="cz-drawer-body">…</div>
+    <div class="cz-drawer-foot">…ações…</div>
+  </aside>
+</div></script>
+</section>
+
+<section class="ds-page" id="bottom-sheet" data-title="Folha inferior" data-group="Sobreposições" data-keys="bottom sheet mobile ações folha" hidden>
+  <p class="ds-crumb">Sobreposições</p>
+  <h1>Folha inferior</h1>
+  <p class="ds-lead">No mobile, substitui menus e diálogos pequenos. Sobe da borda inferior, tem alça para arrastar e fica ao alcance do polegar.</p>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="demo-phone">
+      <div class="bar"><span>9:41</span><span>{{i:globe:i-sm}}</span></div>
+      <div class="scr" style="position:relative;padding:0;display:flex;flex-direction:column;justify-content:flex-end;background:var(--scrim)">
+        <div class="cz-sheet">
+          <div class="grab"></div>
+          <p style="font:600 16px var(--font-ui);margin-bottom:6px">Pedido #CV-2048</p>
+          <p class="cz-help" style="margin-bottom:10px">Eriton Muniz · R$ 318,70</p>
+          <button class="cz-menu-item">{{i:tag}}Gerar etiqueta</button>
+          <button class="cz-menu-item">{{i:file}}Emitir nota fiscal</button>
+          <button class="cz-menu-item">{{i:chat}}Falar com o cliente</button>
+          <button class="cz-menu-item cz-menu-item--danger">{{i:x-circle}}Cancelar pedido</button>
+          <button class="cz-btn cz-btn--secondary cz-btn--block" style="margin-top:10px">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- Sobreposições reais (o script move para o fim do documento) -->
+<div class="cz-scrim" id="dlg-basic" hidden>
+  <div class="cz-dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-basic-t">
+    <div class="cz-dialog-head"><h3 id="dlg-basic-t">Criar cupom</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <form class="cz-dialog-body" id="dlg-basic-form">
+      <p>O cupom vale para toda a loja até a data de término.</p>
+      <div class="cz-field"><label for="cp-cod">Código</label><input class="cz-input" id="cp-cod" value="PRIMAVERA15" required></div>
+      <div class="ds-grid two" style="gap:12px">
+        <div class="cz-field"><label for="cp-val">Desconto</label><div class="cz-input-wrap"><input class="cz-input num" id="cp-val" value="15"><span class="cz-suffix">%</span></div></div>
+        <div class="cz-field"><label for="cp-fim">Termina em</label><input class="cz-input num" id="cp-fim" value="30/10/2026"></div>
+      </div>
+      <label class="cz-check"><input type="checkbox" checked><span>Só para a primeira compra</span></label>
+    </form>
+    <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost" data-close>Cancelar</button><button class="cz-btn" data-close data-toast="success" data-title="Cupom criado" data-msg="PRIMAVERA15 já vale na loja.">Criar cupom</button></div>
+  </div>
+</div>
+
+<div class="cz-scrim" id="dlg-large" hidden>
+  <div class="cz-dialog cz-dialog--lg" role="dialog" aria-modal="true" aria-labelledby="dlg-large-t">
+    <div class="cz-dialog-head"><h3 id="dlg-large-t">Editar variação</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <div class="cz-dialog-body">
+      <div style="display:flex;gap:16px;align-items:center"><img src="{{img:prod-vase.webp}}" alt="" style="width:72px;height:72px;border-radius:8px;object-fit:cover"><div><b style="color:var(--text)">Vaso Terra · Grande</b><div class="cz-help">FRM-002-G</div></div></div>
+      <div class="ds-grid two" style="gap:14px">
+        <div class="cz-field"><label for="vr-preco">Preço</label><div class="cz-input-wrap"><span class="cz-prefix">R$</span><input class="cz-input num" id="vr-preco" value="229,90"></div></div>
+        <div class="cz-field"><label for="vr-de">Preço “de”</label><div class="cz-input-wrap"><span class="cz-prefix">R$</span><input class="cz-input num" id="vr-de" value="259,90"></div></div>
+        <div class="cz-field"><label for="vr-est">Estoque</label><input class="cz-input num" id="vr-est" value="14"></div>
+        <div class="cz-field"><label for="vr-peso">Peso</label><div class="cz-input-wrap"><input class="cz-input num" id="vr-peso" value="2,4"><span class="cz-suffix">kg</span></div></div>
+      </div>
+      <label class="cz-switch"><input type="checkbox" checked> Vender quando o estoque acabar (sob encomenda)</label>
+    </div>
+    <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost" data-close>Cancelar</button><button class="cz-btn" data-close data-toast="success" data-title="Variação salva" data-msg="Vaso Terra · Grande foi atualizado.">Salvar variação</button></div>
+  </div>
+</div>
+
+<div class="cz-scrim" id="dlg-delete" hidden>
+  <div class="cz-dialog" role="alertdialog" aria-modal="true" aria-labelledby="dlg-delete-t" aria-describedby="dlg-delete-d">
+    <div class="cz-dialog-head"><span class="cz-dialog-icon">{{i:trash}}</span><h3 id="dlg-delete-t">Excluir catálogo?</h3></div>
+    <div class="cz-dialog-body">
+      <p id="dlg-delete-d">O catálogo <b style="color:var(--text)">Coleção Verão</b> e seus 48 produtos serão excluídos. Pedidos antigos continuam no histórico. Essa ação não pode ser desfeita.</p>
+      <div class="cz-field"><label for="del-confirm">Digite <b>Coleção Verão</b> para confirmar</label><input class="cz-input" id="del-confirm" autocomplete="off" data-confirm-text="Coleção Verão" data-confirm-btn="del-btn"></div>
+    </div>
+    <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost" data-close>Manter catálogo</button><button class="cz-btn cz-btn--danger-solid" id="del-btn" disabled data-close data-toast="danger" data-title="Catálogo excluído" data-msg="Coleção Verão e 48 produtos foram removidos.">Excluir catálogo</button></div>
+  </div>
+</div>
+
+<div class="cz-scrim" id="dlg-leave" hidden>
+  <div class="cz-dialog" role="alertdialog" aria-modal="true" aria-labelledby="dlg-leave-t">
+    <div class="cz-dialog-head"><h3 id="dlg-leave-t">Sair sem salvar?</h3></div>
+    <div class="cz-dialog-body"><p>As mudanças no preço e na descrição do Vaso Terra serão perdidas.</p></div>
+    <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost" data-close>Continuar editando</button><button class="cz-btn cz-btn--danger" data-close>Sair sem salvar</button></div>
+  </div>
+</div>
+
+<div class="cz-scrim cz-drawer-scrim" id="drw-order" hidden>
+  <aside class="cz-drawer" role="dialog" aria-modal="true" aria-labelledby="drw-order-t">
+    <div class="cz-drawer-head"><div style="flex:1"><h3 id="drw-order-t">Pedido #CV-2048</h3><span class="cz-help">22 de set. de 2026, 14:32 · Loja online</span></div><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <div class="cz-drawer-body">
+      <div class="ds-row"><span class="cz-badge cz-badge--success"><span class="d"></span>Pago</span><span class="cz-badge cz-badge--info"><span class="d"></span>Em separação</span></div>
+      <div class="cz-list-item" style="padding:0;border:0"><span class="cz-avatar cz-avatar--heather">EM</span><div class="body"><b>Eriton Muniz</b><small>eriton@exemplo.com · 3º pedido</small></div><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Conversar">{{i:chat}}</button></div>
+      <hr class="cz-divider">
+      <div class="cz-cart-line" style="padding:0;border:0"><img src="{{img:prod-vase.webp}}" alt=""><div><b>Vaso Terra</b><small>Grande · 1 un.</small></div><b class="num">R$ 229,90</b></div>
+      <div class="cz-cart-line" style="padding:0;border:0"><img src="{{img:prod-lamp.webp}}" alt=""><div><b>Luminária Círculo</b><small>1 un.</small></div><b class="num">R$ 64,90</b></div>
+      <hr class="cz-divider">
+      <div class="cz-summary"><div class="row"><span>Subtotal</span><b>R$ 294,80</b></div><div class="row"><span>Frete · Expressa</span><b>R$ 23,90</b></div><div class="row total"><span>Total</span><b>R$ 318,70</b></div></div>
+      <div><p class="ds-label">Entrega</p><p style="font-size:14px">Rua Harmonia, 118, ap. 42 · Vila Madalena · São Paulo, SP · 05435-000</p></div>
+    </div>
+    <div class="cz-drawer-foot"><button class="cz-btn cz-btn--secondary" data-close>Fechar</button><button class="cz-btn" data-close data-toast="success" data-title="Etiqueta gerada" data-msg="Pedido #CV-2048 pronto para envio.">{{i:tag:i-sm}}Gerar etiqueta</button></div>
+  </aside>
+</div>
+
+<div class="cz-scrim cz-drawer-scrim" id="drw-filter" hidden>
+  <aside class="cz-drawer" role="dialog" aria-modal="true" aria-labelledby="drw-filter-t">
+    <div class="cz-drawer-head"><h3 id="drw-filter-t">Filtros</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <div class="cz-drawer-body">
+      <fieldset style="border:0;padding:0;margin:0;display:grid;gap:10px"><legend class="cz-label" style="margin-bottom:8px">Status</legend>
+        <label class="cz-check"><input type="checkbox" checked><span>Pago</span></label>
+        <label class="cz-check"><input type="checkbox" checked><span>Em trânsito</span></label>
+        <label class="cz-check"><input type="checkbox"><span>Entregue</span></label>
+        <label class="cz-check"><input type="checkbox"><span>Cancelado</span></label>
+      </fieldset>
+      <hr class="cz-divider">
+      <div class="cz-field"><label for="fl-canal">Canal</label><select class="cz-select" id="fl-canal"><option>Todos os canais</option><option>Loja online</option><option>Marketplace</option></select></div>
+      <div class="cz-slider"><div class="cz-slider-head"><label for="fl-val">Valor mínimo</label><output for="fl-val" data-prefix="R$ ">R$ 100</output></div><input class="cz-range" id="fl-val" type="range" min="0" max="1000" step="50" value="100"></div>
+    </div>
+    <div class="cz-drawer-foot"><button class="cz-btn cz-btn--ghost">Limpar</button><button class="cz-btn" data-close>Mostrar 86 pedidos</button></div>
+  </aside>
+</div>

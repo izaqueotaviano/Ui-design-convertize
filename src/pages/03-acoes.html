@@ -1,0 +1,270 @@
+<section class="ds-page" id="botoes" data-title="Botões" data-group="Ações" data-keys="button botão cta primário secundário perigo loading" hidden>
+  <p class="ds-crumb">Ações</p>
+  <h1>Botões</h1>
+  <p class="ds-lead">O botão principal é carvão, não laranja: ele é o mais forte da tela sem competir com a marca. Use uma única ação principal por grupo e deixe as demais como secundárias ou fantasmas.</p>
+
+  <h2>Variantes</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn">{{i:check}}Salvar produto</button>
+    <button class="cz-btn cz-btn--secondary">Ver detalhes</button>
+    <button class="cz-btn cz-btn--tonal">{{i:external}}Ver a loja</button>
+    <button class="cz-btn cz-btn--ghost">Cancelar</button>
+    <button class="cz-btn cz-btn--brand">{{i:sparkle}}Criar campanha</button>
+    <button class="cz-btn cz-btn--danger">{{i:trash}}Excluir</button>
+  </div><div class="ds-cap"><span>Principal, secundário, tonal, fantasma, marca e perigo</span><b>Marca apenas em momentos de campanha</b></div></div>
+
+  <table class="ds-props">
+    <thead><tr><th>Variante</th><th>Quando usar</th></tr></thead>
+    <tbody>
+      <tr><td><code>cz-btn</code></td><td>A ação principal da tela ou do bloco. Uma por grupo.</td></tr>
+      <tr><td><code>--secondary</code></td><td>Ações que acompanham a principal: ver detalhes, exportar, voltar.</td></tr>
+      <tr><td><code>--tonal</code></td><td>Atalhos de barra superior e ferramentas recorrentes, que ficam sempre à vista sem pesar.</td></tr>
+      <tr><td><code>--ghost</code></td><td>Cancelar e ações de baixa ênfase dentro de diálogos e cartões.</td></tr>
+      <tr><td><code>--brand</code></td><td>Campanhas e momentos de marca. Texto carvão sobre laranja: contraste de 5,7:1.</td></tr>
+      <tr><td><code>--danger</code></td><td>Excluir e desfazer algo definitivo; peça confirmação.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Tamanhos</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="ds-row"><button class="cz-btn cz-btn--sm">{{i:plus:i-sm}}Pequeno</button><button class="cz-icon-btn cz-icon-btn--sm cz-icon-btn--secondary" aria-label="Filtrar">{{i:filter}}</button></div>
+    <div class="ds-row"><button class="cz-btn">{{i:plus}}Padrão</button><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Filtrar">{{i:filter}}</button></div>
+    <div class="ds-row"><button class="cz-btn cz-btn--lg">{{i:plus}}Grande</button></div>
+  </div><div class="ds-cap"><span>28, 36 e 44 px, a mesma escala de campos e selects: botão, botão de ícone e campo do mesmo tamanho alinham na mesma linha.</span><b>Raio 4 no pequeno, 6 nos demais</b></div></div>
+
+  <h2>Ações da barra superior</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn cz-btn--tonal cz-btn--sm">Ver a loja{{i:external:i-sm}}</button>
+    <button class="cz-btn cz-btn--tonal cz-btn--sm">{{i:chat:i-sm}}Chat</button>
+    <button class="cz-btn cz-btn--tonal cz-btn--sm">{{i:help:i-sm}}Ajuda{{i:chev-down:i-sm}}</button>
+  </div><div class="ds-cap"><span>Tonal pequeno, texto em caixa normal. O ícone de seta vai depois do texto quando o botão sai do sistema ou abre um menu.</span></div></div>
+
+  <h2>Estados</h2>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:20px">
+    <div><p class="ds-label">Padrão</p><button class="cz-btn">Publicar</button></div>
+    <div><p class="ds-label">Hover</p><button class="cz-btn is-hover">Publicar</button></div>
+    <div><p class="ds-label">Pressionado</p><button class="cz-btn is-pressed">Publicar</button></div>
+    <div><p class="ds-label">Foco por teclado</p><button class="cz-btn is-focus">Publicar</button></div>
+    <div><p class="ds-label">Desativado</p><button class="cz-btn" disabled>Publicar</button></div>
+    <div><p class="ds-label">Carregando</p><button class="cz-btn is-loading" aria-busy="true">Publicar</button></div>
+  </div></div>
+
+  <h2>Com carregamento</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn" data-loading-demo>{{i:upload}}Publicar produto</button>
+    <button class="cz-btn cz-btn--secondary" data-loading-demo>Sincronizar estoque</button>
+  </div><div class="ds-cap"><span>Clique: o botão mantém a largura e bloqueia um segundo clique até terminar.</span></div></div>
+
+  <h2>Largura total</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:380px">
+    <button class="cz-btn cz-btn--lg cz-btn--block">{{i:lock}}Finalizar compra</button>
+    <button class="cz-btn cz-btn--secondary cz-btn--block">Continuar comprando</button>
+  </div></div>
+
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Verbo + objeto: “Salvar produto”, “Criar cupom”.</li><li>O mesmo verbo no toast depois: “Produto salvo”.</li><li>Ação principal à direita em diálogos e rodapés.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Dois botões principais lado a lado.</li><li>“OK”, “Enviar” ou “Clique aqui”.</li><li>Botão desativado sem explicar o que falta.</li></ul></div>
+  </div>
+
+  <h2>Código</h2>
+  <script type="text/plain" class="ds-snippet"><button class="cz-btn">Salvar produto</button>
+<button class="cz-btn cz-btn--secondary">Ver detalhes</button>
+<button class="cz-btn cz-btn--ghost">Cancelar</button>
+<button class="cz-btn cz-btn--danger">Excluir</button>
+<button class="cz-btn cz-btn--sm">Pequeno</button>
+<button class="cz-btn is-loading" aria-busy="true">Publicar</button></script>
+  <div class="ds-scroll"><table class="ds-props">
+    <thead><tr><th>Classe</th><th>Efeito</th></tr></thead>
+    <tbody>
+      <tr><td><code>cz-btn--secondary</code></td><td>Contorno, fundo transparente.</td></tr>
+      <tr><td><code>cz-btn--ghost</code></td><td>Sem contorno. Ações terciárias.</td></tr>
+      <tr><td><code>cz-btn--brand</code></td><td>Laranja com texto carvão (5,7:1).</td></tr>
+      <tr><td><code>cz-btn--danger</code></td><td>Tom suave; vira sólido no hover.</td></tr>
+      <tr><td><code>cz-btn--danger-solid</code></td><td>Confirmação final de exclusão.</td></tr>
+      <tr><td><code>cz-btn--sm</code> / <code>--lg</code></td><td>28 px / 44 px de altura (padrão: 36 px).</td></tr>
+      <tr><td><code>cz-btn--block</code></td><td>Ocupa a largura do container.</td></tr>
+      <tr><td><code>is-loading</code></td><td>Spinner no lugar do rótulo, largura mantida.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="ds-page" id="botoes-icone" data-title="Botões de ícone" data-group="Ações" data-keys="icon button fab flutuante toggle" hidden>
+  <p class="ds-crumb">Ações</p>
+  <h1>Botões de ícone</h1>
+  <p class="ds-lead">Para ações frequentes e reconhecíveis por ícone: editar, copiar, favoritar, mais opções. Todo botão só com ícone tem rótulo acessível e, no desktop, tooltip.</p>
+  <h2>Variantes</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <span class="cz-tooltip"><button class="cz-icon-btn" aria-label="Editar">{{i:edit}}</button><span role="tooltip">Editar</span></span>
+    <span class="cz-tooltip"><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Copiar link">{{i:copy}}</button><span role="tooltip">Copiar link</span></span>
+    <span class="cz-tooltip"><button class="cz-icon-btn cz-icon-btn--primary" aria-label="Adicionar">{{i:plus}}</button><span role="tooltip">Adicionar</span></span>
+    <span class="cz-tooltip"><button class="cz-icon-btn cz-icon-btn--secondary cz-icon-btn--round" aria-label="Mais opções">{{i:more}}</button><span role="tooltip">Mais opções</span></span>
+    <button class="cz-icon-btn cz-icon-btn--sm" aria-label="Fechar">{{i:x}}</button>
+    <button class="cz-icon-btn" aria-label="Excluir" disabled>{{i:trash}}</button>
+  </div><div class="ds-cap"><span>Fantasma · Contorno · Sólido · Redondo · Pequeno · Desativado</span></div></div>
+
+  <h2>Alternância</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-icon-btn cz-icon-btn--secondary" data-toggle aria-pressed="true" aria-label="Favorito">{{i:heart}}</button>
+    <button class="cz-icon-btn cz-icon-btn--secondary" data-toggle aria-pressed="false" aria-label="Fixar">{{i:pin}}</button>
+    <div class="cz-segmented" data-toggle-group aria-label="Visualização">
+      <button aria-pressed="true" aria-label="Grade">{{i:grid:i-sm}}</button>
+      <button aria-pressed="false" aria-label="Lista">{{i:list:i-sm}}</button>
+    </div>
+  </div><div class="ds-cap"><span>Estado em <code>aria-pressed</code>: ligado usa laranja suave</span></div></div>
+
+  <h2>Ação flutuante</h2>
+  <p>Só no mobile, para a ação que define a tela (ex.: novo pedido no app do vendedor). Uma por tela.</p>
+  <div class="ds-spec"><div class="ds-stage canvas">
+    <button class="cz-fab">{{i:plus}}Novo pedido</button>
+    <button class="cz-fab cz-fab--round" aria-label="Novo pedido">{{i:plus:i-lg}}</button>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><button class="cz-icon-btn" aria-label="Editar">
+  <span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/pencil.svg)" aria-hidden="true"></span>
+</button>
+<button class="cz-icon-btn cz-icon-btn--secondary" aria-pressed="false" aria-label="Favorito">…</button>
+<button class="cz-fab"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/add.svg)" aria-hidden="true"></span>Novo pedido</button></script>
+</section>
+
+<section class="ds-page" id="grupos" data-title="Grupos e segmentos" data-group="Ações" data-keys="segmented control button group split toolbar" hidden>
+  <p class="ds-crumb">Ações</p>
+  <h1>Grupos e segmentos</h1>
+  <p class="ds-lead">O controle segmentado troca a visualização de um mesmo conteúdo. O grupo de botões junta ações irmãs. O botão dividido oferece uma ação padrão e variações.</p>
+  <h2>Controle segmentado</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="cz-segmented" data-toggle-group aria-label="Período">
+      <button aria-pressed="false">Hoje</button><button aria-pressed="true">7 dias</button><button aria-pressed="false">30 dias</button><button aria-pressed="false">12 meses</button>
+    </div>
+    <div class="cz-segmented" data-toggle-group aria-label="Canal">
+      <button aria-pressed="true">{{i:store:i-sm}}Loja</button><button aria-pressed="false">{{i:globe:i-sm}}Marketplace</button>
+    </div>
+  </div><div class="ds-cap"><span>De 2 a 5 opções curtas. Mais que isso, use abas ou select.</span></div></div>
+
+  <h2>Grupo de botões</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="cz-btn-group" role="group" aria-label="Formatação">
+      <button class="cz-btn cz-btn--secondary cz-btn--sm">{{i:download:i-sm}}Exportar</button>
+      <button class="cz-btn cz-btn--secondary cz-btn--sm">{{i:upload:i-sm}}Importar</button>
+      <button class="cz-btn cz-btn--secondary cz-btn--sm">{{i:copy:i-sm}}Duplicar</button>
+    </div>
+  </div></div>
+
+  <h2>Botão dividido</h2>
+  <p>A parte maior executa a ação mais comum; a seta abre as variações dessa mesma ação. Se as opções forem ações diferentes, use um menu comum.</p>
+  <div class="ds-spec ov"><div class="ds-stage" style="gap:28px;padding-bottom:40px">
+    <div class="cz-split cz-pop">
+      <button class="cz-btn" data-toast="success" data-title="Produto publicado" data-msg="Vaso Terra já aparece na loja.">Publicar agora</button>
+      <button class="cz-btn cz-split-toggle" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-label="Outras formas de publicar">{{i:chev-down}}</button>
+      <div class="cz-menu" role="menu" hidden>
+        <button class="cz-menu-item" role="menuitem">{{i:clock}}Agendar publicação</button>
+        <button class="cz-menu-item" role="menuitem">{{i:eye}}Salvar como rascunho</button>
+        <button class="cz-menu-item" role="menuitem">{{i:globe}}Publicar só no marketplace</button>
+      </div>
+    </div>
+    <div class="cz-split cz-pop">
+      <button class="cz-btn cz-btn--secondary">{{i:download:i-sm}}Exportar CSV</button>
+      <button class="cz-btn cz-btn--secondary cz-split-toggle" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-label="Outros formatos">{{i:chev-down}}</button>
+      <div class="cz-menu" role="menu" hidden>
+        <button class="cz-menu-item" role="menuitem">{{i:file}}Exportar planilha (.xlsx)</button>
+        <button class="cz-menu-item" role="menuitem">{{i:file}}Exportar PDF</button>
+      </div>
+    </div>
+    <div class="cz-split cz-pop">
+      <button class="cz-btn cz-btn--brand cz-btn--sm">{{i:sparkle:i-sm}}Criar campanha</button>
+      <button class="cz-btn cz-btn--brand cz-btn--sm cz-split-toggle" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-label="Modelos de campanha">{{i:chev-down}}</button>
+      <div class="cz-menu" role="menu" hidden>
+        <button class="cz-menu-item" role="menuitem">{{i:percent}}Cupom de desconto</button>
+        <button class="cz-menu-item" role="menuitem">{{i:truck}}Frete grátis</button>
+        <button class="cz-menu-item" role="menuitem">{{i:gift}}Brinde na compra</button>
+      </div>
+    </div>
+  </div><div class="ds-cap"><span>Principal, secundário e marca pequeno. A divisória interna ocupa metade da altura; a seta gira quando o menu está aberto.</span></div></div>
+
+  <script type="text/plain" class="ds-snippet"><div class="cz-segmented" aria-label="Período">
+  <button aria-pressed="true">7 dias</button>
+  <button aria-pressed="false">30 dias</button>
+</div>
+
+<div class="cz-split cz-pop">
+  <button class="cz-btn">Publicar agora</button>
+  <button class="cz-btn cz-split-toggle" data-menu-trigger aria-haspopup="menu"
+          aria-expanded="false" aria-label="Outras formas de publicar">…</button>
+  <div class="cz-menu" role="menu" hidden>…</div>
+</div></script>
+</section>
+
+<section class="ds-page" id="botoes-site" data-title="Botões do site" data-group="Ações" data-keys="cta site landing página institucional seta pílula botão com ícone" hidden>
+  <p class="ds-crumb">Ações</p>
+  <h1>Botões do site</h1>
+  <p class="ds-lead">No site e nas páginas de campanha, o botão é o próximo passo de quem ainda não é cliente. Ele é maior, em pílula, e o círculo da seta atravessa para o outro lado quando o mouse passa ou o teclado foca. Dentro do painel, use os botões comuns.</p>
+
+  <h2>Variantes</h2>
+  <div class="ds-spec"><div class="ds-stage" style="gap:20px">
+    <a class="cz-cta" href="#botoes-site">Criar minha loja<span class="dot">{{i:arrow-up-right}}</span></a>
+    <a class="cz-cta cz-cta--brand" href="#botoes-site">Testar grátis por 14 dias<span class="dot">{{i:arrow-up-right}}</span></a>
+  </div><div class="ds-cap"><span>Carvão para a ação principal da seção; laranja só para a ação principal da página</span><b>cz-cta, --brand</b></div></div>
+  <div class="ds-spec"><div class="ds-stage cz-bars-bg" style="gap:20px;min-height:140px">
+    <div class="cz-bars cz-bars--soft" data-bars-bg="9" aria-hidden="true"></div>
+    <a class="cz-cta cz-cta--light" href="#botoes-site">Falar com vendas<span class="dot">{{i:arrow-up-right}}</span></a>
+    <a class="cz-cta cz-cta--brand" href="#botoes-site">Testar grátis por 14 dias<span class="dot">{{i:arrow-up-right}}</span></a>
+  </div><div class="ds-cap"><span>Em fundos escuros e no fundo de barras, a variante branca substitui a carvão</span><b>--light</b></div></div>
+
+  <h2>Tamanhos</h2>
+  <div class="ds-spec"><div class="ds-stage" style="gap:20px">
+    <a class="cz-cta" href="#botoes-site">Ver planos<span class="dot">{{i:arrow-up-right}}</span></a>
+    <a class="cz-cta cz-cta--lg" href="#botoes-site">Ver planos<span class="dot">{{i:arrow-up-right}}</span></a>
+  </div><div class="ds-cap"><span>44 px em seções e cartões; 52 px no topo da página</span><b>Círculo com 4 px de respiro</b></div></div>
+
+  <h2>Ícone</h2>
+  <p>A seta diagonal gira para a direita no hover e indica que a pessoa vai avançar. Quando o ícone não é uma seta, use <code>--flat</code> para ele atravessar sem girar.</p>
+  <div class="ds-spec"><div class="ds-stage" style="gap:20px">
+    <a class="cz-cta cz-cta--flat" href="#botoes-site">Ver a loja de exemplo<span class="dot">{{i:store}}</span></a>
+    <button class="cz-cta cz-cta--brand cz-cta--flat" type="button" data-toast="success" data-title="Plano no carrinho" data-msg="Pro, cobrança mensal.">Assinar o Pro<span class="dot">{{i:cart}}</span></button>
+  </div></div>
+
+  <h2>Link com seta</h2>
+  <p>Para a ação secundária ao lado de um botão do site, ou no fim de um bloco de texto.</p>
+  <div class="ds-spec"><div class="ds-stage" style="gap:28px">
+    <a class="cz-cta" href="#botoes-site">Criar minha loja<span class="dot">{{i:arrow-up-right}}</span></a>
+    <a class="cz-cta-link" href="#botoes-site">Comparar planos{{i:arrow-up-right}}</a>
+  </div></div>
+
+  <h2>Na página</h2>
+  <div class="ds-spec"><div class="cz-bars-bg" style="border-radius:var(--radius-lg) var(--radius-lg) 0 0">
+    <div class="cz-bars" data-bars-bg="15" aria-hidden="true"></div>
+    <div class="ds-site-demo">
+      <span style="width:40px;height:40px;display:block">{{sym}}</span>
+      <h3>Sua loja vendendo em todos os canais</h3>
+      <p>Site, marketplaces e WhatsApp num só painel, com o estoque sempre certo.</p>
+      <div class="ds-row" style="gap:20px;margin-top:6px"><a class="cz-cta cz-cta--brand cz-cta--lg" href="#botoes-site">Testar grátis por 14 dias<span class="dot">{{i:arrow-up-right}}</span></a><a class="cz-cta-link" href="#botoes-site" style="color:#fff">Falar com vendas{{i:arrow-up-right}}</a></div>
+    </div>
+  </div><div class="ds-cap"><span>Um botão principal por seção; o link com seta leva à alternativa</span></div></div>
+
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Rótulo com o resultado: “Criar minha loja”, “Testar grátis por 14 dias”.</li><li>Um botão laranja por página, na ação que mais importa.</li><li>Use <code>&lt;a&gt;</code> quando leva a outra página e <code>&lt;button&gt;</code> quando executa algo.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Botões do site dentro do painel do lojista.</li><li>Dois botões em pílula lado a lado; o segundo vira link com seta.</li><li>Rótulos vagos como “Saiba mais” ou “Clique aqui”.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><a class="cz-cta cz-cta--brand" href="/cadastro">
+  Testar grátis por 14 dias
+  <span class="dot"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/arrow-up-right.svg)" aria-hidden="true"></span></span>
+</a>
+<a class="cz-cta-link" href="/vendas">Falar com vendas <svg class="i" aria-hidden="true">…</svg></a>
+<!-- Variantes: --brand, --light. Tamanho: --lg. Ícone sem giro: --flat --></script>
+</section>
+
+<section class="ds-page" id="links" data-title="Links" data-group="Ações" data-keys="link âncora texto hyperlink" hidden>
+  <p class="ds-crumb">Ações</p>
+  <h1>Links</h1>
+  <p class="ds-lead">Links levam a outro lugar; botões fazem algo acontecer. No texto, o link é sublinhado e usa o laranja para texto, que tem contraste suficiente nos dois temas.</p>
+  <div class="ds-spec"><div class="ds-stage col">
+    <p style="max-width:60ch">Os pedidos pagos por Pix são confirmados em segundos. Veja <a class="cz-link" href="#pedido">como acompanhar o status</a> ou <a class="cz-link cz-link--quiet" href="#chat">fale com o atendimento</a>.</p>
+    <div class="ds-row"><a class="cz-link" href="#checkout">Revisar checkout {{i:arrow-right:i-sm}}</a><a class="cz-link" href="https://convertize.com.br" target="_blank" rel="noopener">Site da Convertize {{i:external:i-sm}}</a></div>
+  </div><div class="ds-cap"><span>Padrão · Discreto (em texto corrido de ajuda) · Externo com ícone</span></div></div>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Texto que descreve o destino: “como acompanhar o status”.</li><li>Ícone de externo quando sai da plataforma.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>“Clique aqui” ou “saiba mais” soltos.</li><li>Link sem sublinhado no meio de um parágrafo.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><a class="cz-link" href="/pedidos">como acompanhar o status</a>
+<a class="cz-link cz-link--quiet" href="/ajuda">fale com o atendimento</a></script>
+</section>

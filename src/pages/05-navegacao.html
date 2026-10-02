@@ -1,0 +1,330 @@
+<section class="ds-page" id="barra-superior" data-title="Barra superior" data-group="Navegação" data-keys="top app bar header cabeçalho appbar" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Barra superior</h1>
+  <p class="ds-lead">Fixa no topo, com o título da tela ou a busca global à esquerda e as ações de conta à direita. Em telas pequenas, o botão de menu abre a sidebar em gaveta.</p>
+  <h2>Painel</h2>
+  <div class="ds-spec"><div class="ds-stage col canvas" style="padding:0">
+    <div class="cz-topbar">
+      <button class="cz-icon-btn" aria-label="Abrir menu">{{i:menu}}</button>
+      <div class="cz-input-wrap">{{i:search}}<input class="cz-input" placeholder="Buscar pedidos, produtos ou clientes" aria-label="Busca global"></div>
+      <div class="grow"></div>
+      <span class="cz-tooltip"><button class="cz-icon-btn" aria-label="Ajuda">{{i:help}}</button><span role="tooltip">Central de ajuda</span></span>
+      <span class="cz-with-count"><button class="cz-icon-btn" aria-label="Notificações, 3 novas">{{i:bell}}</button><span class="cz-count-dot">3</span></span>
+      <span class="cz-avatar cz-avatar--brand">MP</span>
+    </div>
+  </div></div>
+  <h2>Página interna</h2>
+  <div class="ds-spec"><div class="ds-stage col canvas" style="padding:0">
+    <div class="cz-topbar">
+      <button class="cz-icon-btn" aria-label="Voltar">{{i:arrow-left}}</button>
+      <div><h3>Vaso Terra</h3><div class="cz-help">Produto · FRM-002</div></div>
+      <span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span>
+      <div class="grow"></div>
+      <button class="cz-btn cz-btn--secondary cz-btn--sm">Pré-visualizar</button>
+      <button class="cz-btn cz-btn--sm">Salvar</button>
+    </div>
+  </div></div>
+  <h2>Escura</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="padding:0">
+    <div class="cz-topbar cz-topbar--dark">{{sym}}<h3>Convertize</h3><div class="grow"></div><button class="cz-icon-btn" aria-label="Notificações">{{i:bell}}</button><span class="cz-avatar cz-avatar--brand">MP</span></div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><header class="cz-topbar">
+  <button class="cz-icon-btn" aria-label="Voltar">…</button>
+  <div><h3>Vaso Terra</h3><div class="cz-help">Produto · FRM-002</div></div>
+  <div class="grow"></div>
+  <button class="cz-btn cz-btn--sm">Salvar</button>
+</header></script>
+</section>
+
+<section class="ds-page" id="sidebar" data-title="Sidebar" data-group="Navegação" data-keys="menu lateral navegação recolher collapse drawer conta recentes" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Sidebar</h1>
+  <p class="ds-lead">Navegação, conversas recentes e seletor de conta, nos estados expandido e recolhido. Use o botão ao lado do logo para recolher ou expandir; no celular ela já começa recolhida.</p>
+
+  <h2>Navegação Convertize</h2>
+  <p>Clique nos itens: a área de conteúdo mostra a página escolhida.</p>
+  <div class="cz-sidebar-demo" data-sidebar-demo>
+    <aside class="cz-sidebar" data-sidebar aria-label="Exemplo de sidebar">
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Recolher menu" aria-expanded="true">{{i:sidebar}}</button></div>
+      <button class="cz-side-item" aria-current="page" data-sb-page="Novo chat|Como posso ajudar hoje?|Escolha um app, retome uma conversa ou comece com uma nova pergunta.">{{i:edit}}<span class="lbl">Novo chat</span></button>
+      <button class="cz-side-item" data-sb-page="Chats|Suas conversas|Todas as conversas com clientes e com a Convertize, da mais recente para a mais antiga.">{{i:file}}<span class="lbl">Chats</span></button>
+      <button class="cz-side-item" data-sb-page="Buscar|Buscar em tudo|Pedidos, produtos, clientes e conversas em um só lugar.">{{i:search}}<span class="lbl">Buscar</span></button>
+      <button class="cz-side-item" data-sb-page="Conectores|Conectores|Marketplaces, meios de pagamento e transportadoras ligados à sua loja.">{{i:grid}}<span class="lbl">Conectores</span></button>
+      <button class="cz-side-item" data-sb-page="Biblioteca|Biblioteca|Arquivos, catálogos e respostas salvas para reutilizar.">{{i:layers}}<span class="lbl">Biblioteca</span></button>
+      <div class="cz-sidebar-section">Recentes</div>
+      <button class="cz-side-item" data-sb-page="Explorar catálogo|Explorar catálogo|Conversa de ontem sobre os mais vendidos da Ateliê Forma.">{{i:clock}}<span class="lbl">Explorar catálogo</span></button>
+      <button class="cz-side-item" data-sb-page="Integração da loja|Integração da loja|Token do Mercado Livre renovado. Estoque sincronizado.">{{i:clock}}<span class="lbl">Integração da loja</span></button>
+      <div class="cz-sidebar-spacer"></div>
+      <button class="cz-side-item" data-sb-page="Configurações|Configurações|Dados da loja, equipe, notificações e plano.">{{i:sliders}}<span class="lbl">Configurações</span></button>
+      <button class="cz-sidebar-foot" aria-label="Sarah Chen, plano Pro">
+        <img src="{{img:img-retrato.webp}}" alt=""><div>Sarah Chen<small>Plano Pro</small></div>{{i:chev-down}}
+      </button>
+    </aside>
+    <div class="cz-sidebar-content" aria-live="polite">
+      <h3 data-sb-title>Como posso ajudar hoje?</h3>
+      <p data-sb-desc>Escolha um app, retome uma conversa ou comece com uma nova pergunta.</p>
+      <div class="cz-suggestions"><button>Explorar objetos para casa</button><button>Pedidos atrasados hoje</button><button>Quais são os mais vendidos?</button><button>Criar cupom de primavera</button></div>
+    </div>
+  </div>
+
+  <h2>Painel da loja</h2>
+  <p>A mesma sidebar organiza a navegação do lojista, com contador de pedidos e seção de canais.</p>
+  <div class="cz-sidebar-demo">
+    <aside class="cz-sidebar" data-sidebar>
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Recolher menu" aria-expanded="true">{{i:sidebar}}</button></div>
+      <button class="cz-side-item" aria-current="page">{{i:home}}<span class="lbl">Visão geral</span></button>
+      <button class="cz-side-item">{{i:bag}}<span class="lbl">Pedidos</span><span class="cz-badge cz-badge--brand">12</span></button>
+      <button class="cz-side-item">{{i:catalog}}<span class="lbl">Catálogo</span></button>
+      <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+      <button class="cz-side-item">{{i:analytics}}<span class="lbl">Relatórios</span></button>
+      <div class="cz-sidebar-section">Canais</div>
+      <button class="cz-side-item">{{i:store}}<span class="lbl">Loja online</span></button>
+      <button class="cz-side-item">{{i:globe}}<span class="lbl">Marketplaces</span></button>
+      <div class="cz-sidebar-spacer"></div>
+      <button class="cz-sidebar-foot" aria-label="Marina Prado, Ateliê Forma"><span class="cz-avatar cz-avatar--brand">MP</span><div>Marina Prado<small>Ateliê Forma · Pro</small></div>{{i:chev-down}}</button>
+    </aside>
+    <div class="cz-sidebar-content"><p class="ds-label">Conteúdo da página</p><div style="display:grid;gap:12px;margin-top:8px"><div class="cz-skel" style="height:28px;width:40%"></div><div class="cz-skel" style="height:110px"></div><div class="cz-skel" style="height:110px"></div></div></div>
+  </div>
+
+  <h2>Variante escura</h2>
+  <p>Do pacote React do kit. Use quando a interface inteira for clara e a navegação precisar de mais contraste; o ícone ativo ganha o laranja.</p>
+  <div class="cz-sidebar-demo" style="min-height:360px">
+    <aside class="cz-sidebar cz-sidebar--dark" data-sidebar>
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Recolher menu" aria-expanded="true">{{i:sidebar}}</button></div>
+      <button class="cz-side-item" aria-current="page">{{i:home}}<span class="lbl">Visão geral</span></button>
+      <button class="cz-side-item">{{i:bag}}<span class="lbl">Pedidos</span></button>
+      <button class="cz-side-item">{{i:catalog}}<span class="lbl">Catálogo</span></button>
+      <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+      <div class="cz-sidebar-spacer"></div>
+      <button class="cz-sidebar-foot" aria-label="Marina Prado"><span class="cz-avatar cz-avatar--brand">MP</span><div>Marina Prado<small>Administração</small></div>{{i:chev-down}}</button>
+    </aside>
+    <div class="cz-sidebar-content"><div class="cz-skel" style="height:28px;width:40%"></div></div>
+  </div>
+
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Até 7 itens principais; agrupe o resto em seções.</li><li>Configurações e conta sempre no rodapé.</li><li>Na versão recolhida, mantenha tooltip ou rótulo acessível em cada ícone.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Esconder a sidebar por completo em telas médias: recolha para 52 px.</li><li>Mais de um item ativo.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><aside class="cz-sidebar">
+  <div class="cz-sidebar-head">
+    <svg class="logo">…</svg><svg class="sym">…</svg>
+    <button aria-label="Recolher menu">…</button>
+  </div>
+  <button class="cz-side-item" aria-current="page"><svg class="i">…</svg><span class="lbl">Novo chat</span></button>
+  <div class="cz-sidebar-section">Recentes</div>
+  <div class="cz-sidebar-spacer"></div>
+  <button class="cz-sidebar-foot"><img src="…" alt=""><div>Sarah Chen<small>Plano Pro</small></div></button>
+</aside>
+<!-- Recolhida: .is-collapsed (52 px) · Escura: .cz-sidebar--dark --></script>
+</section>
+
+<section class="ds-page" id="abas" data-title="Abas" data-group="Navegação" data-keys="tabs abas guias pill" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Abas</h1>
+  <p class="ds-lead">Separam conteúdos do mesmo nível dentro de uma página. O indicador laranja marca a aba ativa; as setas do teclado movem entre elas.</p>
+  <h2>Sublinhadas</h2>
+  <div class="ds-spec"><div class="ds-stage col">
+    <div data-tabs>
+      <div class="cz-tabs" role="tablist" aria-label="Pedidos">
+        <button class="cz-tab" role="tab" aria-selected="true" aria-controls="tp1" id="t1">Todos <span class="cz-count-badge">248</span></button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="tp2" id="t2" tabindex="-1">A enviar <span class="cz-count-badge">12</span></button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="tp3" id="t3" tabindex="-1">Em trânsito</button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="tp4" id="t4" tabindex="-1">Devoluções</button>
+      </div>
+      <div class="cz-tab-panel" role="tabpanel" id="tp1" aria-labelledby="t1">248 pedidos nos últimos 30 dias, de todos os canais.</div>
+      <div class="cz-tab-panel" role="tabpanel" id="tp2" aria-labelledby="t2" hidden>12 pedidos pagos aguardando etiqueta de envio.</div>
+      <div class="cz-tab-panel" role="tabpanel" id="tp3" aria-labelledby="t3" hidden>31 pedidos com a transportadora.</div>
+      <div class="cz-tab-panel" role="tabpanel" id="tp4" aria-labelledby="t4" hidden>2 solicitações de troca abertas.</div>
+    </div>
+  </div></div>
+  <h2>Pílulas</h2>
+  <div class="ds-spec"><div class="ds-stage col">
+    <div data-tabs>
+      <div class="cz-tabs cz-tabs--pill" role="tablist" aria-label="Coleções">
+        <button class="cz-tab" role="tab" aria-selected="true" aria-controls="pp1" id="p1">Cerâmica</button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="pp2" id="p2" tabindex="-1">Iluminação</button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="pp3" id="p3" tabindex="-1">Papelaria</button>
+      </div>
+      <div class="cz-tab-panel" role="tabpanel" id="pp1" aria-labelledby="p1">14 peças em cerâmica de alta temperatura.</div>
+      <div class="cz-tab-panel" role="tabpanel" id="pp2" aria-labelledby="p2" hidden>6 luminárias de mesa e pendentes.</div>
+      <div class="cz-tab-panel" role="tabpanel" id="pp3" aria-labelledby="p3" hidden>22 cadernos, cartões e embalagens.</div>
+    </div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-tabs" role="tablist">
+  <button class="cz-tab" role="tab" aria-selected="true" aria-controls="painel-1">Todos</button>
+  <button class="cz-tab" role="tab" aria-selected="false" tabindex="-1">A enviar</button>
+</div>
+<div class="cz-tab-panel" role="tabpanel" id="painel-1">…</div></script>
+</section>
+
+<section class="ds-page" id="breadcrumb" data-title="Breadcrumb" data-group="Navegação" data-keys="breadcrumb trilha caminho hierarquia" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Breadcrumb</h1>
+  <p class="ds-lead">Mostra onde a tela está na hierarquia e permite voltar um ou mais níveis. Use a partir do terceiro nível; o último item é a página atual e não é link.</p>
+  <div class="ds-spec"><div class="ds-stage col">
+    <nav class="cz-breadcrumb" aria-label="Você está em"><ol><li><a href="#inicio">Painel</a></li><li><a href="#tabela">Catálogo</a></li><li><a href="#tabela">Cerâmica</a></li><li><span aria-current="page">Vaso Terra</span></li></ol></nav>
+    <nav class="cz-breadcrumb" aria-label="Você está em"><ol><li><a href="#inicio">{{i:home:i-sm}}<span class="vh">Início</span></a></li><li><a href="#pedido">Pedidos</a></li><li><span aria-current="page">#CV-2048</span></li></ol></nav>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><nav class="cz-breadcrumb" aria-label="Você está em">
+  <ol>
+    <li><a href="/painel">Painel</a></li>
+    <li><a href="/catalogo">Catálogo</a></li>
+    <li><span aria-current="page">Vaso Terra</span></li>
+  </ol>
+</nav></script>
+</section>
+
+<section class="ds-page" id="paginacao" data-title="Paginação" data-group="Navegação" data-keys="pagination páginas próxima anterior" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Paginação</h1>
+  <p class="ds-lead">Para listas longas com posição estável, como pedidos e produtos. Mostre o intervalo exibido e o total; reticências resumem páginas intermediárias.</p>
+  <div class="ds-spec"><div class="ds-stage col">
+    <div class="cz-pagination" data-pagination data-noun="pedidos" data-total="24" data-current="6" data-per="20" data-items="468"></div>
+  </div><div class="ds-cap"><span>Clique nas páginas: o intervalo e as reticências se ajustam.</span></div></div>
+  <h2>Simples</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="cz-pagination"><button aria-label="Página anterior">{{i:chev-left:i-sm}}</button><span class="cz-help num" style="padding:0 8px">Página 2 de 9</span><button aria-label="Próxima página">{{i:chev-right:i-sm}}</button></div>
+    <button class="cz-btn cz-btn--secondary">Carregar mais 20 produtos</button>
+  </div><div class="ds-cap"><span>Compacta para mobile · “Carregar mais” para vitrines</span></div></div>
+  <script type="text/plain" class="ds-snippet"><nav class="cz-pagination" aria-label="Paginação">
+  <span class="cz-pagination-info">101–120 de 468</span>
+  <button aria-label="Página anterior">‹</button>
+  <button>1</button><span class="gap">…</span>
+  <button aria-current="page">6</button>
+  <button aria-label="Próxima página">›</button>
+</nav></script>
+</section>
+
+<section class="ds-page" id="etapas" data-title="Etapas" data-group="Navegação" data-keys="stepper wizard etapas passos progresso checkout onboarding" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Etapas</h1>
+  <p class="ds-lead">Para fluxos com ordem fixa, como checkout, cadastro da loja ou importação de catálogo. Mostram o que foi feito, onde a pessoa está e o que falta.</p>
+  <h2>Horizontal</h2>
+  <div class="ds-spec"><div class="ds-stage col" data-stepper>
+    <ol class="cz-steps">
+      <li class="done"><span class="dot">1</span><span class="lbl">Carrinho</span></li>
+      <li class="current"><span class="dot">2</span><span class="lbl">Entrega</span></li>
+      <li><span class="dot">3</span><span class="lbl">Pagamento</span></li>
+      <li><span class="dot">4</span><span class="lbl">Revisão</span></li>
+    </ol>
+    <div class="ds-row" style="justify-content:space-between;margin-top:12px"><button class="cz-btn cz-btn--ghost" data-step-prev>{{i:arrow-left:i-sm}}Voltar</button><button class="cz-btn" data-step-next data-last-label="Confirmar pedido">Continuar</button></div>
+  </div></div>
+  <h2>Vertical</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <ol class="cz-steps cz-steps--vertical">
+      <li class="done"><span class="dot">1</span><span>Dados da loja<small>CNPJ e endereço confirmados</small></span></li>
+      <li class="done"><span class="dot">2</span><span>Pagamentos<small>Pix e cartão ativos</small></span></li>
+      <li class="current"><span class="dot">3</span><span>Frete<small>Escolha as transportadoras</small></span></li>
+      <li><span class="dot">4</span><span>Primeiro produto<small>Leva cerca de 5 minutos</small></span></li>
+    </ol>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><ol class="cz-steps">
+  <li class="done"><span class="dot">1</span><span class="lbl">Carrinho</span></li>
+  <li class="current" aria-current="step"><span class="dot">2</span><span class="lbl">Entrega</span></li>
+  <li><span class="dot">3</span><span class="lbl">Pagamento</span></li>
+</ol></script>
+</section>
+
+<section class="ds-page" id="navegacao-inferior" data-title="Navegação inferior" data-group="Navegação" data-keys="bottom navigation tab bar mobile app expansível bottom menu popover tema" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Navegação inferior</h1>
+  <p class="ds-lead">No app mobile, de três a cinco destinos principais ficam ao alcance do polegar. Quando um destino precisa de uma ação rápida em vez de uma tela nova, o botão expande um painel curto por cima da barra, sem sair de onde a pessoa está.</p>
+
+  <h2>Menu expansível</h2>
+  <p>Toque em um ícone: o painel cresce a partir da barra com o tamanho do conteúdo, e troca de forma suave ao mudar de destino. Toque fora, aperte Esc ou toque no mesmo ícone para fechar. O item Tema já troca o tema desta própria documentação.</p>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="demo-phone" style="height:auto">
+      <div class="scr" style="min-height:280px"><p style="font:400 24px var(--font-display)">Pedidos</p><div class="cz-skel" style="height:64px"></div><div class="cz-skel" style="height:64px"></div></div>
+      <div class="cz-bottom-menu-wrap">
+        <div class="cz-bottom-menu" data-bottom-menu aria-label="Menu rápido">
+          <div class="cz-bottom-menu-measure cz-bottom-menu-inner" data-bm-measure aria-hidden="true"></div>
+          <div class="cz-bottom-menu-panel" data-bm-panel hidden>
+            <div class="cz-bottom-menu-inner" data-bm-inner></div>
+          </div>
+          <div class="cz-bottom-menu-bar" data-bm-bar role="group">
+            <button type="button" class="cz-bottom-menu-item" data-bm-key="quick" aria-haspopup="true" aria-expanded="false" aria-label="Ações rápidas">{{i:plus}}</button>
+            <button type="button" class="cz-bottom-menu-item" data-bm-key="search" aria-haspopup="true" aria-expanded="false" aria-label="Buscar">{{i:search}}</button>
+            <button type="button" class="cz-bottom-menu-item" data-bm-key="alerts" aria-haspopup="true" aria-expanded="false" aria-label="Notificações">{{i:bell}}</button>
+            <button type="button" class="cz-bottom-menu-item" data-bm-key="account" aria-haspopup="true" aria-expanded="false" aria-label="Conta">{{i:user}}</button>
+            <button type="button" class="cz-bottom-menu-item" data-bm-key="theme" aria-haspopup="true" aria-expanded="false" aria-label="Tema">{{i:sun}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><div class="ds-cap"><span>Ações rápidas · Buscar · Notificações · Conta · Tema (troca de verdade)</span><b>Painel mede o conteúdo e anima largura, altura e o esmaecido da troca</b></div></div>
+  <h3 class="ds-h3">Quando usar</h3>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Reserve para uma ação curta e sem página própria: criar algo, filtrar, ver 3–4 notificações.</li><li>Feche sempre ao tocar fora — a pessoa está no app inteiro, não numa tela isolada.</li><li>No máximo 5 botões: é a mesma régua da barra simples.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Painel com rolagem própria ou formulário longo: isso é uma folha inferior, não este menu.</li><li>Usar para destinos que já têm tela própria — aí é a barra simples abaixo.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-bottom-menu" data-bottom-menu aria-label="Menu rápido">
+  <div class="cz-bottom-menu-measure cz-bottom-menu-inner" data-bm-measure aria-hidden="true"></div>
+  <div class="cz-bottom-menu-panel" data-bm-panel hidden>
+    <div class="cz-bottom-menu-inner" data-bm-inner></div>
+  </div>
+  <div class="cz-bottom-menu-bar" data-bm-bar role="group">
+    <button type="button" class="cz-bottom-menu-item" data-bm-key="quick" aria-haspopup="true" aria-expanded="false" aria-label="Ações rápidas">
+      <svg class="i">…</svg>
+    </button>
+    <!-- … demais botões, um data-bm-key por painel … -->
+  </div>
+</div>
+<!-- O conteúdo de cada painel (quick, search, alerts, account, theme)
+     é montado por initBottomMenu() a partir de data-bm-key -->
+</script>
+
+  <h2>Barra simples</h2>
+  <p>Quando todos os destinos têm tela própria, a barra de abas resolve sozinha — sem painel, sem estado aberto ou fechado.</p>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="demo-phone" style="height:auto">
+      <div class="scr" style="min-height:200px"><p style="font:400 24px var(--font-display)">Pedidos</p><div class="cz-skel" style="height:64px"></div><div class="cz-skel" style="height:64px"></div></div>
+      <nav class="cz-bottom-nav" data-bottom-nav aria-label="Principal">
+        <button><span class="ind">{{i:home}}</span>Início</button>
+        <button aria-current="page"><span class="ind">{{i:bag}}</span>Pedidos<span class="dotn"></span></button>
+        <button><span class="ind">{{i:catalog}}</span>Catálogo</button>
+        <button><span class="ind">{{i:chat}}</span>Chat</button>
+        <button><span class="ind">{{i:user}}</span>Conta</button>
+      </nav>
+    </div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><nav class="cz-bottom-nav" aria-label="Principal">
+  <button aria-current="page"><span class="ind"><svg class="i">…</svg></span>Pedidos</button>
+  <button><span class="ind"><svg class="i">…</svg></span>Catálogo</button>
+</nav></script>
+</section>
+
+<section class="ds-page" id="menu" data-title="Menu" data-group="Navegação" data-keys="dropdown menu contexto ações opções mais" hidden>
+  <p class="ds-crumb">Navegação</p>
+  <h1>Menu</h1>
+  <p class="ds-lead">Lista de ações que abre a partir de um botão. Agrupe por afinidade, mostre atalhos quando existirem e deixe ações destrutivas por último, separadas.</p>
+  <div class="ds-spec"><div class="ds-stage" style="min-height:360px;align-items:flex-start;gap:40px">
+    <div class="cz-pop">
+      <button class="cz-btn cz-btn--secondary" data-menu-trigger aria-haspopup="menu" aria-expanded="false">Ações do pedido{{i:chev-down:i-sm}}</button>
+      <div class="cz-menu" role="menu" hidden>
+        <button class="cz-menu-item" role="menuitem">{{i:tag}}Gerar etiqueta<kbd>E</kbd></button>
+        <button class="cz-menu-item" role="menuitem">{{i:file}}Emitir nota fiscal<kbd>N</kbd></button>
+        <button class="cz-menu-item" role="menuitem">{{i:copy}}Duplicar pedido</button>
+        <div class="cz-menu-sep" role="separator"></div>
+        <button class="cz-menu-item" role="menuitem">{{i:return}}Registrar devolução</button>
+        <button class="cz-menu-item cz-menu-item--danger" role="menuitem">{{i:x-circle}}Cancelar pedido</button>
+      </div>
+    </div>
+    <div><p class="ds-label">Aberto</p>
+      <div class="cz-menu static" role="menu" aria-label="Exemplo">
+        <div class="cz-menu-title">Marina Prado</div>
+        <button class="cz-menu-item" role="menuitem">{{i:user}}Minha conta</button>
+        <button class="cz-menu-item" role="menuitem">{{i:store}}Trocar de loja</button>
+        <button class="cz-menu-item" role="menuitem">{{i:sliders}}Preferências</button>
+        <div class="cz-menu-sep" role="separator"></div>
+        <button class="cz-menu-item" role="menuitem">{{i:logout}}Sair</button>
+      </div>
+    </div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><button class="cz-btn cz-btn--secondary" aria-haspopup="menu" aria-expanded="false">Ações do pedido</button>
+<div class="cz-menu" role="menu" hidden>
+  <button class="cz-menu-item" role="menuitem">Gerar etiqueta <kbd>E</kbd></button>
+  <div class="cz-menu-sep" role="separator"></div>
+  <button class="cz-menu-item cz-menu-item--danger" role="menuitem">Cancelar pedido</button>
+</div></script>
+</section>

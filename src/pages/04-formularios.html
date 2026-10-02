@@ -1,0 +1,334 @@
+<section class="ds-page" id="campos" data-title="Campo de texto" data-group="Formulários" data-keys="input text field textarea senha password prefixo moeda" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Campo de texto</h1>
+  <p class="ds-lead">Rótulo sempre visível acima do campo, ajuda abaixo quando necessário. O foco troca a borda para laranja com um halo suave; o erro troca para vermelho e explica como corrigir.</p>
+
+  <h2>Tipos</h2>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;align-items:start">
+    <div class="cz-field"><label for="f-nome">Nome da loja</label><input class="cz-input" id="f-nome" value="Ateliê Forma"></div>
+    <div class="cz-field"><label for="f-email">E-mail</label><div class="cz-input-wrap">{{i:mail}}<input class="cz-input" id="f-email" type="email" placeholder="voce@loja.com.br"></div></div>
+    <div class="cz-field"><label for="f-preco">Preço</label><div class="cz-input-wrap"><span class="cz-prefix">R$</span><input class="cz-input num" id="f-preco" inputmode="decimal" value="189,90"></div></div>
+    <div class="cz-field"><label for="f-peso">Peso</label><div class="cz-input-wrap"><input class="cz-input num" id="f-peso" inputmode="decimal" value="1,2"><span class="cz-suffix">kg</span></div></div>
+    <div class="cz-field"><label for="f-senha">Senha</label><div class="cz-input-wrap"><input class="cz-input" id="f-senha" type="password" value="convertize2026"><button class="cz-clear" type="button" data-reveal="f-senha" aria-label="Mostrar senha">{{i:eye:i-sm}}</button></div><span class="cz-help">Mínimo de 8 caracteres.</span></div>
+    <div class="cz-field"><label for="f-cep">CEP</label><div class="cz-input-wrap"><input class="cz-input num" id="f-cep" value="01310-100" data-clearable><button class="cz-clear" type="button" data-clear="f-cep" aria-label="Limpar CEP">{{i:x:i-sm}}</button></div></div>
+  </div></div>
+
+  <h2>Estados</h2>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px;align-items:start">
+    <div class="cz-field"><label for="s1">Padrão</label><input class="cz-input" id="s1" placeholder="Nome do produto"></div>
+    <div class="cz-field"><label for="s2">Foco</label><input class="cz-input is-focus" id="s2" value="Vaso Terra"></div>
+    <div class="cz-field"><label for="s3">Erro</label><input class="cz-input" id="s3" value="vaso-terra" aria-invalid="true" aria-describedby="s3e"><span class="cz-error" id="s3e">{{i:alert:i-sm}}Este SKU já está em uso. Tente FRM-002-B.</span></div>
+    <div class="cz-field"><label for="s4">Desativado</label><input class="cz-input" id="s4" value="FRM-002" disabled></div>
+    <div class="cz-field"><label for="s5">Somente leitura</label><input class="cz-input" id="s5" value="cvz_live_8f2a…" readonly></div>
+  </div></div>
+
+  <h2>Área de texto</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:520px">
+    <div class="cz-field"><label for="f-desc">Descrição do produto <span class="opt">(opcional)</span></label><textarea class="cz-textarea" id="f-desc" maxlength="280" data-count="f-desc-c">Vaso em cerâmica de alta temperatura, esmaltado à mão. Cada peça tem pequenas variações de tom.</textarea><span class="cz-count" id="f-desc-c">0 / 280</span></div>
+  </div></div>
+
+  <h2>Tamanhos</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <input class="cz-input cz-input--sm" style="max-width:200px" placeholder="Pequeno, 28 px" aria-label="Pequeno">
+    <input class="cz-input" style="max-width:200px" placeholder="Padrão, 36 px" aria-label="Padrão">
+    <input class="cz-input cz-input--lg" style="max-width:200px" placeholder="Grande, 44 px" aria-label="Grande">
+  </div><div class="ds-cap"><span>Mesma escala dos botões: um campo e um botão do mesmo tamanho ficam alinhados.</span><b>--h-sm, --h-md, --h-lg</b></div></div>
+
+  <h2>Código</h2>
+  <script type="text/plain" class="ds-snippet"><div class="cz-field">
+  <label for="sku">SKU</label>
+  <input class="cz-input" id="sku" aria-invalid="true" aria-describedby="sku-erro">
+  <span class="cz-error" id="sku-erro">Este SKU já está em uso. Tente FRM-002-B.</span>
+</div>
+
+<div class="cz-input-wrap">
+  <span class="cz-prefix">R$</span>
+  <input class="cz-input" inputmode="decimal">
+</div></script>
+</section>
+
+<section class="ds-page" id="selecao" data-title="Seleção e autocompletar" data-group="Formulários" data-keys="select dropdown combobox autocomplete busca opções" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Seleção e autocompletar</h1>
+  <p class="ds-lead">Use o select nativo para listas curtas e conhecidas. Com mais de 10 opções, ou quando a pessoa sabe o que procura, use o autocompletar com busca.</p>
+  <h2>Select</h2>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;align-items:start">
+    <div class="cz-field"><label for="sel-canal">Canal de venda</label><select class="cz-select" id="sel-canal"><option>Loja online</option><option>Marketplace</option><option>Loja física</option><option>Televendas</option></select></div>
+    <div class="cz-field"><label for="sel-uf">Estado</label><select class="cz-select" id="sel-uf"><option>São Paulo</option><option>Minas Gerais</option><option>Pernambuco</option><option>Rio Grande do Sul</option></select></div>
+    <div class="cz-field"><label for="sel-dis">Transportadora</label><select class="cz-select" id="sel-dis" disabled><option>Defina o CEP primeiro</option></select><span class="cz-help">Liberado depois do CEP de origem.</span></div>
+  </div></div>
+
+  <h2>Autocompletar</h2>
+  <div class="ds-spec"><div class="ds-stage" style="min-height:330px;align-items:flex-start">
+    <div class="cz-field cz-pop block" style="width:min(360px,100%)">
+      <label for="combo-cat">Categoria</label>
+      <div class="cz-input-wrap">{{i:search}}<input class="cz-input" id="combo-cat" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="combo-cat-list" placeholder="Busque ou escolha" autocomplete="off" data-combo-create data-combo-empty="Nenhuma categoria com “{q}”. Pressione Enter para criar." data-combo='["Casa e decoração","Cerâmica","Iluminação","Papelaria","Embalagens","Kits presenteáveis","Têxteis","Utensílios de cozinha","Jardim","Arte e quadros","Organização","Aromas e velas"]'></div>
+      <div class="cz-menu" id="combo-cat-list" role="listbox" style="width:100%;max-height:240px;overflow:auto" hidden></div>
+      <span class="cz-help">Use as setas para navegar e Enter para escolher.</span>
+    </div>
+  </div></div>
+
+  <h2>Menu de seleção</h2>
+  <div class="ds-spec"><div class="ds-stage" style="min-height:260px;align-items:flex-start">
+    <div class="cz-pop">
+      <button class="cz-btn cz-btn--secondary" data-menu-trigger data-select-menu="Ordenar: " aria-haspopup="listbox" aria-expanded="false"><span>Ordenar: Mais vendidos</span>{{i:chev-down:i-sm}}</button>
+      <div class="cz-menu" role="listbox" hidden>
+        <button class="cz-menu-item" role="option" aria-selected="true">Mais vendidos</button>
+        <button class="cz-menu-item" role="option" aria-selected="false">Menor preço</button>
+        <button class="cz-menu-item" role="option" aria-selected="false">Maior preço</button>
+        <button class="cz-menu-item" role="option" aria-selected="false">Lançamentos</button>
+      </div>
+    </div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><select class="cz-select" id="canal">
+  <option>Loja online</option>
+  <option>Marketplace</option>
+</select>
+
+<input class="cz-input" role="combobox" aria-expanded="false"
+       aria-controls="lista" aria-autocomplete="list">
+<div class="cz-menu" id="lista" role="listbox">
+  <button class="cz-menu-item" role="option" aria-selected="true">Cerâmica</button>
+</div></script>
+</section>
+
+<section class="ds-page" id="checkbox" data-title="Checkbox e radio" data-group="Formulários" data-keys="checkbox radio seleção múltipla opção card" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Checkbox e radio</h1>
+  <p class="ds-lead">Checkbox para escolhas independentes; radio para uma única escolha entre opções que se excluem. Quando cada opção tem preço ou descrição, use o cartão de opção.</p>
+  <h2>Checkbox</h2>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;align-items:start">
+    <div style="display:grid;gap:12px">
+      <label class="cz-check"><input type="checkbox" id="chk-all" data-check-all="notif"><span>Todas as notificações</span></label>
+      <div style="display:grid;gap:12px;padding-left:28px">
+        <label class="cz-check"><input type="checkbox" data-check-child="notif" checked><span>Novo pedido</span></label>
+        <label class="cz-check"><input type="checkbox" data-check-child="notif"><span>Estoque baixo</span></label>
+        <label class="cz-check"><input type="checkbox" data-check-child="notif" checked><span>Avaliação recebida</span></label>
+      </div>
+    </div>
+    <div style="display:grid;gap:12px">
+      <label class="cz-check"><input type="checkbox" checked><span>Marcado</span></label>
+      <label class="cz-check"><input type="checkbox"><span>Vazio</span></label>
+      <label class="cz-check"><input type="checkbox" checked disabled><span>Desativado</span></label>
+      <label class="cz-check"><input type="checkbox"><span>Aceito os termos de uso<small>Você pode cancelar quando quiser.</small></span></label>
+    </div>
+  </div><div class="ds-cap"><span>O item pai fica indeterminado quando só parte dos filhos está marcada.</span></div></div>
+
+  <h2>Radio</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <fieldset style="border:0;padding:0;margin:0;display:grid;gap:12px"><legend class="cz-label" style="margin-bottom:10px">Forma de pagamento</legend>
+      <label class="cz-radio"><input type="radio" name="pg" checked><span>Pix</span></label>
+      <label class="cz-radio"><input type="radio" name="pg"><span>Cartão de crédito</span></label>
+      <label class="cz-radio"><input type="radio" name="pg"><span>Boleto</span></label>
+      <label class="cz-radio"><input type="radio" name="pg" disabled><span>Crediário (indisponível)</span></label>
+    </fieldset>
+  </div></div>
+
+  <h2>Cartão de opção</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:520px">
+    <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="frete" checked></span><span><b>Expressa</b><br><small class="cz-help">Chega amanhã, 24 de setembro</small></span><span class="price num">R$ 24,90</span></label>
+    <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="frete"></span><span><b>Econômica</b><br><small class="cz-help">De 5 a 7 dias úteis</small></span><span class="price num">R$ 12,40</span></label>
+    <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="frete"></span><span><b>Retirar na loja</b><br><small class="cz-help">Rua Augusta, 1200 · pronto em 2 horas</small></span><span class="price">Grátis</span></label>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><label class="cz-check"><input type="checkbox" checked><span>Novo pedido</span></label>
+<label class="cz-radio"><input type="radio" name="pg" checked><span>Pix</span></label>
+
+<label class="cz-choice-card">
+  <span class="cz-radio"><input type="radio" name="frete"></span>
+  <span><b>Expressa</b><br><small>Chega amanhã</small></span>
+  <span class="price">R$ 24,90</span>
+</label></script>
+</section>
+
+<section class="ds-page" id="switch" data-title="Switch" data-group="Formulários" data-keys="toggle switch ligar desligar configuração" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Switch</h1>
+  <p class="ds-lead">Liga e desliga algo que tem efeito imediato, sem botão de salvar. Se a mudança só vale depois de confirmar, use checkbox.</p>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:560px;gap:0">
+    <div class="cz-list-item" style="padding:14px 0"><div class="body"><b>Vender no marketplace</b><small>Publica o catálogo nos canais conectados.</small></div><label class="cz-switch"><input type="checkbox" checked aria-label="Vender no marketplace"></label></div>
+    <div class="cz-list-item" style="padding:14px 0"><div class="body"><b>Aceitar Pix</b><small>Confirmação em até 10 segundos.</small></div><label class="cz-switch"><input type="checkbox" checked aria-label="Aceitar Pix"></label></div>
+    <div class="cz-list-item" style="padding:14px 0"><div class="body"><b>Modo férias</b><small>Pausa novos pedidos e avisa na vitrine.</small></div><label class="cz-switch"><input type="checkbox" aria-label="Modo férias"></label></div>
+    <div class="cz-list-item" style="padding:14px 0;border:0"><div class="body"><b>Nota fiscal automática</b><small>Disponível no plano Pro.</small></div><label class="cz-switch"><input type="checkbox" disabled aria-label="Nota fiscal automática"></label></div>
+  </div><div class="ds-cap"><span>Ligado · Ligado · Desligado · Desativado</span><b>Ligado usa verde de sucesso, não laranja</b></div></div>
+  <script type="text/plain" class="ds-snippet"><label class="cz-switch">
+  <input type="checkbox" checked> Aceitar Pix
+</label></script>
+</section>
+
+<section class="ds-page" id="slider" data-title="Slider" data-group="Formulários" data-keys="range slider faixa preço intervalo" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Slider</h1>
+  <p class="ds-lead">Para escolher um valor aproximado dentro de uma faixa: desconto, raio de entrega, preço máximo. Sempre mostre o valor atual ao lado do rótulo.</p>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:28px">
+    <div class="cz-slider"><div class="cz-slider-head"><label for="rg1">Desconto da campanha</label><output for="rg1" data-suffix="%">15%</output></div><input class="cz-range" id="rg1" type="range" min="0" max="60" step="5" value="15"></div>
+    <div class="cz-slider"><div class="cz-slider-head"><label for="rg2">Raio de entrega própria</label><output for="rg2" data-suffix=" km">8 km</output></div><input class="cz-range" id="rg2" type="range" min="1" max="30" value="8"></div>
+    <div class="cz-slider"><div class="cz-slider-head"><label for="rg3">Preço máximo</label><output for="rg3" data-prefix="R$ ">R$ 350</output></div><input class="cz-range" id="rg3" type="range" min="0" max="1000" step="10" value="350"><div class="cz-slider-head cz-help"><span>R$ 0</span><span>R$ 1.000</span></div></div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-slider">
+  <div class="cz-slider-head"><label for="desc">Desconto</label><output for="desc">15%</output></div>
+  <input class="cz-range" id="desc" type="range" min="0" max="60" value="15" style="--p:25%">
+</div></script>
+</section>
+
+<section class="ds-page" id="busca" data-title="Busca" data-group="Formulários" data-keys="busca search paleta comando command palette ctrl k modal procurar" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Busca</h1>
+  <p class="ds-lead">Um botão discreto abre uma paleta com resultados e ações. A pessoa digita, navega com as setas e abre com Enter. Serve para ir direto a um pedido, produto ou cliente sem ocupar espaço na tela com um campo sempre aberto.</p>
+
+  <h2>Exemplo</h2>
+  <div class="ds-spec"><div class="ds-stage center" style="min-height:180px;flex-direction:column;gap:12px">
+    <button type="button" class="cz-cmd-trigger" data-cmd-demo aria-label="Buscar na loja"><span class="lbl">Buscar...</span>{{i:search}}</button>
+    <p class="cz-help">Experimente “pedido”, “tema” ou um nome que não existe.</p>
+  </div><div class="ds-cap"><span>Botão de 36 px, lista de 380 px, categoria alinhada à direita</span><b>cz-cmd-trigger, cz-cmd</b></div></div>
+
+  <h2>Onde aparece no kit</h2>
+  <ul class="ds-sub" style="padding-left:18px;display:grid;gap:6px">
+    <li>No topo desta documentação, com o atalho Ctrl K (⌘ K no Mac).</li>
+    <li>Na <a class="cz-link" href="#tabela">tabela de produtos</a>, onde escolher um produto filtra a lista e mostra um chip removível.</li>
+    <li>No <a class="cz-link" href="#dashboard">painel da loja</a>, como “Pesquisar no sistema”.</li>
+  </ul>
+
+  <h2>Teclado</h2>
+  <table class="ds-props">
+    <thead><tr><th>Tecla</th><th>O que faz</th></tr></thead>
+    <tbody>
+      <tr><td>Ctrl K / ⌘ K</td><td>Abre e fecha a busca global da página.</td></tr>
+      <tr><td>↑ ↓</td><td>Move a seleção entre os resultados.</td></tr>
+      <tr><td>Enter</td><td>Abre o resultado selecionado.</td></tr>
+      <tr><td>Esc</td><td>Fecha e devolve o foco ao botão que abriu.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Cada resultado com título, uma linha de contexto (“Ana Beatriz Lima, R$ 229,90”) e a categoria à direita.</li><li>Misture resultados e ações frequentes: “Criar cupom”, “Gerar etiquetas”.</li><li>No vazio, diga o que foi buscado e ofereça limpar.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Usar a paleta para filtrar uma lista enquanto se digita; para isso, use um campo com ícone.</li><li>Mais de um atalho Ctrl K na mesma página.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><button class="cz-cmd-trigger" aria-label="Buscar na loja">
+  <span class="lbl">Buscar...</span>
+  <span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/search.svg)" aria-hidden="true"></span>
+</button>
+<!-- A paleta é criada por createCmd({ label, placeholder, items(), onPick(item) }).
+     Cada item: { title, desc, cat, icon }. --></script>
+</section>
+
+<section class="ds-page" id="quantidade" data-title="Quantidade" data-group="Formulários" data-keys="stepper quantidade número incremento carrinho" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Quantidade</h1>
+  <p class="ds-lead">Seletor numérico com limites. O botão de diminuir desativa no mínimo, o de aumentar no estoque disponível, e a pessoa também pode digitar.</p>
+  <div class="ds-spec"><div class="ds-stage" style="gap:32px;align-items:flex-start">
+    <div class="cz-field"><span class="cz-label" id="q1l">Padrão</span><div class="cz-qty" data-qty data-min="1" data-max="12" role="group" aria-labelledby="q1l"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="1" min="1" max="12" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div><span class="cz-help">12 em estoque</span></div>
+    <div class="cz-field"><span class="cz-label" id="q2l">Compacto</span><div class="cz-qty cz-qty--sm" data-qty data-min="0" data-max="3" role="group" aria-labelledby="q2l"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="3" min="0" max="3" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div><span class="cz-help">Limite atingido</span></div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-qty" role="group" aria-label="Quantidade">
+  <button type="button" aria-label="Diminuir">−</button>
+  <input type="number" value="1" min="1" max="12">
+  <button type="button" aria-label="Aumentar">+</button>
+</div></script>
+</section>
+
+<section class="ds-page" id="upload" data-title="Upload de arquivos" data-group="Formulários" data-keys="upload arquivo drag drop imagem anexo" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Upload de arquivos</h1>
+  <p class="ds-lead">Área de soltar com alternativa por clique. Diga antes quais formatos e tamanhos são aceitos, mostre o progresso de cada arquivo e explique a recusa quando houver.</p>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:560px">
+    <label class="cz-drop" data-drop>
+      {{i:upload}}
+      <strong>Solte as fotos do produto aqui</strong>
+      <small>ou <span class="cz-link">escolha no computador</span> · JPEG, PNG ou WebP até 10 MB</small>
+      <input type="file" multiple accept="image/*,.pdf" class="vh">
+    </label>
+    <div class="cz-upload-list" data-upload-list>
+      <div class="cz-upload-item"><span class="cz-file" data-file="png" style="--s:32px"></span><div><b>vaso-terra-frente.png</b><div class="cz-help">2,1 MB · enviado</div></div><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Remover arquivo" data-remove>{{i:x:i-sm}}</button></div>
+      <div class="cz-upload-item"><span class="cz-file" data-file="pdf" style="--s:32px"></span><div><b>ficha-tecnica.pdf</b><div class="cz-progress cz-progress--brand" style="margin-top:6px"><i style="--v:64%"></i></div></div><span class="cz-help num">64%</span></div>
+      <div class="cz-upload-item" style="border-color:var(--danger-line);background:var(--danger-bg)"><span class="cz-file" data-file="zip" style="--s:32px"></span><div><b>fotos-colecao.zip</b><div class="cz-error">Arquivos .zip não são aceitos. Envie as imagens separadas.</div></div><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Remover arquivo" data-remove>{{i:x:i-sm}}</button></div>
+    </div>
+  </div><div class="ds-cap"><span>Arraste arquivos de verdade para testar.</span></div></div>
+  <script type="text/plain" class="ds-snippet"><label class="cz-drop">
+  <strong>Solte as fotos do produto aqui</strong>
+  <small>ou escolha no computador · JPEG, PNG ou WebP até 10 MB</small>
+  <input type="file" multiple accept="image/*" class="vh">
+</label></script>
+</section>
+
+<section class="ds-page" id="data" data-title="Seletor de data" data-group="Formulários" data-keys="date picker calendário data período intervalo" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Seletor de data</h1>
+  <p class="ds-lead">Campo com máscara dd/mm/aaaa e calendário opcional. Para relatórios, o modo de período marca início e fim, com atalhos para intervalos comuns.</p>
+  <h2>Data única</h2>
+  <div class="ds-spec"><div class="ds-stage" style="min-height:440px;align-items:flex-start;gap:32px">
+    <div class="cz-field cz-pop" style="width:240px">
+      <label for="dt1">Início da promoção</label>
+      <div class="cz-input-wrap">{{i:calendar}}<input class="cz-input num" id="dt1" value="24/09/2026" data-date-input="cal1" aria-haspopup="dialog"></div>
+      <div class="cz-menu" style="padding:0;border:0;background:transparent;box-shadow:none" data-cal-pop hidden><div class="cz-cal" id="cal1" data-cal data-target="dt1" data-today="2026-09-22" data-value="2026-09-24"></div></div>
+    </div>
+    <div><p class="ds-label">Calendário aberto</p><div class="cz-cal" data-cal data-mode="range" data-today="2026-09-22" data-start="2026-09-14" data-end="2026-09-20"></div></div>
+  </div><div class="ds-cap"><span>Clique em dois dias no calendário à direita para marcar um período.</span></div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-cal">
+  <div class="cz-cal-head">…mês e setas…</div>
+  <div class="cz-cal-grid">
+    <span>D</span>…
+    <button aria-selected="true">24</button>
+    <button class="in-range">25</button>
+  </div>
+</div></script>
+</section>
+
+<section class="ds-page" id="chips" data-title="Chips e tags" data-group="Formulários" data-keys="chip filtro tag input etiqueta" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Chips e tags</h1>
+  <p class="ds-lead">Chips de filtro refinam uma lista na hora. Chips de entrada representam valores digitados, como tags de produto ou e-mails, e podem ser removidos.</p>
+  <h2>Filtro</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-chip" data-toggle aria-pressed="true">{{i:check:i-sm}}Em estoque</button>
+    <button class="cz-chip" data-toggle aria-pressed="false">Frete grátis</button>
+    <button class="cz-chip" data-toggle aria-pressed="false">Em promoção</button>
+    <button class="cz-chip" data-toggle aria-pressed="false">Lançamentos</button>
+    <button class="cz-chip">{{i:sliders:i-sm}}Mais filtros</button>
+  </div></div>
+  <h2>Entrada</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:520px">
+    <div class="cz-field"><label for="tags-in">Tags do produto</label>
+      <div class="cz-tags-input" data-tags>
+        <span class="cz-chip cz-chip--input">cerâmica<button class="x" aria-label="Remover cerâmica">{{i:x}}</button></span>
+        <span class="cz-chip cz-chip--input">feito à mão<button class="x" aria-label="Remover feito à mão">{{i:x}}</button></span>
+        <span class="cz-chip cz-chip--input">presente<button class="x" aria-label="Remover presente">{{i:x}}</button></span>
+        <input id="tags-in" placeholder="Digite e pressione Enter">
+      </div>
+    </div>
+    <div class="ds-row"><span class="cz-chip"><span class="cz-avatar cz-avatar--sky">MP</span>Marina Prado<button class="x" aria-label="Remover Marina">{{i:x}}</button></span><span class="cz-chip"><span class="cz-avatar cz-avatar--heather">EM</span>Eriton Muniz<button class="x" aria-label="Remover Eriton">{{i:x}}</button></span></div>
+  </div></div>
+  <h2>Tags de leitura</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <span class="cz-tag">{{i:tag:i-sm}}FRM-002</span><span class="cz-tag">Cerâmica</span><span class="cz-tag cz-tag--ship">{{i:truck:i-sm}}Envio em 24 h</span><span class="cz-tag cz-tag--ok">{{i:check:i-sm}}Em estoque</span><span class="cz-tag cz-tag--brand">{{i:percent:i-sm}}Primavera</span>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><button class="cz-chip" aria-pressed="true">Em estoque</button>
+<span class="cz-chip cz-chip--input">cerâmica
+  <button class="x" aria-label="Remover cerâmica">×</button>
+</span>
+<span class="cz-tag">FRM-002</span>
+<span class="cz-tag cz-tag--ship">…Envio em 24 h</span>
+<!-- Variantes: --ship (prazo e frete), --ok (estoque), --brand (campanha) --></script>
+</section>
+
+<section class="ds-page" id="formulario" data-title="Validação de formulário" data-group="Formulários" data-keys="form validação erro submit cadastro" hidden>
+  <p class="ds-crumb">Formulários</p>
+  <h1>Validação de formulário</h1>
+  <p class="ds-lead">Valide ao sair do campo e novamente ao enviar. Erros ficam junto do campo, dizem o que fazer e o foco vai para o primeiro problema. Tente enviar o formulário vazio.</p>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:640px">
+    <form class="ds-form-demo" novalidate data-validate style="display:grid;gap:18px">
+      <div class="ds-grid two" style="gap:16px">
+        <div class="cz-field"><label for="v-nome">Nome completo</label><input class="cz-input" id="v-nome" required data-msg="Informe o nome como está no documento." autocomplete="name"></div>
+        <div class="cz-field"><label for="v-cpf">CPF</label><input class="cz-input num" id="v-cpf" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" data-msg="Use 11 números, como 123.456.789-09." inputmode="numeric"></div>
+      </div>
+      <div class="cz-field"><label for="v-email">E-mail</label><input class="cz-input" id="v-email" type="email" required data-msg="Use um e-mail completo, como nome@loja.com.br." autocomplete="email"></div>
+      <div class="cz-field"><label for="v-seg">Segmento da loja</label><select class="cz-select" id="v-seg" required data-msg="Escolha o segmento principal."><option value="">Escolha</option><option>Casa e decoração</option><option>Moda</option><option>Farmácia e saúde</option><option>Alimentos</option></select></div>
+      <label class="cz-check"><input type="checkbox" id="v-termos" required data-msg="Aceite os termos para criar a conta."><span>Li e aceito os termos de uso</span></label>
+      <div class="ds-row"><button class="cz-btn" type="submit">Criar conta</button><button class="cz-btn cz-btn--ghost" type="reset">Limpar</button></div>
+    </form>
+  </div></div>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Mensagens que ajudam</h3><ul><li>“Use 11 números, como 123.456.789-09.”</li><li>“Escolha um PDF, JPEG ou PNG de até 10 MB.”</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Mensagens vagas</h3><ul><li>“Campo inválido.”</li><li>“Ops! Algo deu errado.”</li></ul></div>
+  </div>
+</section>

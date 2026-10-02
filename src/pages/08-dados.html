@@ -1,0 +1,359 @@
+<section class="ds-page" id="cards" data-title="Cards" data-group="Dados" data-keys="card cartão superfície container" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Cards</h1>
+  <p class="ds-lead">Agrupam conteúdo sobre um mesmo assunto. O card padrão é plano com borda; a sombra fica para o card elevado que precisa se destacar, e o escuro para um único destaque por tela.</p>
+  <div class="ds-grid three" style="margin-top:24px">
+    <article class="cz-card"><img class="cz-card-media" src="{{img:img-loja.webp}}" alt="Duas pessoas conversando em uma loja de objetos"><div class="cz-card-body"><h4>Venda também na loja física</h4><p>Estoque único entre site, marketplace e balcão.</p></div><div class="cz-card-foot"><a class="cz-link" href="#segmentos">Conhecer o omnichannel</a></div></article>
+    <article class="cz-card"><div class="cz-card-body"><span class="cz-ill-icon cz-ill-icon--sm">{{i:settings-automation}}</span><h4>Automação de pedidos</h4><p>Gere etiquetas e notas assim que o pagamento for aprovado.</p></div><div class="cz-card-foot"><label class="cz-switch"><input type="checkbox" checked> Ativa</label></div></article>
+    <article class="cz-card cz-card--raised"><div class="cz-card-body"><span class="cz-badge cz-badge--brand" style="justify-self:start">Recomendado</span><h4>Plano Pro</h4><p>Marketplaces, nota fiscal automática e relatórios completos.</p><p style="font:700 28px var(--font-ui);letter-spacing:-.01em;color:var(--text)" class="num">R$ 249<span class="cz-help" style="font-family:var(--font-ui)">/mês</span></p></div><div class="cz-card-foot"><button class="cz-btn cz-btn--block">Assinar o Pro</button></div></article>
+    <article class="cz-card cz-card--interactive" tabindex="0"><div class="cz-card-body"><div class="ds-row" style="justify-content:space-between"><span class="cz-avatar cz-avatar--sq cz-avatar--brand">{{i:store:i-sm}}</span>{{i:chev-right}}</div><h4>Ateliê Forma</h4><p>Objetos, ideias e curadoria para casa.</p></div></article>
+    <article class="cz-card cz-card--inset"><div class="cz-card-body"><h4>Dica</h4><p>Produtos com três fotos ou mais vendem até 2 vezes mais no marketplace.</p></div></article>
+    <article class="cz-card cz-card--dark"><div class="cz-card-body"><span class="cz-help" style="color:#c9c4bd">Receita no período</span><p style="font:600 36px var(--font-ui);letter-spacing:-.01em;color:#fff" class="num">R$ 42.850</p><p>{{i:arrow-up-right:i-sm}} 12,4% sobre o mês anterior</p></div></article>
+  </div>
+  <div class="ds-cap" style="border:var(--hairline) solid var(--line);border-radius:8px;margin-top:14px"><span>Mídia · Padrão · Elevado · Interativo · Rebaixado · Escuro</span></div>
+  <script type="text/plain" class="ds-snippet"><article class="cz-card">
+  <img class="cz-card-media" src="…" alt="…">
+  <div class="cz-card-body"><h4>Título</h4><p>Descrição curta.</p></div>
+  <div class="cz-card-foot"><a class="cz-link" href="…">Ação</a></div>
+</article>
+<!-- Variantes: --raised --interactive --inset --dark --></script>
+</section>
+
+<section class="ds-page" id="tabela" data-title="Tabela" data-group="Dados" data-keys="table tabela dados ordenação filtro seleção produtos lista" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Tabela</h1>
+  <p class="ds-lead">A tabela de produtos do kit, completa: busca em paleta, filtros, ordenação por coluna, seleção e paginação. Ao selecionar produtos, uma barra flutuante reúne as ações em massa do catálogo. Tudo abaixo funciona com os dados de exemplo.</p>
+  <div class="cz-table-wrap" style="margin-top:24px" data-products-table>
+    <div class="cz-table-tools">
+      <button type="button" class="cz-cmd-trigger" data-t-find aria-label="Buscar produtos"><span class="lbl">Buscar produtos...</span>{{i:search}}</button><span class="cz-chip cz-chip--input" data-t-q-chip hidden><span data-t-q-text></span><button class="x" type="button" data-t-q-clear aria-label="Remover filtro de busca">{{i:x}}</button></span>
+      <select class="cz-select" aria-label="Categoria" data-t-cat><option value="">Todas as categorias</option><option>Cerâmica</option><option>Iluminação</option><option>Papelaria</option><option>Embalagens</option><option>Têxteis</option></select>
+      <select class="cz-select" aria-label="Status" data-t-status><option value="">Todos os status</option><option>Ativo</option><option>Baixo estoque</option><option>Esgotado</option></select>
+      <div style="margin-left:auto" class="ds-row"><button class="cz-btn cz-btn--secondary" data-toast="success" data-title="Exportação iniciada" data-msg="Você recebe o CSV por e-mail em instantes.">{{i:download}}Exportar CSV</button><button class="cz-btn">{{i:plus}}Novo produto</button></div>
+    </div>
+    <div class="cz-action-bar" data-t-bulk role="region" aria-label="Ações para os produtos selecionados" hidden>
+      <div class="cz-action-bar-count"><b data-t-bulk-count aria-live="polite">1 selecionado</b><button type="button" class="cz-action-bar-link" data-t-select-all hidden></button></div>
+      <span class="cz-action-bar-sep" aria-hidden="true"></span>
+      <button type="button" class="cz-action-bar-btn" data-bulk="price" title="Ajustar preço">{{i:tag}}<span>Ajustar preço</span></button>
+      <button type="button" class="cz-action-bar-btn" data-bulk="publish" title="Publicar no marketplace">{{i:globe}}<span>Publicar no marketplace</span></button>
+      <button type="button" class="cz-action-bar-btn" data-bulk="export" title="Exportar CSV">{{i:download}}<span>Exportar</span></button>
+      <div class="cz-pop">
+        <button type="button" class="cz-action-bar-btn" data-menu-trigger aria-haspopup="menu" aria-expanded="false" title="Mais ações">{{i:more}}<span>Mais</span></button>
+        <div class="cz-menu cz-menu--up" role="menu" hidden>
+          <button class="cz-menu-item" role="menuitem" data-bulk="promo">{{i:percent}}Adicionar à promoção</button>
+          <button class="cz-menu-item" role="menuitem" data-bulk="labels">{{i:barcode}}Imprimir etiquetas</button>
+          <button class="cz-menu-item" role="menuitem" data-bulk="pause">{{i:eye-off}}Pausar vendas</button>
+          <button class="cz-menu-item" role="menuitem" data-bulk="duplicate">{{i:copy}}Duplicar</button>
+        </div>
+      </div>
+      <button type="button" class="cz-action-bar-btn cz-action-bar-btn--danger" data-bulk="delete" title="Excluir">{{i:trash}}<span>Excluir</span></button>
+      <span class="cz-action-bar-sep" aria-hidden="true"></span>
+      <button type="button" class="cz-action-bar-close" data-bulk="clear" aria-label="Limpar seleção">{{i:x}}</button>
+    </div>
+    <div class="cz-table-scroll">
+      <table class="cz-table">
+        <thead><tr>
+          <th style="width:40px;padding-right:0"><label class="cz-check cz-check--round"><input type="checkbox" aria-label="Selecionar todos da página" data-t-all></label></th>
+          <th aria-sort="none" data-sort="sku"><button>SKU<span class="sort-ic">{{i:sort:i-sm}}{{i:arrow-up:i-sm}}</span></button></th>
+          <th aria-sort="none" data-sort="name"><button>Produto<span class="sort-ic">{{i:sort:i-sm}}{{i:arrow-up:i-sm}}</span></button></th>
+          <th class="r" aria-sort="none" data-sort="price"><button>Preço<span class="sort-ic">{{i:sort:i-sm}}{{i:arrow-up:i-sm}}</span></button></th>
+          <th class="r" aria-sort="none" data-sort="stock"><button>Estoque<span class="sort-ic">{{i:sort:i-sm}}{{i:arrow-up:i-sm}}</span></button></th>
+          <th>Status</th>
+          <th aria-sort="none" data-sort="updated"><button>Atualizado<span class="sort-ic">{{i:sort:i-sm}}{{i:arrow-up:i-sm}}</span></button></th>
+          <th class="r" style="width:132px">Ações</th>
+        </tr></thead>
+        <tbody data-t-body></tbody>
+      </table>
+    </div>
+    <div data-t-empty hidden><div class="cz-empty"><h4>Nenhum produto encontrado</h4><p>Tente outro termo ou limpe os filtros.</p><div class="ds-row"><button class="cz-btn cz-btn--secondary cz-btn--sm" data-t-clear>Limpar filtros</button></div></div></div>
+    <div class="cz-table-foot"><span data-t-info></span><div class="cz-pagination" data-t-pages></div></div>
+  </div>
+  <h2>Barra de ações em massa</h2>
+  <p>Aparece ao selecionar uma ou mais linhas e fica presa ao pé da tela enquanto a pessoa rola a lista. Mostra quantos itens estão selecionados, oferece selecionar todos os resultados do filtro e reúne as ações que valem para vários produtos de uma vez. Esc ou o botão de fechar limpam a seleção.</p>
+  <table class="ds-props">
+    <thead><tr><th>Ação</th><th>O que faz</th></tr></thead>
+    <tbody>
+      <tr><td>Ajustar preço</td><td>Aumenta ou reduz o preço em percentual, com prévia antes de aplicar.</td></tr>
+      <tr><td>Publicar no marketplace</td><td>Envia os anúncios para os canais conectados.</td></tr>
+      <tr><td>Exportar</td><td>Gera um CSV só com os itens selecionados.</td></tr>
+      <tr><td>Mais</td><td>Adicionar à promoção, imprimir etiquetas de código de barras, pausar vendas e duplicar.</td></tr>
+      <tr><td>Excluir</td><td>Remove da lista na hora, com “Desfazer” no aviso por 8 segundos.</td></tr>
+    </tbody>
+  </table>
+  <p>Deixe visíveis até quatro ações, as mais usadas naquela lista; o resto vai para “Mais”. Excluir fica sempre por último, separado pela cor. Em telas estreitas os rótulos somem e ficam só os ícones, com o nome no título.</p>
+
+  <script type="text/plain" class="ds-snippet"><div class="cz-table-wrap">
+  <div class="cz-table-tools">…busca (cz-cmd-trigger) e filtros…</div>
+  <div class="cz-table-scroll">
+    <table class="cz-table">
+      <thead><tr><th aria-sort="ascending"><button>Produto</button></th>…</tr></thead>
+      <tbody><tr class="is-selected">…</tr></tbody>
+    </table>
+  </div>
+  <div class="cz-table-foot">…paginação…</div>
+  <div class="cz-action-bar" role="region" aria-label="Ações para os produtos selecionados">
+    <div class="cz-action-bar-count"><b>3 selecionados</b></div>
+    <span class="cz-action-bar-sep"></span>
+    <button class="cz-action-bar-btn">…<span>Ajustar preço</span></button>
+    <button class="cz-action-bar-btn cz-action-bar-btn--danger">…<span>Excluir</span></button>
+    <button class="cz-action-bar-close" aria-label="Limpar seleção">…</button>
+  </div>
+</div></script>
+<div class="cz-scrim" id="dlg-bulk-price" hidden>
+  <div class="cz-dialog" role="dialog" aria-modal="true" aria-labelledby="dbp-t">
+    <div class="cz-dialog-head"><h3 id="dbp-t">Ajustar preço</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar">{{i:x}}</button></div>
+    <form class="cz-dialog-body" data-bp-form>
+      <p data-bp-desc></p>
+      <div class="cz-segmented" data-bp-dir aria-label="Tipo de ajuste" style="justify-self:start"><button type="button" aria-pressed="true" data-v="-1">Reduzir</button><button type="button" aria-pressed="false" data-v="1">Aumentar</button></div>
+      <div class="cz-field"><label for="bp-pct">Percentual</label><div class="cz-input-wrap" style="max-width:160px"><input class="cz-input num" id="bp-pct" type="number" min="1" max="90" step="1" value="10"><span class="cz-suffix">%</span></div></div>
+      <p class="cz-help" data-bp-preview></p>
+    </form>
+    <div class="cz-dialog-foot"><button class="cz-btn cz-btn--ghost" data-close>Cancelar</button><button class="cz-btn" data-bp-apply>Aplicar novo preço</button></div>
+  </div>
+</div>
+</section>
+
+<section class="ds-page" id="lista" data-title="Lista" data-group="Dados" data-keys="list lista linhas itens conectores arquivos conta" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Lista</h1>
+  <p class="ds-lead">Linhas com elemento à esquerda, texto em duas linhas e ação à direita. Serve para arquivos, conectores, contas e qualquer coleção sem colunas comparáveis.</p>
+  <div class="ds-grid two" style="margin-top:24px">
+    <div><p class="ds-label">Configurações de linha</p><ul class="cz-list">
+      <li class="cz-list-item"><span class="cz-file" data-file="pdf" style="--s:32px"></span><div class="body"><b>catalogo-forma.pdf</b><small>Arquivo · atualizado hoje</small></div><button class="cz-icon-btn cz-icon-btn--sm" aria-label="Baixar">{{i:download}}</button></li>
+      <li class="cz-list-item"><span class="lead">{{i:calendar}}</span><div class="body"><b>Google Agenda <span class="cz-badge cz-badge--info">Beta</span></b><small>Conector</small></div><label class="cz-switch"><input type="checkbox" checked aria-label="Conectado"></label></li>
+      <li class="cz-list-item cz-list-item--link" tabindex="0"><span class="lead">{{i:store}}</span><div class="body"><b>Ateliê Forma <span class="cz-badge cz-badge--dark">Pro</span></b><small>Objetos, ideias e curadoria para casa</small></div>{{i:chev-right}}</li>
+      <li class="cz-list-item"><span class="lead"><img src="{{img:prod-lamp.webp}}" alt=""></span><div class="body"><b>Luminária Círculo</b><small>FRM-001 · 8 em estoque</small></div><b class="num">R$ 64,90</b></li>
+    </ul></div>
+    <div><p class="ds-label">Seletor de conta</p><ul class="cz-list" role="listbox" aria-label="Contas" data-single-select>
+      <li class="cz-list-item cz-list-item--link" role="option" aria-selected="false" tabindex="0"><span class="cz-avatar cz-avatar--sky">SC</span><div class="body"><b>Sarah Chen</b><small>Plano Free · <span class="cz-link">Fazer upgrade</span></small></div></li>
+      <li class="cz-list-item cz-list-item--link" role="option" aria-selected="true" tabindex="0"><span class="cz-avatar cz-avatar--sky">SC</span><div class="body"><b>Sarah Chen</b><small>Plano Pro</small></div>{{i:check}}</li>
+      <li class="cz-list-item cz-list-item--link" role="option" aria-selected="false" tabindex="0"><span class="cz-avatar cz-avatar--sq cz-avatar--fig">AC</span><div class="body"><b>Acme Co.</b><small>Plano Team</small></div></li>
+      <li class="cz-list-item cz-list-item--link" role="option" aria-selected="false" tabindex="0"><span class="cz-avatar cz-avatar--sq cz-avatar--cactus">AC</span><div class="body"><b>Acme Co.</b><small>Enterprise</small></div></li>
+    </ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><ul class="cz-list">
+  <li class="cz-list-item">
+    <span class="lead">…ícone ou imagem…</span>
+    <div class="body"><b>Google Agenda</b><small>Conector</small></div>
+    <label class="cz-switch"><input type="checkbox" checked></label>
+  </li>
+</ul></script>
+</section>
+
+<section class="ds-page" id="metricas" data-title="Métricas e gráficos" data-group="Dados" data-keys="kpi métrica gráfico chart sparkline barras dashboard receita" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Métricas e gráficos</h1>
+  <p class="ds-lead">O número vem primeiro, em Inter com peso 600 e dígitos tabulares; a variação diz a direção com seta, cor e texto. Gráficos usam laranja para a série principal e carvão para a comparação.</p>
+  <h2>Cartão de métrica</h2>
+  <p>O número vem em primeiro plano; o gráfico dos últimos dias sangra por trás, esmaecendo perto do texto. Passe o mouse sobre o gráfico para ver o valor de cada dia; os botões trocam o período e a forma do gráfico.</p>
+  <div class="ds-grid two">
+    <div class="cz-metric-card" data-metric-card data-unit="currency" data-period="30" data-view="line">
+      <div class="cz-metric-region"><div class="cz-metric-fade"></div><svg role="img" aria-label="Receita diária, últimos 30 dias"></svg></div>
+      <div class="cz-metric-head">
+        <div class="cz-metric-titlewrap"><h4>Receita</h4>
+          <div class="cz-metric-view" data-mc-view role="group" aria-label="Tipo de gráfico">
+            <button type="button" data-mc-view="line" aria-pressed="true" aria-label="Linha">{{i:trend:i-sm}}</button>
+            <button type="button" data-mc-view="bar" aria-pressed="false" aria-label="Barras">{{i:analytics:i-sm}}</button>
+          </div>
+        </div>
+        <div class="cz-metric-aux">
+          <span class="cz-metric-trend" data-mc-trend></span>
+          <div class="cz-metric-period" data-mc-period role="group" aria-label="Período">
+            <button type="button" data-mc-period="7" aria-pressed="false">7d</button>
+            <button type="button" data-mc-period="30" aria-pressed="true">30d</button>
+            <button type="button" data-mc-period="90" aria-pressed="false">90d</button>
+          </div>
+        </div>
+      </div>
+      <div class="cz-metric-total num" data-mc-total>—</div>
+      <div class="cz-metric-spacer"></div>
+      <div class="cz-metric-foot">
+        <span class="delta num" data-mc-delta></span>
+        <span class="cz-metric-stats num"><b data-mc-peak></b> pico<span class="sep">·</span><b data-mc-low></b> mínimo<span class="sep">·</span><b data-mc-avg></b> média</span>
+      </div>
+      <div class="cz-metric-tip"></div>
+    </div>
+    <div class="cz-metric-card" data-metric-card data-demo="pedidos" data-period="7" data-view="bar">
+      <div class="cz-metric-region"><div class="cz-metric-fade"></div><svg role="img" aria-label="Pedidos por dia, últimos 7 dias"></svg></div>
+      <div class="cz-metric-head">
+        <div class="cz-metric-titlewrap"><h4>Pedidos</h4>
+          <div class="cz-metric-view" data-mc-view role="group" aria-label="Tipo de gráfico">
+            <button type="button" data-mc-view="line" aria-pressed="false" aria-label="Linha">{{i:trend:i-sm}}</button>
+            <button type="button" data-mc-view="bar" aria-pressed="true" aria-label="Barras">{{i:analytics:i-sm}}</button>
+          </div>
+        </div>
+        <div class="cz-metric-aux">
+          <span class="cz-metric-trend" data-mc-trend></span>
+          <div class="cz-metric-period" data-mc-period role="group" aria-label="Período">
+            <button type="button" data-mc-period="7" aria-pressed="true">7d</button>
+            <button type="button" data-mc-period="30" aria-pressed="false">30d</button>
+            <button type="button" data-mc-period="90" aria-pressed="false">90d</button>
+          </div>
+        </div>
+      </div>
+      <div class="cz-metric-total num" data-mc-total>—</div>
+      <div class="cz-metric-spacer"></div>
+      <div class="cz-metric-foot">
+        <span class="delta num" data-mc-delta></span>
+        <span class="cz-metric-stats num"><b data-mc-peak></b> pico<span class="sep">·</span><b data-mc-low></b> mínimo<span class="sep">·</span><b data-mc-avg></b> média</span>
+      </div>
+      <div class="cz-metric-tip"></div>
+    </div>
+  </div>
+  <h3 class="ds-h3">Carregando</h3>
+  <div class="cz-metric-card" data-loading style="max-width:380px" aria-busy="true">
+    <div class="cz-metric-head"><div class="cz-skel" style="height:20px;width:90px"></div><div class="cz-skel" style="height:26px;width:80px"></div></div>
+    <div class="cz-skel" style="height:44px;width:160px;margin:14px 22px 0;border-radius:6px"></div>
+    <div class="cz-metric-spacer"></div>
+    <div class="cz-metric-foot"><div class="cz-skel" style="height:14px;width:100px"></div><div class="cz-skel" style="height:14px;width:130px"></div></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-metric-card" data-metric-card data-unit="currency" data-period="30" data-view="line">
+  <div class="cz-metric-region"><div class="cz-metric-fade"></div><svg role="img" aria-label="…"></svg></div>
+  <div class="cz-metric-head">
+    <div class="cz-metric-titlewrap"><h4>Receita</h4>
+      <div class="cz-metric-view" data-mc-view>
+        <button data-mc-view="line" aria-pressed="true">…</button>
+        <button data-mc-view="bar" aria-pressed="false">…</button>
+      </div>
+    </div>
+    <div class="cz-metric-aux">
+      <span class="cz-metric-trend" data-mc-trend></span>
+      <div class="cz-metric-period" data-mc-period>
+        <button data-mc-period="7">7d</button><button data-mc-period="30" aria-pressed="true">30d</button><button data-mc-period="90">90d</button>
+      </div>
+    </div>
+  </div>
+  <div class="cz-metric-total" data-mc-total></div>
+  <div class="cz-metric-spacer"></div>
+  <div class="cz-metric-foot">
+    <span class="delta" data-mc-delta></span>
+    <span class="cz-metric-stats"><b data-mc-peak></b> pico<span class="sep">·</span><b data-mc-low></b> mínimo<span class="sep">·</span><b data-mc-avg></b> média</span>
+  </div>
+  <div class="cz-metric-tip"></div>
+</div>
+<!-- data-unit="currency" formata em R$; sem o atributo, mostra números inteiros -->
+</script>
+
+  <h2>Cartões compactos</h2>
+  <p>Para uma linha densa de indicadores, sem interação — o número, a variação e um traço do período.</p>
+  <div class="ds-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+    <div class="cz-stat cz-stat--dark"><span class="lbl">Receita · 30 dias</span><span class="val">R$ 42.850</span><span class="delta up">{{i:arrow-up-right:i-sm}}12,4% <span>vs. agosto</span></span><svg class="spark" data-spark="18,22,19,26,24,31,29,35,33,41" data-color="#ff5e2c" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="cz-stat"><span class="lbl">{{i:bag:i-sm}}Pedidos</span><span class="val">248</span><span class="delta up">{{i:arrow-up-right:i-sm}}8,1% <span>vs. agosto</span></span><svg class="spark" data-spark="12,14,11,16,15,18,17,19,22,21" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="cz-stat"><span class="lbl">{{i:percent:i-sm}}Conversão</span><span class="val">2,8%</span><span class="delta down">{{i:arrow-down:i-sm}}0,3 p.p. <span>vs. agosto</span></span><svg class="spark" data-spark="3.4,3.2,3.3,3.1,3.0,3.1,2.9,2.9,2.8,2.8" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="cz-stat"><span class="lbl">{{i:card:i-sm}}Ticket médio</span><span class="val">R$ 172,78</span><span class="delta up">{{i:arrow-up-right:i-sm}}4,0% <span>vs. agosto</span></span><svg class="spark" data-spark="160,158,165,162,168,166,170,169,171,173" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+  </div>
+
+  <h2>Vendas por canal</h2>
+  <div class="ds-grid two">
+    <div class="cz-card"><div class="cz-card-body" style="gap:14px"><h4>Receita por canal</h4>
+      <div data-bars='[["Loja online",21400],["Mercado Livre",11200],["Shopee",6100],["Loja física",4150]]'></div>
+    </div></div>
+    <div class="cz-card"><div class="cz-card-body" style="gap:14px"><h4>Status dos pedidos</h4>
+      <div style="display:flex;height:14px;border-radius:99px;overflow:hidden;gap:2px"><i style="flex:58;background:var(--chart-1)"></i><i style="flex:22;background:var(--chart-3)"></i><i style="flex:14;background:var(--chart-4)"></i><i style="flex:6;background:var(--chart-5)"></i></div>
+      <div class="cz-legend" style="display:grid;gap:8px">
+        <span><i style="background:var(--chart-1)"></i>Entregues · 144 <b class="num" style="margin-left:auto">58%</b></span>
+        <span><i style="background:var(--chart-3)"></i>Em trânsito · 55 <b class="num" style="margin-left:auto">22%</b></span>
+        <span><i style="background:var(--chart-4)"></i>A enviar · 35 <b class="num" style="margin-left:auto">14%</b></span>
+        <span><i style="background:var(--chart-5)"></i>Devoluções · 14 <b class="num" style="margin-left:auto">6%</b></span>
+      </div>
+    </div></div>
+  </div>
+  <h2>Paleta de dados</h2>
+  <div class="ds-row">
+    <span class="cz-tag"><i style="width:12px;height:12px;border-radius:3px;background:#ff5e2c"></i>--chart-1 Laranja</span>
+    <span class="cz-tag"><i style="width:12px;height:12px;border-radius:3px;background:var(--chart-2)"></i>--chart-2 Carvão</span>
+    <span class="cz-tag"><i style="width:12px;height:12px;border-radius:3px;background:#8dbacb"></i>--chart-3 Sky</span>
+    <span class="cz-tag"><i style="width:12px;height:12px;border-radius:3px;background:#7b9771"></i>--chart-4 Cactus</span>
+    <span class="cz-tag"><i style="width:12px;height:12px;border-radius:3px;background:#b8a8c4"></i>--chart-5 Heather</span>
+  </div>
+</section>
+
+<section class="ds-page" id="avatar" data-title="Avatar" data-group="Dados" data-keys="avatar foto perfil iniciais usuário grupo" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Avatar</h1>
+  <p class="ds-lead">Pessoas são redondas; lojas e empresas, quadradas com cantos suaves. Sem foto, use as iniciais sobre uma das secundárias da marca.</p>
+  <div class="ds-spec"><div class="ds-stage" style="gap:20px">
+    <span class="cz-avatar" style="--s:24px">MP</span>
+    <span class="cz-avatar cz-avatar--sky" style="--s:32px">EM</span>
+    <span class="cz-avatar cz-avatar--heather">SC</span>
+    <span class="cz-avatar cz-avatar--brand" style="--s:48px">MP<span class="st"></span></span>
+    <span class="cz-avatar" style="--s:64px"><img src="{{img:img-retrato.webp}}" alt="Retrato de Marina Prado"></span>
+    <span class="cz-avatar cz-avatar--sq cz-avatar--fig" style="--s:48px">AF</span>
+    <span class="cz-avatar cz-avatar--sq cz-avatar--cactus" style="--s:48px">{{i:store}}</span>
+    <span class="cz-avatar-stack"><span class="cz-avatar cz-avatar--sky">MP</span><span class="cz-avatar cz-avatar--heather">EM</span><span class="cz-avatar">SC</span><span class="cz-avatar" style="background:var(--inset);color:var(--text-2)">+4</span></span>
+  </div><div class="ds-cap"><span>24 · 32 · 36 · 48 com status online · foto · loja · grupo</span></div></div>
+  <script type="text/plain" class="ds-snippet"><span class="cz-avatar cz-avatar--sky">EM</span>
+<span class="cz-avatar" style="--s:48px"><img src="…" alt="Marina Prado"></span>
+<span class="cz-avatar cz-avatar--sq cz-avatar--fig">AF</span></script>
+</section>
+
+<section class="ds-page" id="acordeao" data-title="Acordeão" data-group="Dados" data-keys="accordion acordeão expandir faq perguntas" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Acordeão</h1>
+  <p class="ds-lead">Esconde detalhes que só parte das pessoas precisa, como perguntas frequentes e configurações avançadas. O título diz exatamente o que há dentro.</p>
+  <div class="cz-acc" style="margin-top:24px" data-accordion>
+    <div class="cz-acc-item"><h4><button class="cz-acc-btn" aria-expanded="true" aria-controls="acc1">Quanto tempo leva para o Pix cair?{{i:chev-down}}</button></h4><div class="cz-acc-panel" id="acc1">A confirmação chega em até 10 segundos e o valor fica disponível para saque no mesmo dia útil.</div></div>
+    <div class="cz-acc-item"><h4><button class="cz-acc-btn" aria-expanded="false" aria-controls="acc2">Posso vender no marketplace e na loja com o mesmo estoque?{{i:chev-down}}</button></h4><div class="cz-acc-panel" id="acc2" hidden>Sim. O estoque é único: cada venda, em qualquer canal, desconta a mesma quantidade em todos os outros.</div></div>
+    <div class="cz-acc-item"><h4><button class="cz-acc-btn" aria-expanded="false" aria-controls="acc3">Como emito nota fiscal?{{i:chev-down}}</button></h4><div class="cz-acc-panel" id="acc3" hidden>Conecte seu certificado A1 em Configurações e ative a emissão automática. No plano Essencial, a emissão é manual, pedido a pedido.</div></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-acc">
+  <div class="cz-acc-item">
+    <h4><button class="cz-acc-btn" aria-expanded="false" aria-controls="p1">Pergunta</button></h4>
+    <div class="cz-acc-panel" id="p1" hidden>Resposta.</div>
+  </div>
+</div></script>
+</section>
+
+<section class="ds-page" id="timeline" data-title="Linha do tempo" data-group="Dados" data-keys="timeline histórico atividade eventos rastreio" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Linha do tempo</h1>
+  <p class="ds-lead">Histórico de eventos em ordem, do mais antigo ao mais recente: rastreio de pedidos, atividade de um ticket, alterações em um produto.</p>
+  <div class="ds-grid two" style="margin-top:24px">
+    <div class="cz-card"><div class="cz-card-body"><h4 style="margin-bottom:12px">Rastreio · #CV-2048</h4>
+      <ol class="cz-timeline">
+        <li class="done"><span class="dot">{{i:check}}</span><div><b>Pedido pago</b><small>22 set., 14:32 · Pix</small></div></li>
+        <li class="done"><span class="dot">{{i:check}}</span><div><b>Separado e embalado</b><small>22 set., 17:10 · Marina Prado</small></div></li>
+        <li class="now"><span class="dot">{{i:truck}}</span><div><b>Em trânsito</b><small>23 set., 08:02 · Centro de distribuição Barueri</small></div></li>
+        <li class="next"><span class="dot">{{i:home}}</span><div><b>Entrega prevista</b><small>24 set., até 18:00</small></div></li>
+      </ol>
+    </div></div>
+    <div class="cz-card"><div class="cz-card-body"><h4 style="margin-bottom:12px">Atividade do produto</h4>
+      <ol class="cz-timeline">
+        <li><span class="dot">{{i:edit}}</span><div><b>Preço alterado de R$ 199,90 para R$ 189,90</b><small>Hoje, 10:14 · Marina Prado</small></div></li>
+        <li><span class="dot">{{i:image}}</span><div><b>3 fotos adicionadas</b><small>Ontem, 16:40 · Eriton Muniz</small></div></li>
+        <li><span class="dot">{{i:globe}}</span><div><b>Publicado no Mercado Livre</b><small>20 set., 09:00 · Automação</small></div></li>
+      </ol>
+    </div></div>
+  </div>
+</section>
+
+<section class="ds-page" id="arquivos" data-title="Ícones de arquivo" data-group="Dados" data-keys="file icon arquivo pdf csv xls xml imagem vídeo formato extensão" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Ícones de arquivo</h1>
+  <p class="ds-lead">Cartão de arquivo com dobra discreta, símbolo do tipo no centro e faixa com a extensão. O símbolo diz o que o arquivo é (imagem, planilha, vídeo) e a cor da faixa ajuda a achar o formato numa lista.</p>
+  <h2>Formatos</h2>
+  <div class="ds-spec"><div class="ds-stage"><div class="ds-file-grid"><figure class="ds-file-card"><span class="cz-file" data-file="pdf"></span><figcaption><b>Documento PDF</b><small>.pdf</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="jpeg"></span><figcaption><b>Imagem JPEG</b><small>.jpeg</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="png"></span><figcaption><b>Imagem PNG</b><small>.png</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="webp"></span><figcaption><b>Imagem WebP</b><small>.webp</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="gif"></span><figcaption><b>Imagem animada</b><small>.gif</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="svg"></span><figcaption><b>Vetor SVG</b><small>.svg</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="docx"></span><figcaption><b>Documento de texto</b><small>.docx</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="txt"></span><figcaption><b>Texto simples</b><small>.txt</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="xlsx"></span><figcaption><b>Planilha</b><small>.xlsx</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="csv"></span><figcaption><b>Dados tabulares</b><small>.csv</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="pptx"></span><figcaption><b>Apresentação</b><small>.pptx</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="zip"></span><figcaption><b>Arquivo compactado</b><small>.zip</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="mp4"></span><figcaption><b>Vídeo</b><small>.mp4</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="mp3"></span><figcaption><b>Áudio</b><small>.mp3</small></figcaption></figure><figure class="ds-file-card"><span class="cz-file" data-file="xml"></span><figcaption><b>Nota fiscal XML</b><small>.xml</small></figcaption></figure></div></div><div class="ds-cap"><span>15 formatos, um símbolo por tipo: PDF, imagem, vetor, texto, planilha, apresentação, compactado, vídeo, áudio e código</span></div></div>
+  <h2>Tamanhos</h2>
+  <div class="ds-spec"><div class="ds-stage" style="align-items:flex-end;gap:24px">
+    <span class="cz-file" data-file="xlsx" style="--s:32px"></span><span class="cz-file" data-file="xlsx" style="--s:64px"></span><span class="cz-file" data-file="xlsx" style="--s:88px"></span><span class="cz-file" data-file="xlsx" style="--s:104px"></span>
+  </div><div class="ds-cap"><span>32 · 64 · 88 · 104 px</span><b>Abaixo de 48 px, mostre o nome do arquivo ao lado</b></div></div>
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Use o ícone ao lado do nome e do tamanho do arquivo, como nas listas e no upload.</li><li>Formato desconhecido? O ícone genérico com a extensão real serve.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Trocar as cores da faixa por status (erro, sucesso). O estado vai na linha, não no ícone.</li><li>Ícone de arquivo sozinho como botão de baixar.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><span class="cz-file" data-file="pdf" style="--s:64px"></span>
+<!-- O script do kit desenha o SVG a partir de data-file: pdf, jpeg, png, webp, gif, svg,
+     docx, txt, xlsx, csv, pptx, zip, mp4, mp3, xml, json --></script>
+</section>
+
+<section class="ds-page" id="divisores" data-title="Divisores e atalhos" data-group="Dados" data-keys="divider separador hr kbd teclado atalho" hidden>
+  <p class="ds-crumb">Dados</p>
+  <h1>Divisores e atalhos</h1>
+  <p class="ds-lead">Divisores separam grupos quando o espaço sozinho não basta. Teclas de atalho aparecem em menus e na ajuda.</p>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:480px">
+    <p>Endereço de cobrança</p><hr class="cz-divider"><p>Endereço de entrega</p>
+    <div class="cz-divider-label">ou continue com</div>
+    <div class="ds-row"><button class="cz-btn cz-btn--secondary">{{i:globe:i-sm}}Google</button><button class="cz-btn cz-btn--secondary">{{i:mail:i-sm}}Link por e-mail</button></div>
+    <p class="cz-help">Abra a busca com <kbd class="cz-kbd">Ctrl</kbd> <kbd class="cz-kbd">K</kbd> e feche com <kbd class="cz-kbd">Esc</kbd>.</p>
+  </div></div>
+</section>

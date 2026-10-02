@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novo protótipo · Convertize</title>
+<!-- 1. Fontes: Inter na interface e nos números, Tenor Sans só em títulos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tenor+Sans&display=swap">
+<!-- 2. Kit: tokens, ícones e componentes cz-* -->
+<link rel="stylesheet" href="convertize.css">
+<style>
+  /* Só o layout desta página. Os componentes vêm do kit. */
+  body{display:flex;min-height:100vh}
+  .app-side.cz-sidebar{position:sticky;top:0;height:100vh}
+  .app-main{flex:1;min-width:0;padding:28px clamp(16px,4vw,48px) 64px}
+  .app-top{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+  .app-top h1{font:400 34px/1.1 var(--font-display);margin-right:auto}
+  .app-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px}
+  .app-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0 12px}
+  .app-bar .cz-tabs{margin-right:auto}
+  @media (max-width:700px){.app-side.cz-sidebar{position:fixed;z-index:60}.app-main{padding-left:68px}
+    .app-top{flex-wrap:wrap}.app-top h1{flex-basis:100%;font-size:28px}.app-top .cz-cmd-trigger{flex:1}}
+</style>
+</head>
+<body>
+
+<aside class="cz-sidebar app-side" aria-label="Menu principal">
+  <div class="cz-sidebar-head"><svg class="logo" role="img" aria-label="Convertize" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1764.8 450.4"><g><path fill="#ff5e2c" d="M323.8,361.3l-172.9-.2h-19.3s-2.6,0-3.7,0-2.2,0-3.3-.3c-4.6-.9-8.3-3.3-10.8-7l-2.1-4-24.8-48.4h0l-39-75.1c-3.7-5.4-4-12.4-1-18.1l40.2-75.8,52.7,119.5c2.8,6.5,9.1,10.7,16.2,10.8l139.6-.2c7.5,0,14.2,4.9,16.6,12l27.8,61.9c3.8,11.4-4.2,25-16.2,25.1Z"/><path fill="#ff5e2c" d="M310.1,162.9l-15.8,30.3-1.1,2.2c-3.1,5-8.5,8.3-14.8,8.4h-.3l-148.3.2-32.8-73.6c-3.5-11.5,4.3-23.3,15.5-23.2l150.9.2c4.5,0,9.8,2.7,12.9,6.4l29.3,27.1c2.3,2.2,4.2,4.9,5.4,7.8,0,0,0,.2,0,.2,1.7,4.6,1.3,9.7-.9,14Z"/></g><path fill="#ff5e2c" d="M1542.6,201.4c-.3.8-.7,1.5-1.1,2.2l1.1-2.2Z"/><g><path fill="currentColor" d="M525,262.3c-1.7,10-5.5,17.8-11.5,23.5-6,5.7-14.5,8.5-25.4,8.5s-15.1-2-21.1-6.1c-6.1-4.1-10.8-9.9-14.2-17.4-3.4-7.5-5.1-16.5-5.1-27s1.7-19.3,5-26.9c3.3-7.6,8-13.5,14.1-17.7,6.1-4.2,13.3-6.3,21.6-6.3s18.3,2.6,24.2,7.8c5.9,5.2,9.8,12.4,11.6,21.6l28.2-1.4c-3.2-15.8-9.9-28.2-20.3-37-10.4-8.8-24.9-13.2-43.7-13.2s-25.8,3-36.1,8.9c-10.2,6-18.2,14.4-23.8,25.3-5.7,10.9-8.5,23.8-8.5,38.8s2.9,28.2,8.7,39c5.8,10.8,13.8,19.1,24,24.9,10.2,5.8,22,8.7,35.4,8.7s23-2.1,32-6.4c9-4.2,16.3-10.3,21.9-18.2,5.5-7.9,9.2-17.3,11.2-28.2l-28.2-1.4Z"/><path fill="currentColor" d="M701.8,204.9c-5.6-10.9-13.6-19.3-24-25.2-10.4-5.9-23-8.8-37.8-8.8s-27.2,2.9-37.6,8.8c-10.4,5.9-18.4,14.3-24,25.2-5.6,10.9-8.4,23.9-8.4,39s2.8,28,8.4,38.9c5.6,10.9,13.7,19.2,24.2,25,10.5,5.8,23,8.7,37.5,8.7s27.4-2.9,37.8-8.7c10.4-5.8,18.4-14.2,24-25,5.6-10.9,8.4-23.8,8.4-38.9s-2.8-28-8.4-39ZM677.4,271c-3.4,7.5-8.2,13.3-14.5,17.3-6.3,4-13.9,6-22.9,6s-16.2-2-22.6-6c-6.4-4-11.2-9.7-14.6-17.3-3.4-7.5-5.1-16.6-5.1-27.2s1.7-19.7,5.1-27.3c3.4-7.6,8.2-13.4,14.6-17.5,6.4-4,14-6.1,22.8-6.1s16.4,2,22.7,6.1c6.3,4.1,11.1,9.9,14.5,17.5,3.4,7.6,5.1,16.7,5.1,27.3s-1.7,19.7-5.1,27.2Z"/><path fill="currentColor" d="M827.3,174v104.8l-63.4-104.8h-31.5v139.3h26.9v-101.8l5.8,9.5,56.8,92.4h32.3v-139.3h-26.9Z"/><path fill="currentColor" d="M980.4,174l-41,110.9-41.2-110.9h-28.4l53.2,139.3h32.3l53.5-139.3h-28.4Z"/><path fill="currentColor" d="M1051.1,291.2v-36.7h69.6v-22h-69.6v-36.3h72.1v-22.2h-99v139.3h100.7v-22.2h-73.8Z"/><path fill="currentColor" d="M1261.6,273.1c-.7-8.4-3.6-14.6-8.8-18.6-3.6-2.8-8.3-4.7-14-5.5,3.3-1,6.3-2.3,9.2-4.1,4.9-3,8.8-7,11.7-12,2.9-5,4.4-10.7,4.4-17.1s-2.1-15.9-6.4-22.2c-4.3-6.3-10.3-11.1-18-14.5-7.7-3.4-16.9-5.1-27.6-5.1h-61.5v139.3h26.9v-52.6h35.2c7.7,0,13.3,1.3,16.6,3.9,3.3,2.6,5.2,6.7,5.6,12.2l3.1,36.5h27.4l-3.7-40.2ZM1229.5,232.9c-4.6,3.7-10.9,5.5-19.1,5.5h-32.9v-25.7c0-8.8-10.5-16.5-14.7-16.5s14.7,0,14.7,0h0s31.7,0,31.7,0c8.8,0,15.6,1.8,20.2,5.5,4.6,3.7,6.9,8.9,6.9,15.7s-2.3,11.9-6.8,15.5Z"/><path fill="currentColor" d="M1275.3,174v22.2h44.8v117.2h26.9v-97c0-8.8-5.9-17.5-14-20.2h4s54.6,0,54.6,0v-22.2h-116.2Z"/><path fill="currentColor" d="M1406,174v139.3h26.9v-139.3h-26.9Z"/><path fill="currentColor" d="M1486.2,291.2l73.8-95.2v-22h-102.8v22.2h70l-73.1,95.2v22h108.4v-22.2h-76.3Z"/><path fill="currentColor" d="M1610.5,291.2v-36.7h69.6v-22h-69.6v-36.3h72.1v-22.2h-99v139.3h100.7v-22.2h-73.8Z"/></g></svg><svg class="sym" role="img" aria-label="Convertize" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800"><path fill="#ff5e2c" d="M711.7,702.8l-411.9-.6h-59.6s-6.1,0-8.9,0-5.2-.2-7.8-.8c-10.9-2.1-19.8-7.8-25.8-16.6l-4.9-9.6-49.4-107.3-88.8-186.9c-8.7-12.9-9.6-29.5-2.3-43.2l92.3-173.1,129.1,277c6.6,15.5,21.7,25.6,38.5,25.6l332.5-.6c18,0,33.9,11.6,39.6,28.6l66.3,147.6c9.1,27.1-10.1,59.6-38.7,59.8Z"/><path fill="#ff5e2c" d="M679.1,230.2l-37.5,72.2-2.7,5.2c-7.3,11.9-20.3,19.8-35.3,19.9h-.7l-350,.4-81.5-175.3c-8.4-27.4,10.4-55.6,36.8-55.4l359.5.6c10.8.1,23.4,6.5,30.6,15.2l69.8,64.5c5.5,5.3,10.1,11.6,12.9,18.7,0,.2.1.4.2.5,4.1,10.9,3.2,23.1-2.2,33.4Z"/></svg><button data-collapse aria-label="Recolher menu" aria-expanded="true"><svg class="i" aria-hidden="true"><use href="#i-sidebar"/></svg></button></div>
+  <button class="cz-side-item"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span class="lbl">Início</span></button>
+  <button class="cz-side-item" aria-current="page"><svg class="i" aria-hidden="true"><use href="#i-catalog"/></svg><span class="lbl">Produtos</span></button>
+  <button class="cz-side-item"><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg><span class="lbl">Pedidos</span></button>
+  <button class="cz-side-item"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><span class="lbl">Clientes</span></button>
+  <button class="cz-side-item"><svg class="i" aria-hidden="true"><use href="#i-analytics"/></svg><span class="lbl">Relatórios</span></button>
+  <div class="cz-sidebar-spacer"></div>
+  <button class="cz-side-item"><svg class="i" aria-hidden="true"><use href="#i-sliders"/></svg><span class="lbl">Configurações</span></button>
+</aside>
+
+<main class="app-main">
+  <header class="app-top">
+    <h1>Produtos</h1>
+    <button type="button" class="cz-cmd-trigger" data-cmd aria-label="Buscar, atalho Ctrl K" data-cmd-placeholder="Produto, pedido ou ação"
+      data-cmd-items='[{"title":"Vaso Terra","desc":"FRM-002, 2 em estoque","cat":"Produto","icon":"box"},{"title":"Pedido #CV-2051","desc":"Ana Beatriz Lima, R$ 229,90","cat":"Pedido","icon":"bag"},{"title":"Criar cupom","desc":"Desconto em percentual ou valor fixo","cat":"Ação","icon":"percent"}]'><span class="lbl">Buscar...</span><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/search.svg)" aria-hidden="true"></span></button>
+    <button class="cz-icon-btn" data-theme-toggle aria-label="Alternar tema claro e escuro"><span data-theme-icon="light"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/moon.svg)" aria-hidden="true"></span></span><span data-theme-icon="dark" hidden><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/sun.svg)" aria-hidden="true"></span></span></button>
+    <button class="cz-btn" data-open="dlg-novo"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/add.svg)" aria-hidden="true"></span>Novo produto</button>
+  </header>
+
+  <div class="app-stats">
+    <div class="cz-stat"><span class="lbl"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/shopping-bag.svg)" aria-hidden="true"></span>Pedidos</span><span class="val">248</span><span class="delta up"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/arrow-up-right.svg)" aria-hidden="true"></span>8,1% <span>vs. agosto</span></span><svg class="spark" data-spark="12,14,11,16,15,18,17,19,22,21"></svg></div>
+    <div class="cz-stat"><span class="lbl"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/percentage.svg)" aria-hidden="true"></span>Conversão</span><span class="val">2,8%</span><span class="delta down"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/arrow-down.svg)" aria-hidden="true"></span>0,3 p.p. <span>vs. agosto</span></span><svg class="spark" data-spark="3.4,3.2,3.3,3.1,3.0,3.1,2.9,2.9,2.8,2.8"></svg></div>
+    <div class="cz-stat"><span class="lbl"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/package.svg)" aria-hidden="true"></span>Sem estoque</span><span class="val">3</span><span class="delta down"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/arrow-up-right.svg)" aria-hidden="true"></span>+1 <span>vs. agosto</span></span><svg class="spark" data-spark="1,1,2,1,2,2,3,2,2,3"></svg></div>
+  </div>
+
+  <div data-tabs>
+    <div class="app-bar">
+      <div class="cz-tabs" role="tablist" aria-label="Status">
+        <button class="cz-tab" role="tab" aria-selected="true" aria-controls="tab-todos" id="t-todos">Todos <span class="cz-count-badge">4</span></button>
+        <button class="cz-tab" role="tab" aria-selected="false" aria-controls="tab-esgotados" id="t-esgotados" tabindex="-1">Esgotados</button>
+      </div>
+      <div class="cz-pop">
+        <button class="cz-btn cz-btn--secondary" data-menu-trigger data-select-menu="Ordenar: " aria-haspopup="listbox" aria-expanded="false"><span>Ordenar: Mais vendidos</span><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/chevron-down.svg)" aria-hidden="true"></span></button>
+        <div class="cz-menu" role="listbox" hidden>
+          <button class="cz-menu-item" role="option" aria-selected="true">Mais vendidos</button>
+          <button class="cz-menu-item" role="option" aria-selected="false">Menor preço</button>
+          <button class="cz-menu-item" role="option" aria-selected="false">Mais recentes</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-todos" role="tabpanel" aria-labelledby="t-todos">
+      <div class="cz-table-scroll">
+        <table class="cz-table">
+          <thead><tr><th>Produto</th><th class="r">Preço</th><th class="r">Estoque</th><th>Status</th><th class="r">Ações</th></tr></thead>
+          <tbody>
+            <tr><td><b>Vaso Terra</b></td><td class="r num">R$ 229,90</td><td class="r num">2</td><td><span class="cz-badge cz-badge--warning"><span class="d"></span>Baixo estoque</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-002" aria-label="Copiar SKU"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/copy.svg)" aria-hidden="true"></span></button></td></tr>
+            <tr><td><b>Luminária Círculo</b></td><td class="r num">R$ 64,90</td><td class="r num">8</td><td><span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-001" aria-label="Copiar SKU"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/copy.svg)" aria-hidden="true"></span></button></td></tr>
+            <tr><td><b>Caixa Essencial</b></td><td class="r num">R$ 39,90</td><td class="r num">0</td><td><span class="cz-badge cz-badge--danger"><span class="d"></span>Esgotado</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-003" aria-label="Copiar SKU"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/copy.svg)" aria-hidden="true"></span></button></td></tr>
+            <tr><td><b>Caderno Linho</b></td><td class="r num">R$ 54,90</td><td class="r num">120</td><td><span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span></td><td class="r"><button class="cz-icon-btn cz-icon-btn--sm" data-copy="FRM-006" aria-label="Copiar SKU"><span class="i i-sm" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/copy.svg)" aria-hidden="true"></span></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="tab-esgotados" role="tabpanel" aria-labelledby="t-esgotados" hidden>
+      <div class="cz-empty"><span class="i i-lg" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/package.svg)" aria-hidden="true"></span><h4>Só um produto esgotado</h4><p>Caixa Essencial está sem estoque desde 20/09.</p></div>
+    </div>
+  </div>
+</main>
+
+<!-- Diálogo: abre com data-open="id", fecha com data-close, Esc ou clique fora -->
+<div class="cz-scrim" id="dlg-novo" hidden>
+  <div class="cz-dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-novo-t">
+    <div class="cz-dialog-head"><h3 id="dlg-novo-t">Novo produto</h3><button class="cz-icon-btn cz-icon-btn--sm" data-close aria-label="Fechar"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/x.svg)" aria-hidden="true"></span></button></div>
+    <form class="cz-dialog-body" id="form-novo" data-validate novalidate>
+      <div class="cz-field"><label for="np-nome">Nome</label><input class="cz-input" id="np-nome" required data-msg="Dê um nome ao produto."></div>
+      <div class="cz-field"><label for="np-preco">Preço</label><div class="cz-input-wrap"><span class="cz-prefix">R$</span><input class="cz-input num" id="np-preco" inputmode="decimal" required data-msg="Informe o preço."></div></div>
+    </form>
+    <div class="cz-dialog-foot">
+      <button class="cz-btn cz-btn--ghost" data-close>Cancelar</button>
+      <button class="cz-btn" type="submit" form="form-novo">Salvar produto</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Comportamento dos componentes (inclui o sprite de ícones) -->
+<script src="convertize.js"></script>
+<script>
+  // A busca funciona só com data-cmd no botão (sem código). Itens do JSON sem link avisam por cz:cmd-pick.
+  document.addEventListener('cz:cmd-pick', function (e) {
+    if (!e.detail.item.el) Convertize.toast('success', e.detail.item.title, 'Aberto a partir da busca.');
+  });
+
+  // Formulário válido: o kit dispara cz:valid. Aqui o protótipo não envia de verdade.
+  document.getElementById('form-novo').addEventListener('cz:valid', function (e) {
+    e.preventDefault();
+    Convertize.closeDialog();
+    Convertize.toast('success', 'Produto salvo', document.getElementById('np-nome').value + ' entrou no catálogo.', true);
+    e.target.reset();
+  });
+</script>
+</body>
+</html>

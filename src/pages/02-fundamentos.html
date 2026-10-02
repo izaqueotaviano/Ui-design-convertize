@@ -1,0 +1,257 @@
+<section class="ds-page" id="cores" data-title="Cores" data-group="Fundamentos" data-keys="paleta color tokens laranja neutros semântica tema escuro" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Cores</h1>
+  <p class="ds-lead">A paleta combina a escala neutra quente do kit com o laranja Convertize e sete secundárias de apoio. Os componentes nunca usam hex direto: leem papéis semânticos que mudam com o tema.</p>
+
+  <h2>Marca</h2>
+  <p>Clique em qualquer cor para copiar o valor.</p>
+  <div class="ds-swatches">
+    <button class="ds-swatch" data-copy="#ff5e2c"><i style="background:#ff5e2c"></i><div><b>Laranja Convertize</b><code>#ff5e2c</code></div></button>
+    <button class="ds-swatch" data-copy="#d94d1e"><i style="background:#d94d1e"></i><div><b>Laranja profundo</b><code>#d94d1e</code></div></button>
+    <button class="ds-swatch" data-copy="#b3401b"><i style="background:#b3401b"></i><div><b>Laranja para texto</b><code>#b3401b</code></div></button>
+    <button class="ds-swatch" data-copy="#fff0e9"><i style="background:#fff0e9"></i><div><b>Laranja suave</b><code>#fff0e9</code></div></button>
+    <button class="ds-swatch" data-copy="#292524"><i style="background:#292524"></i><div><b>Carvão</b><code>#292524</code></div></button>
+  </div>
+
+  <h2>Escala neutra</h2>
+  <p>Doze passos quentes, do branco ao tinta. Os passos 200 e 300 desenham bordas; 500 e 600 carregam texto secundário.</p>
+  <div class="ds-scroll"><div class="ds-ramp" style="min-width:640px">
+    <span style="background:#ffffff;color:#292524">0</span><span style="background:#fafafa;color:#292524">25</span><span style="background:#f5f5f5;color:#292524">50</span><span style="background:#f0efed;color:#292524">100</span><span style="background:#e7e5e4;color:#292524">200</span><span style="background:#d6d3d1;color:#292524">300</span><span style="background:#a8a29e;color:#1c1917">400</span><span style="background:#777169;color:#fff">500</span><span style="background:#4e4e4e;color:#fff">600</span><span style="background:#292524;color:#fff">700</span><span style="background:#1c1917;color:#fff">800</span><span style="background:#0c0a09;color:#fff">900</span>
+  </div></div>
+  <div class="ds-swatches" style="margin-top:14px">
+    <button class="ds-swatch" data-copy="#f0efed"><i style="background:#f0efed"></i><div><b>Superfície forte</b><code>n100 · #f0efed</code></div></button>
+    <button class="ds-swatch" data-copy="#e7e5e4"><i style="background:#e7e5e4"></i><div><b>Linha</b><code>n200 · #e7e5e4</code></div></button>
+    <button class="ds-swatch" data-copy="#777169"><i style="background:#777169"></i><div><b>Texto apagado</b><code>n500 · #777169</code></div></button>
+    <button class="ds-swatch" data-copy="#4e4e4e"><i style="background:#4e4e4e"></i><div><b>Corpo</b><code>n600 · #4e4e4e</code></div></button>
+    <button class="ds-swatch" data-copy="#1c1917"><i style="background:#1c1917"></i><div><b>Superfície escura</b><code>n800 · #1c1917</code></div></button>
+    <button class="ds-swatch" data-copy="#0c0a09"><i style="background:#0c0a09"></i><div><b>Tinta</b><code>n900 · #0c0a09</code></div></button>
+  </div>
+
+  <h2>Secundárias</h2>
+  <p>Para ilustrações, gráficos, avatares e fundos de produto. Nunca em texto ou em ações.</p>
+  <div class="ds-swatches">
+    <button class="ds-swatch" data-copy="#e9dec9"><i style="background:#e9dec9"></i><div><b>Oat</b><code>#e9dec9</code></div></button>
+    <button class="ds-swatch" data-copy="#8dbacb"><i style="background:#8dbacb"></i><div><b>Sky</b><code>#8dbacb</code></div></button>
+    <button class="ds-swatch" data-copy="#7b9771"><i style="background:#7b9771"></i><div><b>Cactus</b><code>#7b9771</code></div></button>
+    <button class="ds-swatch" data-copy="#858a58"><i style="background:#858a58"></i><div><b>Olive</b><code>#858a58</code></div></button>
+    <button class="ds-swatch" data-copy="#b8a8c4"><i style="background:#b8a8c4"></i><div><b>Heather</b><code>#b8a8c4</code></div></button>
+    <button class="ds-swatch" data-copy="#5e4668"><i style="background:#5e4668"></i><div><b>Fig</b><code>#5e4668</code></div></button>
+    <button class="ds-swatch" data-copy="#d97757"><i style="background:#d97757"></i><div><b>Clay</b><code>#d97757</code></div></button>
+  </div>
+
+  <h2>Papéis semânticos</h2>
+  <p>O que os componentes realmente usam. O valor muda quando o tema muda.</p>
+  <div class="ds-scroll"><table class="ds-props">
+    <thead><tr><th>Token</th><th>Claro</th><th>Escuro</th><th>Uso</th></tr></thead>
+    <tbody>
+      <tr><td><code>--bg</code></td><td>#fafafa</td><td>#0f0d0c</td><td>Fundo da página.</td></tr>
+      <tr><td><code>--surface</code></td><td>#ffffff</td><td>#1c1917</td><td>Cards, tabelas, diálogos, campos.</td></tr>
+      <tr><td><code>--inset</code></td><td>#f0efed</td><td>#0c0a09</td><td>Hover, trilhos, áreas rebaixadas.</td></tr>
+      <tr><td><code>--text</code></td><td>#292524</td><td>#f5f5f5</td><td>Títulos e texto principal.</td></tr>
+      <tr><td><code>--text-2</code></td><td>#4e4e4e</td><td>#d6d3d1</td><td>Parágrafos e descrições.</td></tr>
+      <tr><td><code>--muted</code></td><td>#6f6a63</td><td>#a8a29e</td><td>Legendas, placeholders, metadados.</td></tr>
+      <tr><td><code>--line</code></td><td>#e7e5e4</td><td>#3a3532</td><td>Divisores e contornos de superfície.</td></tr>
+      <tr><td><code>--control-line</code></td><td>#c9c4bd</td><td>#5a5450</td><td>Contorno de campos e botões secundários (3:1).</td></tr>
+      <tr><td><code>--primary</code></td><td>#292524</td><td>#f0efed</td><td>Botão principal, seleção forte.</td></tr>
+      <tr><td><code>--accent</code></td><td>#ff5e2c</td><td>#ff5e2c</td><td>Foco, indicador ativo, marca.</td></tr>
+      <tr><td><code>--accent-text</code></td><td>#b3401b</td><td>#ff8a63</td><td>Links e texto em laranja.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Estados</h2>
+  <p>Cada estado tem cor de texto, fundo e borda. Use sempre os três juntos.</p>
+  <div class="ds-grid three">
+    <div class="cz-alert cz-alert--success">{{i:check-circle}}<div><strong>Sucesso</strong><code>--success</code></div><span></span></div>
+    <div class="cz-alert cz-alert--warning">{{i:alert}}<div><strong>Atenção</strong><code>--warning</code></div><span></span></div>
+    <div class="cz-alert cz-alert--danger">{{i:x-circle}}<div><strong>Erro</strong><code>--danger</code></div><span></span></div>
+    <div class="cz-alert cz-alert--info">{{i:info}}<div><strong>Informação</strong><code>--info</code></div><span></span></div>
+  </div>
+
+  <h2>Uso do laranja</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Use o laranja em um elemento de foco por área: indicador ativo, anel de foco, badge “Novo”.</li><li>Em texto, use <code>--accent-text</code> (#b3401b), que passa 5,4:1 sobre branco.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Texto #ff5e2c sobre branco: 2,9:1, abaixo do mínimo.</li><li>Fundos inteiros em laranja em telas de trabalho. Reserve para campanhas.</li></ul></div>
+  </div>
+</section>
+
+<section class="ds-page" id="tipografia" data-title="Tipografia" data-group="Fundamentos" data-keys="fonte type escala tenor inter título texto" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Tipografia</h1>
+  <p class="ds-lead">Duas famílias complementares. Tenor Sans dá o tom editorial em títulos; Inter faz o trabalho da interface e de todo dado numérico — navegação, controles, tabelas, preços e números de destaque.</p>
+
+  <div class="ds-grid two" style="margin-top:28px">
+    <div class="cz-card"><div class="cz-card-body"><span class="ds-label">Títulos · Tenor Sans Regular</span><p style="font:400 44px/1.05 var(--font-display);color:var(--text)">Aa Bb Cc 0123</p><p>Uma única espessura. Use tamanho e espaço, nunca negrito falso, para criar hierarquia.</p></div></div>
+    <div class="cz-card"><div class="cz-card-body"><span class="ds-label">Interface · Inter 400 · 500 · 600 · 700</span><p style="font:600 44px/1.05 var(--font-ui);color:var(--text);letter-spacing:-.02em">Aa Bb Cc 0123</p><p>Números tabulares em tabelas e preços: <code>font-variant-numeric: tabular-nums</code>.</p></div></div>
+  </div>
+
+  <h2>Escala</h2>
+  <p>Baseada no texto de 16 px, com saltos de uma quarta justa (1,333) entre títulos.</p>
+  <div>
+    <div class="ds-type-row"><div><b>Display</b><small>Tenor Sans · 52/56</small></div><p style="font:400 52px/1.08 var(--font-display)">Venda em todos os canais</p></div>
+    <div class="ds-type-row"><div><b>Título 1</b><small>Tenor Sans · 40/46</small></div><p style="font:400 40px/1.15 var(--font-display)">Pedidos da semana</p></div>
+    <div class="ds-type-row"><div><b>Título 2</b><small>Tenor Sans · 28/34</small></div><p style="font:400 28px/1.2 var(--font-display)">Produtos e coleções</p></div>
+    <div class="ds-type-row"><div><b>Título 3</b><small>Inter 600 · 20/28</small></div><p style="font:600 20px/1.4 var(--font-ui)">Informações de envio</p></div>
+    <div class="ds-type-row"><div><b>Subtítulo</b><small>Inter 600 · 16/24</small></div><p style="font:600 16px/1.5 var(--font-ui)">Endereço de entrega</p></div>
+    <div class="ds-type-row"><div><b>Corpo</b><small>Inter 400 · 16/24</small></div><p style="font:400 16px/1.5 var(--font-ui)">Encontre a informação de que precisa sem sair da tela do pedido.</p></div>
+    <div class="ds-type-row"><div><b>Interface</b><small>Inter 400 · 14/20</small></div><p style="font:400 14px/1.45 var(--font-ui)">Rótulos de controle, células de tabela e itens de menu.</p></div>
+    <div class="ds-type-row"><div><b>Legenda</b><small>Inter 400 · 12/16</small></div><p style="font:400 12px/1.4 var(--font-ui);color:var(--muted)">Atualizado há 3 minutos por Marina Prado</p></div>
+    <div class="ds-type-row"><div><b>Número de destaque</b><small>Inter 600 · 34 · tabular</small></div><p style="font:600 34px/1.1 var(--font-ui);letter-spacing:-.01em;font-variant-numeric:tabular-nums">R$ 42.850,00</p></div>
+  </div>
+
+  <h2>Regras</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Frases em caixa normal (sentence case) em títulos, botões e rótulos.</li><li>Linhas de texto com no máximo 70 caracteres.</li><li>Tenor Sans a partir de 22 px; abaixo disso, Inter.</li><li>Inter em qualquer número — preços, métricas, contadores — com <code>tabular-nums</code>.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Rótulos em caixa alta com espaçamento largo.</li><li>Destacar uma palavra do título com outra cor ou itálico.</li><li>Tenor Sans em botões, campos, tabelas ou qualquer número.</li></ul></div>
+  </div>
+</section>
+
+<section class="ds-page" id="espacamento" data-title="Espaçamento e raios" data-group="Fundamentos" data-keys="spacing radius borda arredondamento gap padding" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Espaçamento e raios</h1>
+  <p class="ds-lead">As escalas vêm do arquivo Figma original. Os passos pequenos aproximam controles relacionados; os grandes separam grupos e dão respiro às superfícies.</p>
+
+  <h2>Espaçamento</h2>
+  <p>Os passos 4, 8, 16 e 24 são os do kit; 12, 32, 48 e 64 estendem a escala para layout de página.</p>
+  <div>
+    <div class="ds-space"><code>--space-1</code><span>4 px</span><i style="width:4px"></i></div>
+    <div class="ds-space"><code>--space-2</code><span>8 px</span><i style="width:8px"></i></div>
+    <div class="ds-space"><code>--space-3</code><span>12 px</span><i style="width:12px"></i></div>
+    <div class="ds-space"><code>--space-4</code><span>16 px</span><i style="width:16px"></i></div>
+    <div class="ds-space"><code>--space-5</code><span>24 px</span><i style="width:24px"></i></div>
+    <div class="ds-space"><code>--space-6</code><span>32 px</span><i style="width:32px"></i></div>
+    <div class="ds-space"><code>--space-7</code><span>48 px</span><i style="width:48px"></i></div>
+    <div class="ds-space"><code>--space-8</code><span>64 px</span><i style="width:64px"></i></div>
+  </div>
+
+  <h2>Raios</h2>
+  <p>O raio cresce com o tamanho da superfície. Controles pequenos ficam mais retos; diálogos e capas, mais arredondados.</p>
+  <div class="ds-radius">
+    <div><i style="border-radius:var(--radius-xs) 0 0 0"></i><b>4 px · xs</b><span class="cz-help">Botões e campos pequenos, itens de menu</span></div>
+    <div><i style="border-radius:var(--radius-sm) 0 0 0"></i><b>6 px · sm</b><span class="cz-help">Botões, campos e selects</span></div>
+    <div><i style="border-radius:var(--radius-md) 0 0 0"></i><b>10 px · md</b><span class="cz-help">Alertas, menus</span></div>
+    <div><i style="border-radius:var(--radius-lg) 0 0 0"></i><b>12 px · lg</b><span class="cz-help">Cards, tabelas</span></div>
+    <div><i style="border-radius:var(--radius-xl) 0 0 0"></i><b>20 px · xl</b><span class="cz-help">Diálogos, capas</span></div>
+    <div><i style="border-radius:40px 0 0 0"></i><b>Total</b><span class="cz-help">Chips, badges, avatares</span></div>
+  </div>
+
+  <h2>Na prática</h2>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="cz-card" style="width:min(360px,100%)"><div class="cz-card-body" style="gap:16px">
+      <div style="display:grid;gap:4px"><h4>Frete grátis acima de R$ 199</h4><p>Aplicado automaticamente no checkout.</p></div>
+      <div class="ds-row" style="gap:8px"><button class="cz-btn cz-btn--sm">Ativar</button><button class="cz-btn cz-btn--secondary cz-btn--sm">Editar regra</button></div>
+    </div></div>
+  </div><div class="ds-cap"><span>Padding 20 · título e texto a 4 · grupos a 16 · botões a 8</span><b>Raio 12 no card, 4 nos botões pequenos</b></div></div>
+</section>
+
+<section class="ds-page" id="elevacao" data-title="Elevação e superfícies" data-group="Fundamentos" data-keys="sombra shadow camadas superfície z-index" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Elevação e superfícies</h1>
+  <p class="ds-lead">A maior parte da interface é plana e se separa por bordas. A sombra só aparece quando algo flutua sobre o conteúdo: menus, toasts e diálogos.</p>
+  <h2>Níveis</h2>
+  <div class="ds-spec"><div class="ds-stage canvas" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px">
+    <div class="cz-card"><div class="cz-card-body"><b>0 · Borda</b><p>Cards, tabelas, listas.</p><code>var(--hairline) solid --line</code></div></div>
+    <div class="cz-card" style="border-color:transparent;box-shadow:var(--shadow-1)"><div class="cz-card-body"><b>1 · Contato</b><p>Segmento ativo, chips selecionados.</p><code>--shadow-1</code></div></div>
+    <div class="cz-card" style="border-color:transparent;box-shadow:var(--shadow-2)"><div class="cz-card-body"><b>2 · Flutuante</b><p>Menus, popovers, cards em hover.</p><code>--shadow-2</code></div></div>
+    <div class="cz-card" style="border-color:transparent;box-shadow:var(--shadow-3)"><div class="cz-card-body"><b>3 · Modal</b><p>Diálogos, drawers, toasts.</p><code>--shadow-3</code></div></div>
+  </div></div>
+  <h2>Camadas</h2>
+  <div class="ds-scroll"><table class="ds-props">
+    <thead><tr><th>Camada</th><th>z-index</th><th>Exemplos</th></tr></thead>
+    <tbody>
+      <tr><td>Conteúdo</td><td>0</td><td>Página, cards, tabelas</td></tr>
+      <tr><td>Fixo</td><td>40</td><td>Barra superior, cabeçalho de tabela</td></tr>
+      <tr><td>Flutuante</td><td>30</td><td>Menus, popovers, tooltips (dentro do contexto do gatilho)</td></tr>
+      <tr><td>Navegação móvel</td><td>60</td><td>Sidebar aberta em telas pequenas</td></tr>
+      <tr><td>Modal</td><td>90</td><td>Diálogos, drawers, folhas inferiores</td></tr>
+      <tr><td>Aviso</td><td>120</td><td>Toasts, sempre acima de tudo</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="ds-page" id="iconografia" data-title="Iconografia" data-group="Fundamentos" data-keys="ícones icons svg jsdelivr biblioteca sidebar" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Iconografia</h1>
+  <p class="ds-lead">A interface usa a biblioteca de ícones Convertize, com cerca de 5 mil ícones servidos pelo jsDelivr. Cada ícone é referenciado pelo link, nunca copiado para o projeto. A sidebar é a exceção: mantém o conjunto desenhado a partir das ilustrações de comércio.</p>
+  <h2>Como escolher</h2>
+  <p>Os nomes disponíveis estão em <code>icons.json</code>. Escolha o que descreve a ação, não a aparência, e use o link <code>https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/&lt;nome&gt;.svg</code>. O ícone entra como máscara, então pega a cor do texto em qualquer tema.</p>
+  <h2>Usados no kit</h2>
+  <p>Os ícones que os componentes usam, com o nome curto do kit. Clique para copiar o código.</p>
+  <div class="cz-input-wrap" style="max-width:340px;margin-bottom:16px">{{i:search}}<input class="cz-input" id="icon-filter" type="search" placeholder="Filtrar ícones" aria-label="Filtrar ícones"></div>
+  <div id="icon-grid" class="ds-icon-grid"></div>
+  <h2>Tamanhos</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="ds-row" style="gap:28px">
+      <span style="display:grid;gap:6px;justify-items:center">{{i:cart:i-sm}}<small class="cz-help">16 · densa</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{i:cart}}<small class="cz-help">20 · padrão</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{i:cart:i-lg}}<small class="cz-help">24 · navegação</small></span>
+    </div>
+  </div><div class="ds-cap"><span>Link do jsDelivr aplicado como máscara</span><b>Cor sempre herdada do texto</b></div></div>
+  <h2>Sidebar</h2>
+  <p>Itens de <code>cz-side-item</code> usam o conjunto desenhado da marca, sólido e com um detalhe que fica laranja no item ativo. Ele vem no sprite do <code>convertize.js</code> e se usa com <code>&lt;use href="#i-nome"&gt;</code>.</p>
+  <div class="ds-spec"><div class="ds-stage">
+    <div class="ds-row" style="gap:28px">
+      <span style="display:grid;gap:6px;justify-items:center">{{si:analytics:i-lg}}<small class="cz-help">padrão</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{si:analytics:i-lg i-accent}}<small class="cz-help">ativo</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{si:catalog:i-lg}}<small class="cz-help">padrão</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{si:catalog:i-lg i-accent}}<small class="cz-help">ativo</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{si:cart:i-lg}}<small class="cz-help">padrão</small></span>
+      <span style="display:grid;gap:6px;justify-items:center">{{si:cart:i-lg i-accent}}<small class="cz-help">ativo</small></span>
+    </div>
+  </div><div class="ds-cap"><span>Só na sidebar</span><b>Sprite do kit</b></div></div>
+  <script type="text/plain" class="ds-snippet"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/cart.svg)" aria-hidden="true"></span>
+
+<!-- Botão só com ícone precisa de rótulo -->
+<button class="cz-icon-btn" aria-label="Abrir carrinho">
+  <span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/cart.svg)" aria-hidden="true"></span>
+</button></script>
+</section>
+
+<section class="ds-page" id="layout" data-title="Grid e responsivo" data-group="Fundamentos" data-keys="grid colunas breakpoints responsivo mobile layout" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Grid e responsivo</h1>
+  <p class="ds-lead">Telas de trabalho usam sidebar fixa e conteúdo fluido. O conteúdo se reorganiza em 12, 8 ou 4 colunas conforme a largura, sempre com margem lateral mínima de 16 px.</p>
+  <h2>Pontos de quebra</h2>
+  <div class="ds-scroll"><table class="ds-props">
+    <thead><tr><th>Nome</th><th>Largura</th><th>Colunas</th><th>Margem</th><th>Navegação</th></tr></thead>
+    <tbody>
+      <tr><td>Compacto</td><td>até 599 px</td><td>4</td><td>16 px</td><td>Navegação inferior</td></tr>
+      <tr><td>Médio</td><td>600 a 979 px</td><td>8</td><td>24 px</td><td>Sidebar em gaveta</td></tr>
+      <tr><td>Expandido</td><td>980 a 1439 px</td><td>12</td><td>32 px</td><td>Sidebar fixa (240 px)</td></tr>
+      <tr><td>Amplo</td><td>1440 px ou mais</td><td>12</td><td>auto, conteúdo até 1280 px</td><td>Sidebar fixa</td></tr>
+    </tbody>
+  </table></div>
+  <h2>Grade de 12 colunas</h2>
+  <div class="ds-spec"><div class="ds-stage col canvas">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:12px">
+      <div style="grid-column:span 12;height:44px;border-radius:4px;background:var(--accent-soft);border:1px dashed var(--accent);display:grid;place-items:center;font-size:12px">12 · cabeçalho da página</div>
+      <div style="grid-column:span 3;height:88px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">3 · métrica</div>
+      <div style="grid-column:span 3;height:88px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">3</div>
+      <div style="grid-column:span 3;height:88px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">3</div>
+      <div style="grid-column:span 3;height:88px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">3</div>
+      <div style="grid-column:span 8;height:140px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">8 · gráfico</div>
+      <div style="grid-column:span 4;height:140px;border-radius:8px;background:var(--surface);border:var(--hairline) solid var(--line);display:grid;place-items:center;font-size:12px">4 · lista</div>
+    </div>
+  </div><div class="ds-cap"><span>Gutter de 12 px em cards densos, 16 a 24 px entre seções</span><b>Em 4 colunas, tudo empilha</b></div></div>
+</section>
+
+<section class="ds-page" id="movimento" data-title="Movimento" data-group="Fundamentos" data-keys="animação motion duração easing transição" hidden>
+  <p class="ds-crumb">Fundamentos</p>
+  <h1>Movimento</h1>
+  <p class="ds-lead">O movimento responde a uma ação e mostra o que mudou: um menu abre de onde foi chamado, um toast sobe de onde vai ficar. Nada se mexe sozinho sem motivo.</p>
+  <h2>Durações</h2>
+  <div class="ds-scroll"><table class="ds-props">
+    <thead><tr><th>Token</th><th>Valor</th><th>Uso</th></tr></thead>
+    <tbody>
+      <tr><td><code>--dur-1</code></td><td>120 ms</td><td>Hover, pressionar, trocar cor.</td></tr>
+      <tr><td><code>--dur-2</code></td><td>200 ms</td><td>Switch, acordeão, recolher sidebar.</td></tr>
+      <tr><td><code>--dur-3</code></td><td>320 ms</td><td>Diálogos, drawers, toasts entrando.</td></tr>
+      <tr><td><code>--ease</code></td><td>cubic-bezier(.2,.7,.2,1)</td><td>Sai rápido e assenta devagar. Única curva do sistema.</td></tr>
+    </tbody>
+  </table></div>
+  <h2>Experimente</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn" data-open="dlg-basic">Abrir diálogo</button>
+    <button class="cz-btn cz-btn--secondary" data-toast="success" data-title="Produto salvo" data-msg="As alterações já aparecem na loja.">Mostrar toast</button>
+    <label class="cz-switch"><input type="checkbox" checked> Switch</label>
+  </div><div class="ds-cap"><span>Com “reduzir movimento” ativo no sistema, tudo acontece sem transição.</span></div></div>
+</section>

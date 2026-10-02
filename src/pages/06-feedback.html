@@ -1,0 +1,179 @@
+<section class="ds-page" id="alertas" data-title="Alertas e banners" data-group="Feedback" data-keys="alert aviso banner mensagem sucesso erro atenção info" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Alertas e banners</h1>
+  <p class="ds-lead">Alertas ficam no conteúdo, perto do que descrevem, e só saem quando o problema é resolvido ou a pessoa fecha. Banners avisam algo que vale para a conta inteira.</p>
+  <h2>Completos</h2>
+  <div class="ds-spec"><div class="ds-stage col">
+    <div class="cz-alert cz-alert--success" role="status">{{i:check-circle}}<div><strong>Ticket #CV-2048 criado</strong>Recebemos sua solicitação. Você pode acompanhar as atualizações na lista de tickets.</div><button class="close" aria-label="Fechar aviso" data-dismiss>{{i:x:i-sm}}</button></div>
+    <div class="cz-alert cz-alert--warning" role="status">{{i:alert}}<div><strong>Você tem alterações pendentes</strong>Salve antes de sair para manter as edições feitas neste item.<div class="actions"><button class="cz-btn cz-btn--sm">Salvar agora</button><button class="cz-btn cz-btn--ghost cz-btn--sm">Descartar</button></div></div><span></span></div>
+    <div class="cz-alert cz-alert--danger" role="alert">{{i:x-circle}}<div><strong>Não foi possível anexar o arquivo</strong>Escolha um PDF, JPEG ou PNG de até 10 MB. O arquivo atual permanece fora da conversa.<div class="actions"><a class="cz-link" href="#upload">Escolher outro arquivo</a></div></div><button class="close" aria-label="Fechar aviso" data-dismiss>{{i:x:i-sm}}</button></div>
+    <div class="cz-alert cz-alert--info" role="status">{{i:info}}<div><strong>Nova integração disponível</strong>Conecte sua conta do Mercado Livre e sincronize o estoque automaticamente.</div><button class="close" aria-label="Fechar aviso" data-dismiss>{{i:x:i-sm}}</button></div>
+  </div></div>
+
+  <h2>Compactos</h2>
+  <p>Mensagens rápidas para listas e painéis. O kit original traz oito estados:</p>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px">
+    <div class="cz-alert cz-alert--compact cz-alert--success">{{i:check-circle:i-sm}}<div><strong>Item salvo</strong>Alterações atualizadas.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--success">{{i:check-circle:i-sm}}<div><strong>Ticket criado</strong>#CV-2048 está na lista.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--info">{{i:chat:i-sm}}<div><strong>Novo chat</strong>Conversa pronta para começar.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--danger">{{i:file:i-sm}}<div><strong>Arquivo inválido</strong>Envie PDF, JPEG ou PNG.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--warning">{{i:alert:i-sm}}<div><strong>Não salvo</strong>Salve antes de sair.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--warning">{{i:globe:i-sm}}<div><strong>Sem conexão</strong>Tente novamente em instantes.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact">{{i:lock:i-sm}}<div><strong>Sem permissão</strong>Peça acesso ao responsável.</div><span></span></div>
+    <div class="cz-alert cz-alert--compact cz-alert--danger">{{i:trash:i-sm}}<div><strong>Excluir arquivo</strong>Confirme digitando o nome.</div><button class="cz-btn cz-btn--danger cz-btn--sm" data-open="dlg-delete">Excluir</button></div>
+  </div></div>
+
+  <h2>Banner</h2>
+  <div class="ds-spec"><div class="ds-stage col canvas">
+    <div class="cz-banner" role="region" aria-label="Aviso da conta">{{i:sparkle}}<span>Seu teste do plano Pro termina em 5 dias. <a class="cz-link" href="#checkout">Escolher um plano</a></span><button class="close" aria-label="Fechar aviso" data-dismiss>{{i:x:i-sm}}</button></div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-alert cz-alert--success" role="status">
+  <svg class="i">…check-circle…</svg>
+  <div><strong>Ticket #CV-2048 criado</strong>Recebemos sua solicitação.</div>
+  <button class="close" aria-label="Fechar aviso">…</button>
+</div>
+<!-- Variantes: --success --warning --danger --info --compact --></script>
+</section>
+
+<section class="ds-page" id="toast" data-title="Toasts" data-group="Feedback" data-keys="toast snackbar notificação temporária desfazer" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Toasts</h1>
+  <p class="ds-lead">Confirmam uma ação que acabou de acontecer e somem sozinhos em 5 segundos. Quando a ação pode ser revertida, ofereça “Desfazer” e mantenha o toast por mais tempo.</p>
+  <h2>Experimente</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <button class="cz-btn cz-btn--secondary" data-toast="success" data-title="Produto salvo" data-msg="As alterações já aparecem na loja.">{{i:check-circle:i-sm}}Sucesso</button>
+    <button class="cz-btn cz-btn--secondary" data-toast="info" data-title="Novo ticket" data-msg="#CV-2051 · Farmácia Brito abriu um chamado.">{{i:info:i-sm}}Informação</button>
+    <button class="cz-btn cz-btn--secondary" data-toast="warning" data-title="Estoque baixo" data-msg="Restam 2 unidades do Vaso Terra.">{{i:alert:i-sm}}Atenção</button>
+    <button class="cz-btn cz-btn--secondary" data-toast="danger" data-title="Pagamento recusado" data-msg="O banco não autorizou. Peça outro cartão ao cliente.">{{i:x-circle:i-sm}}Erro</button>
+    <button class="cz-btn cz-btn--secondary" data-toast="success" data-title="Pedido arquivado" data-msg="#CV-2048 saiu da lista." data-undo>{{i:return:i-sm}}Com desfazer</button>
+  </div></div>
+  <h2>Anatomia</h2>
+  <div class="ds-spec"><div class="ds-stage canvas col" style="max-width:420px">
+    <div class="cz-toast cz-toast--success static">{{i:check-circle}}<div><strong>Pedido arquivado</strong><small>#CV-2048 saiu da lista.</small></div><button class="undo">Desfazer</button></div>
+  </div><div class="ds-cap"><span>Ícone de estado · título no passado · detalhe opcional · uma ação</span><b>Fundo sempre escuro</b></div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-toast-region" aria-live="polite">
+  <div class="cz-toast cz-toast--success">
+    <svg class="i">…</svg>
+    <div><strong>Produto salvo</strong><small>As alterações já aparecem na loja.</small></div>
+    <button class="undo">Desfazer</button>
+  </div>
+</div></script>
+</section>
+
+<section class="ds-page" id="progresso" data-title="Progresso e carregamento" data-group="Feedback" data-keys="progress bar spinner skeleton carregando loading anel" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Progresso e carregamento</h1>
+  <p class="ds-lead">Mostre progresso determinado quando souber quanto falta; spinner para esperas curtas; skeleton quando a estrutura da tela já é conhecida.</p>
+  <h2>Barras</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:560px;gap:20px">
+    <div class="cz-field"><div class="cz-slider-head"><span class="cz-label">Importando catálogo</span><span class="cz-help num" data-prog-label>0%</span></div><div class="cz-progress cz-progress--brand" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-prog><i style="--v:0%"></i></div><span class="cz-help">Produtos de planilha-colecao-verao.csv</span></div>
+    <div class="cz-field"><div class="cz-slider-head"><span class="cz-label">Armazenamento</span><span class="cz-help num">50% usado</span></div><div class="cz-progress" role="progressbar" aria-valuenow="50"><i style="--v:50%"></i></div></div>
+    <div class="cz-field"><div class="cz-slider-head"><span class="cz-label">Armazenamento</span><span class="cz-help num">100% usado</span></div><div class="cz-progress cz-progress--danger" role="progressbar" aria-valuenow="100"><i style="--v:100%"></i></div><span class="cz-error">Exclua arquivos para liberar espaço.</span></div>
+    <div class="cz-field"><span class="cz-label">Sincronizando estoque</span><div class="cz-progress cz-progress--indeterminate" role="progressbar" aria-label="Sincronizando"><i></i></div></div>
+    <button class="cz-btn cz-btn--secondary cz-btn--sm" data-prog-run style="justify-self:start">{{i:refresh:i-sm}}Reiniciar importação</button>
+  </div></div>
+  <h2>Anéis e spinners</h2>
+  <div class="ds-spec"><div class="ds-stage" style="gap:32px">
+    <div class="cz-ring" style="--v:25"><span>25%</span></div>
+    <div class="cz-ring" style="--v:62"><span>62%</span></div>
+    <div class="cz-ring" style="--v:100;--s:88px"><span>{{i:check}}</span></div>
+    <span class="cz-spinner" role="status" aria-label="Carregando"></span>
+    <span class="cz-spinner cz-spinner--sm" role="status" aria-label="Carregando"></span>
+  </div></div>
+  <h2>Skeleton</h2>
+  <div class="ds-spec"><div class="ds-stage col">
+    <div class="cz-card" style="max-width:520px"><div class="cz-card-body" style="gap:14px" aria-busy="true" aria-label="Carregando produtos">
+      <div style="display:flex;gap:12px;align-items:center"><div class="cz-skel" style="width:48px;height:48px;border-radius:8px"></div><div style="flex:1;display:grid;gap:8px"><div class="cz-skel" style="height:12px;width:60%"></div><div class="cz-skel" style="height:10px;width:35%"></div></div></div>
+      <div style="display:flex;gap:12px;align-items:center"><div class="cz-skel" style="width:48px;height:48px;border-radius:8px"></div><div style="flex:1;display:grid;gap:8px"><div class="cz-skel" style="height:12px;width:70%"></div><div class="cz-skel" style="height:10px;width:30%"></div></div></div>
+      <div class="cz-skel" style="height:120px;border-radius:8px"></div>
+    </div></div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><div class="cz-progress cz-progress--brand" role="progressbar" aria-valuenow="64">
+  <i style="--v:64%"></i>
+</div>
+<div class="cz-ring" style="--v:62"><span>62%</span></div>
+<span class="cz-spinner" role="status" aria-label="Carregando"></span>
+<div class="cz-skel" style="height:12px;width:60%"></div></script>
+</section>
+
+<section class="ds-page" id="vazio" data-title="Estados vazios e erro" data-group="Feedback" data-keys="empty state vazio erro 404 sem resultados" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Estados vazios e erro</h1>
+  <p class="ds-lead">Uma tela vazia é um convite para agir. Diga o que vai aparecer ali e ofereça o primeiro passo. No erro, diga o que aconteceu e como sair dele.</p>
+  <div class="ds-grid two" style="margin-top:24px">
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center"><div class="cz-empty">
+      <span class="cz-ill-icon">{{i:category-plus}}</span>
+      <h4>Seu catálogo começa aqui</h4><p>Cadastre um produto ou importe uma planilha com todos de uma vez.</p>
+      <div class="ds-row"><button class="cz-btn">{{i:plus:i-sm}}Adicionar produto</button><button class="cz-btn cz-btn--secondary">Importar planilha</button></div>
+    </div></div><div class="ds-cap"><span>Primeiro uso</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center"><div class="cz-empty">
+      <span class="cz-ill-icon cz-ill-icon--muted">{{i:search}}</span>
+      <h4>Nenhum pedido encontrado</h4><p>Nada corresponde a “Brito” com o status Em trânsito. Tente outro termo ou limpe os filtros.</p>
+      <div class="ds-row"><button class="cz-btn cz-btn--secondary">Limpar filtros</button></div>
+    </div></div><div class="ds-cap"><span>Busca sem resultado</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center"><div class="cz-empty">
+      <span class="cz-ill-icon cz-ill-icon--danger">{{i:plug-connected-x}}</span>
+      <h4>Não conseguimos falar com o Mercado Livre</h4><p>A integração respondeu com erro 503. Seus pedidos estão seguros; tentaremos de novo em 5 minutos.</p>
+      <div class="ds-row"><button class="cz-btn">{{i:refresh:i-sm}}Tentar agora</button><a class="cz-link" href="#chat">Ver status das integrações</a></div>
+    </div></div><div class="ds-cap"><span>Erro recuperável</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center"><div class="cz-empty">
+      <span class="cz-ill-icon">{{i:truck-delivery}}</span>
+      <h4>Tudo enviado por hoje</h4><p>Os 12 pedidos pagos já têm etiqueta. Os próximos aparecem aqui assim que forem aprovados.</p>
+    </div></div><div class="ds-cap"><span>Lista concluída</span></div></div>
+  </div>
+</section>
+
+<section class="ds-page" id="badges" data-title="Badges e status" data-group="Feedback" data-keys="badge status pill contador etiqueta novo" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Badges e status</h1>
+  <p class="ds-lead">Badges resumem um estado em uma ou duas palavras. Status sempre combina cor e texto, nunca só a cor.</p>
+  <h2>Tons</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <span class="cz-badge">Padrão</span><span class="cz-badge cz-badge--brand">Novo</span><span class="cz-badge cz-badge--dark">Pro</span><span class="cz-badge cz-badge--info">Beta</span><span class="cz-badge cz-badge--outline">Rascunho</span>
+  </div></div>
+  <h2>Status de pedido e produto</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <span class="cz-badge cz-badge--success"><span class="d"></span>Pago</span>
+    <span class="cz-badge cz-badge--info"><span class="d"></span>Em trânsito</span>
+    <span class="cz-badge cz-badge--warning"><span class="d"></span>Aguardando pagamento</span>
+    <span class="cz-badge cz-badge--danger"><span class="d"></span>Cancelado</span>
+    <span class="cz-badge"><span class="d"></span>Entregue</span>
+    <span class="cz-badge cz-badge--success"><span class="d"></span>Ativo</span>
+    <span class="cz-badge cz-badge--warning"><span class="d"></span>Baixo estoque</span>
+    <span class="cz-badge cz-badge--danger"><span class="d"></span>Esgotado</span>
+  </div></div>
+  <h2>Contadores</h2>
+  <div class="ds-spec"><div class="ds-stage" style="gap:28px">
+    <span class="cz-with-count"><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Notificações, 3 novas">{{i:bell}}</button><span class="cz-count-dot">3</span></span>
+    <span class="cz-with-count"><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Carrinho, 12 itens">{{i:cart}}</button><span class="cz-count-dot">12</span></span>
+    <span class="cz-with-count"><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Mensagens, mais de 99">{{i:chat}}</button><span class="cz-count-dot">99+</span></span>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><span class="cz-badge cz-badge--success"><span class="d"></span>Pago</span>
+<span class="cz-badge cz-badge--brand">Novo</span>
+<span class="cz-with-count">
+  <button class="cz-icon-btn" aria-label="Notificações, 3 novas">…</button>
+  <span class="cz-count-dot">3</span>
+</span></script>
+</section>
+
+<section class="ds-page" id="tooltip" data-title="Tooltip e popover" data-group="Feedback" data-keys="tooltip dica popover balão ajuda" hidden>
+  <p class="ds-crumb">Feedback</p>
+  <h1>Tooltip e popover</h1>
+  <p class="ds-lead">O tooltip nomeia um controle e aparece no hover e no foco. O popover abre no clique e pode ter conteúdo e ações; fecha com Esc ou clicando fora.</p>
+  <div class="ds-spec"><div class="ds-stage" style="min-height:300px;align-items:center;padding-top:64px;gap:32px">
+    <span class="cz-tooltip"><button class="cz-icon-btn cz-icon-btn--secondary" aria-label="Duplicar produto">{{i:copy}}</button><span role="tooltip">Duplicar produto</span></span>
+    <span class="cz-tooltip"><span class="cz-badge cz-badge--info" tabindex="0">Frete calculado</span><span role="tooltip">Pelo CEP 01310-100</span></span>
+    <div class="cz-pop">
+      <button class="cz-btn cz-btn--secondary" data-popover aria-expanded="false">{{i:help:i-sm}}O que é o SKU?</button>
+      <div class="cz-popover" hidden role="dialog" aria-label="Sobre o SKU">
+        <h4>Código do produto</h4>
+        <p>O SKU identifica cada variação no estoque. Use letras, números e hífens, como FRM-002-AZ.</p>
+        <div class="ds-row"><a class="cz-link" href="#campos">Ver exemplos</a><button class="cz-btn cz-btn--sm" data-close-pop>Entendi</button></div>
+      </div>
+    </div>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><span class="cz-tooltip">
+  <button class="cz-icon-btn" aria-label="Duplicar produto">…</button>
+  <span role="tooltip">Duplicar produto</span>
+</span></script>
+</section>

@@ -1,0 +1,238 @@
+<section class="ds-page" id="produto" data-title="Card de produto" data-group="Comércio" data-keys="produto vitrine preço desconto favorito card comprar" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Card de produto</h1>
+  <p class="ds-lead">O card da vitrine: imagem quadrada sobre fundo Oat, nome, avaliação e preço com parcelamento. Selos ficam no canto da imagem, e o favorito sempre no mesmo lugar.</p>
+  <div class="ds-spec"><div class="ds-stage canvas" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:24px;align-items:start">
+    <article class="cz-product">
+      <div class="cz-product-media"><img src="{{img:prod-vase.webp}}" alt="Vaso de cerâmica em tom terra"><span class="cz-badge cz-badge--brand">-12%</span><button class="cz-icon-btn cz-icon-btn--sm cz-icon-btn--round fav" data-toggle aria-pressed="false" aria-label="Favoritar Vaso Terra">{{i:heart}}</button></div>
+      <div><h4>Vaso Terra</h4><span class="meta">Cerâmica · 3 tamanhos</span></div>
+      <span class="cz-rating"><span class="cz-stars" aria-hidden="true">{{i:star}}{{i:star}}{{i:star}}{{i:star}}{{i:star}}</span>4,9 (128)</span>
+      <div class="cz-price"><b>R$ 229,90</b><s>R$ 259,90</s><small>ou 3× de R$ 76,63 sem juros</small></div>
+      <button class="cz-btn cz-btn--sm cz-btn--block" data-toast="success" data-title="Adicionado ao carrinho" data-msg="Vaso Terra · Grande">{{i:cart:i-sm}}Adicionar</button>
+    </article>
+    <article class="cz-product">
+      <div class="cz-product-media"><img src="{{img:prod-lamp.webp}}" alt="Luminária circular de mesa"><span class="cz-badge cz-badge--dark">Novo</span><button class="cz-icon-btn cz-icon-btn--sm cz-icon-btn--round fav" data-toggle aria-pressed="true" aria-label="Favoritar Luminária Círculo">{{i:heart}}</button></div>
+      <div><h4>Luminária Círculo</h4><span class="meta">Iluminação · Latão</span></div>
+      <span class="cz-rating"><span class="cz-stars" aria-hidden="true">{{i:star}}{{i:star}}{{i:star}}{{i:star}}<span class="i off" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/star.svg)" aria-hidden="true"></span></span>4,2 (36)</span>
+      <div class="cz-price"><b>R$ 64,90</b><small>no Pix · R$ 68,90 no cartão</small></div>
+      <button class="cz-btn cz-btn--sm cz-btn--block" data-toast="success" data-title="Adicionado ao carrinho" data-msg="Luminária Círculo">{{i:cart:i-sm}}Adicionar</button>
+    </article>
+    <article class="cz-product">
+      <div class="cz-product-media"><img src="{{img:prod-box.webp}}" alt="Caixa de papelão kraft" style="opacity:.55"><span class="cz-badge">Esgotado</span></div>
+      <div><h4>Caixa Essencial</h4><span class="meta">Embalagens · Kit com 10</span></div>
+      <span class="cz-rating"><span class="cz-stars" aria-hidden="true">{{i:star}}{{i:star}}{{i:star}}{{i:star}}{{i:star}}</span>5,0 (12)</span>
+      <div class="cz-price"><b>R$ 39,90</b></div>
+      <button class="cz-btn cz-btn--secondary cz-btn--sm cz-btn--block" data-toast="info" data-title="Aviso ativado" data-msg="Você recebe um e-mail quando voltar ao estoque.">{{i:bell:i-sm}}Avise-me</button>
+    </article>
+  </div><div class="ds-cap"><span>Em promoção · Novo e favoritado · Esgotado</span><b>Clique no coração e em Adicionar</b></div></div>
+
+  <h2>Horizontal</h2>
+  <div class="ds-spec"><div class="ds-stage">
+    <article class="cz-card" style="display:grid;grid-template-columns:120px 1fr;max-width:520px;width:100%">
+      <img src="{{img:prod-vase.webp}}" alt="" style="width:100%;height:100%;object-fit:cover;background:var(--cz-oat)">
+      <div class="cz-card-body"><h4>Vaso Terra</h4><div class="cz-price"><b>R$ 229,90</b><s>R$ 259,90</s><span class="off">12% off</span></div><span class="cz-tag cz-tag--ship" style="justify-self:start">{{i:truck:i-sm}}Chega amanhã</span></div>
+    </article>
+  </div></div>
+  <script type="text/plain" class="ds-snippet"><article class="cz-product">
+  <div class="cz-product-media">
+    <img src="vaso.jpg" alt="Vaso de cerâmica em tom terra">
+    <span class="cz-badge cz-badge--brand">-12%</span>
+    <button class="cz-icon-btn cz-icon-btn--sm cz-icon-btn--round fav" aria-pressed="false" aria-label="Favoritar">…</button>
+  </div>
+  <div><h4>Vaso Terra</h4><span class="meta">Cerâmica</span></div>
+  <div class="cz-price"><b>R$ 229,90</b><s>R$ 259,90</s><small>ou 3× de R$ 76,63</small></div>
+</article></script>
+</section>
+
+<section class="ds-page" id="variacoes" data-title="Variações e avaliação" data-group="Comércio" data-keys="variação cor tamanho estrelas avaliação review swatch" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Variações e avaliação</h1>
+  <p class="ds-lead">Seletores de cor e tamanho para a página de produto, com a variação indisponível riscada mas visível. A avaliação por estrelas aceita teclado e diz a nota em texto.</p>
+  <div class="ds-spec"><div class="ds-stage" style="display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:32px;align-items:start">
+    <div class="cz-product-media"><img src="{{img:prod-vase.webp}}" alt="Vaso Terra"></div>
+    <div style="display:grid;gap:18px">
+      <div><p class="cz-help">Cerâmica · FRM-002</p><h3 style="font:400 32px var(--font-display)">Vaso Terra</h3><span class="cz-rating"><span class="cz-stars" aria-hidden="true">{{i:star}}{{i:star}}{{i:star}}{{i:star}}{{i:star}}</span><a class="cz-link cz-link--quiet" href="#variacoes">4,9 de 5 · 128 avaliações</a></span></div>
+      <div class="cz-price"><b style="font-size:24px">R$ 229,90</b><s>R$ 259,90</s><span class="off">12% off</span><small>ou 3× de R$ 76,63 sem juros · R$ 218,40 no Pix</small></div>
+      <div class="cz-field"><span class="cz-label">Cor: <span data-swatch-name style="font-weight:400">Terracota</span></span>
+        <div class="cz-swatch-pick" data-toggle-group data-swatch aria-label="Cor">
+          <button aria-pressed="true" aria-label="Terracota" style="background:#c5785c"></button>
+          <button aria-pressed="false" aria-label="Oat" style="background:#e9dec9"></button>
+          <button aria-pressed="false" aria-label="Oliva" style="background:#858a58"></button>
+          <button aria-pressed="false" aria-label="Carvão" style="background:#292524"></button>
+        </div>
+      </div>
+      <div class="cz-field"><span class="cz-label">Tamanho</span>
+        <div class="cz-size-pick" data-toggle-group aria-label="Tamanho">
+          <button aria-pressed="false">P</button><button aria-pressed="true">M</button><button aria-pressed="false">G</button><button disabled aria-label="GG, indisponível">GG</button>
+        </div>
+      </div>
+      <div class="ds-row"><div class="cz-qty cz-qty--lg" data-qty data-min="1" data-max="5"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="1" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div><button class="cz-btn cz-btn--lg" style="flex:1" data-toast="success" data-title="Adicionado ao carrinho" data-msg="Vaso Terra · M">{{i:cart:i-sm}}Adicionar ao carrinho</button></div>
+      <div class="cz-field"><label for="cep-calc">Calcular frete</label><div class="cz-coupon"><input class="cz-input num" id="cep-calc" placeholder="00000-000" style="max-width:160px"><button class="cz-btn cz-btn--secondary" data-toast="info" data-title="Frete para 01310-100" data-msg="Expressa: amanhã, R$ 24,90 · Econômica: 5 dias, R$ 12,40">Calcular</button></div></div>
+    </div>
+  </div></div>
+  <h2>Avaliar</h2>
+  <div class="ds-spec"><div class="ds-stage col" style="max-width:520px">
+    <div class="cz-field"><span class="cz-label" id="rate-l">Sua nota para o Vaso Terra</span><div class="cz-stars-input" data-rating role="radiogroup" aria-labelledby="rate-l"></div><span class="cz-help" data-rating-label>Escolha de 1 a 5 estrelas</span></div>
+    <div class="cz-field"><label for="rev">Conte como foi <span class="opt">(opcional)</span></label><textarea class="cz-textarea" id="rev" placeholder="A peça chegou bem embalada? O tamanho é o que você esperava?"></textarea></div>
+  </div></div>
+</section>
+
+<section class="ds-page" id="carrinho" data-title="Carrinho e resumo" data-group="Comércio" data-keys="carrinho cart resumo pedido cupom frete total" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Carrinho e resumo</h1>
+  <p class="ds-lead">Linhas de carrinho com quantidade editável e um resumo que recalcula na hora. Experimente mudar as quantidades e aplicar o cupom <code>CONVERTIZE10</code>.</p>
+  <div class="ds-spec"><div class="ds-stage" data-cart style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:start">
+    <div>
+      <h3 class="ds-h3">Seu carrinho · <span data-cart-count>3 itens</span></h3>
+      <div data-cart-lines>
+        <div class="cz-cart-line" data-price="229.90"><img src="{{img:prod-vase.webp}}" alt=""><div><b>Vaso Terra</b><small>Terracota · M</small><div style="margin-top:10px" class="cz-qty cz-qty--sm" data-qty data-min="0" data-max="9"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="1" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div></div><div class="end"><b class="num" data-line-total>R$ 229,90</b><button class="cz-link cz-link--quiet" style="border:0;background:none;padding:0;font-size:13px" data-remove-line>Remover</button></div></div>
+        <div class="cz-cart-line" data-price="64.90"><img src="{{img:prod-lamp.webp}}" alt=""><div><b>Luminária Círculo</b><small>Latão</small><div style="margin-top:10px" class="cz-qty cz-qty--sm" data-qty data-min="0" data-max="9"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="1" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div></div><div class="end"><b class="num" data-line-total>R$ 64,90</b><button class="cz-link cz-link--quiet" style="border:0;background:none;padding:0;font-size:13px" data-remove-line>Remover</button></div></div>
+        <div class="cz-cart-line" data-price="39.90"><img src="{{img:prod-box.webp}}" alt=""><div><b>Caixa Essencial</b><small>Kit com 10</small><div style="margin-top:10px" class="cz-qty cz-qty--sm" data-qty data-min="0" data-max="9"><button type="button" data-step="-1" aria-label="Diminuir">{{i:minus:i-sm}}</button><input type="number" value="1" aria-label="Quantidade"><button type="button" data-step="1" aria-label="Aumentar">{{i:plus:i-sm}}</button></div></div><div class="end"><b class="num" data-line-total>R$ 39,90</b><button class="cz-link cz-link--quiet" style="border:0;background:none;padding:0;font-size:13px" data-remove-line>Remover</button></div></div>
+      </div>
+    </div>
+    <aside class="cz-card"><div class="cz-card-body" style="gap:16px">
+      <h4>Resumo do pedido</h4>
+      <div class="cz-field"><label for="cupom">Cupom de desconto</label><div class="cz-coupon"><input class="cz-input" id="cupom" placeholder="Digite o código" data-coupon-input><button class="cz-btn cz-btn--secondary" data-coupon-apply>Aplicar</button></div><span class="cz-help" data-coupon-msg>Experimente CONVERTIZE10.</span></div>
+      <div class="cz-summary">
+        <div class="row"><span>Subtotal</span><b data-sum-sub>R$ 334,70</b></div>
+        <div class="row disc" data-sum-disc-row hidden><span>Cupom CONVERTIZE10</span><b data-sum-disc>− R$ 0,00</b></div>
+        <div class="row"><span>Frete</span><b data-sum-ship>Grátis</b></div>
+        <div class="cz-progress cz-progress--success" aria-hidden="true"><i data-ship-bar style="--v:100%"></i></div>
+        <span class="cz-help" data-ship-msg>Você ganhou frete grátis.</span>
+        <div class="row total"><span>Total</span><b data-sum-total>R$ 334,70</b></div>
+      </div>
+      <a class="cz-btn cz-btn--lg cz-btn--block" href="#checkout">{{i:lock:i-sm}}Ir para o pagamento</a>
+    </div></aside>
+  </div></div>
+</section>
+
+<section class="ds-page" id="checkout" data-title="Checkout" data-group="Comércio" data-keys="checkout pagamento pix cartão boleto finalizar compra" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Checkout</h1>
+  <p class="ds-lead">Etapas, cartões de opção e resumo fixo compõem o checkout de uma página. A forma de pagamento escolhida revela só os campos que ela precisa.</p>
+  <div class="ds-spec"><div class="ds-stage canvas" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:start">
+    <div style="display:grid;gap:16px">
+      <ol class="cz-steps" style="margin-bottom:8px"><li class="done"><span class="dot">1</span><span class="lbl">Carrinho</span></li><li class="done"><span class="dot">2</span><span class="lbl">Entrega</span></li><li class="current"><span class="dot">3</span><span class="lbl">Pagamento</span></li><li><span class="dot">4</span><span class="lbl">Confirmação</span></li></ol>
+      <div class="cz-card"><div class="cz-card-body" style="gap:12px">
+        <div class="ds-row" style="justify-content:space-between"><h4>Entrega</h4><button class="cz-btn cz-btn--ghost cz-btn--sm">Alterar</button></div>
+        <p>Eriton Muniz · Rua Harmonia, 118, ap. 42 · São Paulo, SP · 05435-000</p>
+        <span class="cz-tag cz-tag--ship" style="justify-self:start">{{i:truck:i-sm}}Expressa, chega amanhã</span>
+      </div></div>
+      <div class="cz-card"><div class="cz-card-body" style="gap:12px" data-pay>
+        <h4>Pagamento</h4>
+        <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="pay" value="pix" checked></span><span><b>Pix</b><br><small class="cz-help">Aprovação na hora · 5% de desconto</small></span><span class="price">{{i:qr}}</span></label>
+        <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="pay" value="card"></span><span><b>Cartão de crédito</b><br><small class="cz-help">Até 3× sem juros</small></span><span class="price">{{i:card}}</span></label>
+        <label class="cz-choice-card"><span class="cz-radio"><input type="radio" name="pay" value="boleto"></span><span><b>Boleto</b><br><small class="cz-help">Compensação em até 2 dias úteis</small></span><span class="price">{{i:barcode}}</span></label>
+        <div data-pay-panel="pix" class="cz-alert cz-alert--info">{{i:qr}}<div><strong>O QR Code aparece na próxima tela</strong>Ele vale por 30 minutos. O pedido é confirmado assim que o pagamento cair.</div><span></span></div>
+        <div data-pay-panel="card" hidden style="display:grid;gap:12px">
+          <div class="cz-field"><label for="cc-n">Número do cartão</label><div class="cz-input-wrap">{{i:card}}<input class="cz-input num" id="cc-n" inputmode="numeric" placeholder="0000 0000 0000 0000"></div></div>
+          <div class="ds-grid two" style="gap:12px"><div class="cz-field"><label for="cc-v">Validade</label><input class="cz-input num" id="cc-v" placeholder="MM/AA"></div><div class="cz-field"><label for="cc-c">CVV</label><input class="cz-input num" id="cc-c" placeholder="3 dígitos"></div></div>
+          <div class="cz-field"><label for="cc-p">Parcelas</label><select class="cz-select" id="cc-p"><option>1× de R$ 358,60</option><option>2× de R$ 179,30 sem juros</option><option>3× de R$ 119,53 sem juros</option></select></div>
+        </div>
+        <div data-pay-panel="boleto" hidden class="cz-alert cz-alert--warning">{{i:clock}}<div><strong>O pedido é separado depois da compensação</strong>Isso leva até 2 dias úteis. Pix e cartão são aprovados na hora.</div><span></span></div>
+      </div></div>
+    </div>
+    <aside class="cz-card" style="position:sticky;top:80px"><div class="cz-card-body" style="gap:14px">
+      <h4>Resumo</h4>
+      <div class="cz-list-item" style="padding:0;border:0"><span class="lead"><img src="{{img:prod-vase.webp}}" alt=""></span><div class="body"><b>Vaso Terra</b><small>1 × R$ 229,90</small></div></div>
+      <div class="cz-list-item" style="padding:0;border:0"><span class="lead"><img src="{{img:prod-lamp.webp}}" alt=""></span><div class="body"><b>Luminária Círculo</b><small>1 × R$ 64,90</small></div></div>
+      <div class="cz-list-item" style="padding:0;border:0"><span class="lead"><img src="{{img:prod-box.webp}}" alt=""></span><div class="body"><b>Caixa Essencial</b><small>1 × R$ 39,90</small></div></div>
+      <hr class="cz-divider">
+      <div class="cz-summary"><div class="row"><span>Subtotal</span><b>R$ 334,70</b></div><div class="row"><span>Frete</span><b>R$ 23,90</b></div><div class="row total"><span>Total</span><b>R$ 358,60</b></div></div>
+      <button class="cz-btn cz-btn--lg cz-btn--block" data-toast="success" data-title="Pedido confirmado" data-msg="#CV-2052 · enviamos os detalhes por e-mail.">{{i:lock:i-sm}}Pagar R$ 358,60</button>
+      <span class="cz-help" style="display:flex;gap:6px;align-items:center;justify-content:center">{{i:shield:i-sm}}Pagamento processado com criptografia</span>
+    </div></aside>
+  </div></div>
+</section>
+
+<section class="ds-page" id="pedido" data-title="Status do pedido" data-group="Comércio" data-keys="pedido status rastreio entrega confirmação" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Status do pedido</h1>
+  <p class="ds-lead">Tela de acompanhamento para quem comprou: o estado atual em destaque, a previsão em linguagem simples e o histórico logo abaixo.</p>
+  <div class="ds-spec"><div class="ds-stage canvas center">
+    <div class="cz-card" style="width:min(560px,100%)"><div class="cz-card-body" style="gap:18px">
+      <div class="ds-row" style="justify-content:space-between"><span class="cz-help">Pedido #CV-2048</span><span class="cz-badge cz-badge--info"><span class="d"></span>Em trânsito</span></div>
+      <p style="font:400 30px/1.15 var(--font-display)">Chega amanhã, até as 18h</p>
+      <ol class="cz-steps"><li class="done"><span class="dot">{{i:check:i-sm}}</span><span class="lbl">Pago</span></li><li class="done"><span class="dot">{{i:check:i-sm}}</span><span class="lbl">Separado</span></li><li class="current"><span class="dot">{{i:truck:i-sm}}</span><span class="lbl">A caminho</span></li><li><span class="dot">{{i:home:i-sm}}</span><span class="lbl">Entregue</span></li></ol>
+      <hr class="cz-divider">
+      <ol class="cz-timeline">
+        <li class="now"><span class="dot">{{i:truck}}</span><div><b>Saiu do centro de distribuição</b><small>Hoje, 08:02 · Barueri, SP</small></div></li>
+        <li class="done"><span class="dot">{{i:check}}</span><div><b>Entregue à transportadora</b><small>Ontem, 17:40</small></div></li>
+        <li class="done"><span class="dot">{{i:check}}</span><div><b>Pagamento aprovado</b><small>Ontem, 14:32 · Pix</small></div></li>
+      </ol>
+      <div class="ds-row"><button class="cz-btn cz-btn--secondary">{{i:chat:i-sm}}Falar com a loja</button><button class="cz-btn cz-btn--ghost">{{i:return:i-sm}}Solicitar troca</button></div>
+    </div></div>
+  </div></div>
+</section>
+
+<section class="ds-page" id="rastreamento" data-title="Rastreamento de pedido" data-group="Comércio" data-keys="order tracking rastreamento rastreio entrega etapas pedido timeline" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Rastreamento de pedido</h1>
+  <p class="ds-lead">Order tracking: as etapas do pedido em coluna, da compra à entrega. Etapas concluídas ganham o check; a data e a hora ficam logo abaixo do nome, e o que ainda não aconteceu aparece como pendente.</p>
+
+  <h2>Em português</h2>
+  <div class="ds-grid two">
+    <div class="ds-spec" style="margin:0"><div class="ds-stage" style="padding:40px 48px">
+    <ol class="cz-track" aria-label="Rastreamento do pedido #CV-2051">
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Pedido realizado</b><time class="when" datetime="2026-09-20T14:23">20/09/2026 14:23</time><span class="vh">Concluído</span></div></li>
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Pedido confirmado</b><time class="when" datetime="2026-09-20T14:30">20/09/2026 14:30</time><span class="vh">Concluído</span></div></li>
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Pedido enviado</b><time class="when" datetime="2026-09-21T09:45">21/09/2026 09:45</time><span class="vh">Concluído</span></div></li>
+      <li><span class="dot">{{i:check}}</span><div><b>Saiu para entrega</b><time class="when" datetime="2026-09-22T08:15">22/09/2026 08:15</time><span class="vh">A fazer</span></div></li>
+      <li><span class="dot">{{i:check}}</span><div><b>Entregue</b><span class="when">Pendente</span><span class="vh">A fazer</span></div></li>
+    </ol>
+    </div><div class="ds-cap"><span>Pedido #CV-2051, três etapas concluídas</span><b>cz-track</b></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage" style="padding:40px 48px">
+    <ol class="cz-track" aria-label="Order tracking">
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Order Placed</b><time class="when" datetime="2024-03-20T14:23">2024-03-20 14:23</time><span class="vh">Done</span></div></li>
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Order Confirmed</b><time class="when" datetime="2024-03-20T14:30">2024-03-20 14:30</time><span class="vh">Done</span></div></li>
+      <li class="is-done"><span class="dot">{{i:check}}</span><div><b>Order Shipped</b><time class="when" datetime="2024-03-21T09:45">2024-03-21 09:45</time><span class="vh">Done</span></div></li>
+      <li><span class="dot">{{i:check}}</span><div><b>Out for Delivery</b><time class="when" datetime="2024-03-22T08:15">2024-03-22 08:15</time><span class="vh">Not done</span></div></li>
+      <li><span class="dot">{{i:check}}</span><div><b>Delivered</b><span class="when">Pending</span><span class="vh">Not done</span></div></li>
+    </ol>
+    </div><div class="ds-cap"><span>Em inglês, com o conteúdo da referência</span><b>Order tracking</b></div></div>
+  </div>
+
+  <h2>Anatomia</h2>
+  <table class="ds-props">
+    <thead><tr><th>Parte</th><th>Medida</th></tr></thead>
+    <tbody>
+      <tr><td>Círculo</td><td>26 px, contorno de 2,5 px em cinza; o check aparece só em <code>li.is-done</code>.</td></tr>
+      <tr><td>Linha</td><td>2 px, da mesma cor do contorno, ligando um círculo ao próximo.</td></tr>
+      <tr><td>Etapa</td><td>Nome em Inter 500 de 17 px; data e hora no mesmo tamanho, em cinza, com números tabulares.</td></tr>
+      <tr><td>Espaço</td><td>16 px entre círculo e texto, 34 px entre etapas.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Use a data da etapa quando ela já tem previsão, mesmo sem estar concluída.</li><li>Escreva “Pendente” quando ainda não há data.</li><li>Marque a lista como <code>&lt;ol&gt;</code> e use <code>&lt;time datetime&gt;</code> nas datas.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Mais de sete etapas; agrupe as intermediárias.</li><li>Cor como único sinal de etapa concluída; o check é o sinal.</li></ul></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><ol class="cz-track" aria-label="Rastreamento do pedido #CV-2051">
+  <li class="is-done">
+    <span class="dot"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/check.svg)" aria-hidden="true"></span></span>
+    <div><b>Pedido realizado</b><time class="when" datetime="2026-09-20T14:23">20/09/2026 14:23</time></div>
+  </li>
+  <li>
+    <span class="dot"><span class="i" style="--icon:url(https://cdn.jsdelivr.net/gh/izaqueotaviano/icons@main/svg/check.svg)" aria-hidden="true"></span></span>
+    <div><b>Entregue</b><span class="when">Pendente</span></div>
+  </li>
+</ol></script>
+</section>
+
+<section class="ds-page" id="segmentos" data-title="Segmentos" data-group="Comércio" data-keys="b2b b2c marketplace omnichannel segmentos soluções modelo de negócio" hidden>
+  <p class="ds-crumb">Comércio</p>
+  <h1>Segmentos</h1>
+  <p class="ds-lead">Cartões de navegação para os segmentos da Convertize (B2C, B2B, Marketplace, Multiloja e Aplicativo), com os ícones do site. O cartão escolhido ganha o contorno laranja e atualiza a descrição.</p>
+  <div class="cz-seg" style="margin-top:24px" data-segments>
+    <div><p style="color:#a8a29e;font-size:14px;margin-bottom:10px">Soluções Convertize</p><h4>Um comércio. Muitos jeitos de crescer.</h4></div>
+    <div class="cz-seg-grid">
+      <button class="cz-seg-card" aria-pressed="true" data-seg="E‑commerce B2C|Venda mais, em todos os canais.|Crie uma experiência de compra moderna e de alta performance, integrada à sua operação física com estoque unificado, Clique e Retire, Ship from Store, multidocas e preços sincronizados em tempo real."><img src="https://convertize.com.br/wp-content/uploads/2026/07/icon-b2c-1.svg" alt="" width="64" height="64" loading="lazy"><span><b>E‑commerce B2C</b><br><small>Venda mais, em todos os canais.</small></span></button>
+      <button class="cz-seg-card" aria-pressed="false" data-seg="E‑commerce B2B|Regras comerciais do seu jeito.|Atenda clientes corporativos com tabelas de preços personalizadas, catálogos exclusivos, pedido mínimo, aprovação de pedidos, limite de crédito e representantes comerciais."><img src="https://convertize.com.br/wp-content/uploads/2026/07/icon-b2b-1.svg" alt="" width="64" height="64" loading="lazy"><span><b>E‑commerce B2B</b><br><small>Regras comerciais do seu jeito.</small></span></button>
+      <button class="cz-seg-card" aria-pressed="false" data-seg="Marketplace|Expanda seu catálogo e aumente suas vendas.|Conecte sua loja aos principais marketplaces, como Mercado Livre e TikTok Shop, e gerencie produtos, pedidos e estoque de forma centralizada."><img src="https://convertize.com.br/wp-content/uploads/2026/07/icon-marketplace-1.svg" alt="" width="64" height="64" loading="lazy"><span><b>Marketplace</b><br><small>Expanda seu catálogo e aumente suas vendas.</small></span></button>
+      <button class="cz-seg-card" aria-pressed="false" data-seg="Multiloja|Gerencie todas as suas lojas em um só lugar.|Administre lojas, centros de distribuição e unidades de negócio com catálogo, estoque, pedidos, preços e campanhas centralizados."><img src="https://convertize.com.br/wp-content/uploads/2026/07/icon-omni-1.svg" alt="" width="64" height="64" loading="lazy"><span><b>Multiloja</b><br><small>Gerencie todas as suas lojas em um só lugar.</small></span></button>
+      <button class="cz-seg-card" aria-pressed="false" data-seg="Aplicativo|Sua marca na palma da mão dos clientes.|Aplicativo nativo para Android e iOS integrado ao e-commerce, com o mesmo catálogo, promoções, pedidos, login e programas de fidelidade."><img src="https://convertize.com.br/wp-content/uploads/2026/09/icon-app.svg" alt="" width="64" height="64" loading="lazy"><span><b>Aplicativo</b><br><small>Sua marca na palma da mão dos clientes.</small></span></button>
+    </div>
+    <div class="cz-seg-detail" aria-live="polite"><span style="color:#a8a29e;font-size:13px" data-seg-name>Modelo selecionado · E‑commerce B2C</span><b style="font-size:22px;font-weight:600" data-seg-title>Venda mais, em todos os canais.</b><p data-seg-desc>Crie uma experiência de compra moderna e de alta performance, integrada à sua operação física com estoque unificado, Clique e Retire, Ship from Store, multidocas e preços sincronizados em tempo real.</p><a class="cz-link" style="color:#ffb19a" href="#segmentos">Explorar solução {{i:arrow-up-right:i-sm}}</a></div>
+  </div>
+</section>

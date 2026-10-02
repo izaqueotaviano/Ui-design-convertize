@@ -1,0 +1,44 @@
+<title>UI Convertize V2</title>
+<meta name="description" content="Fundamentos, componentes e padrões de interface da Convertize.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tenor+Sans&display=swap">
+<style>
+/*STYLES*/
+</style>
+<!--SPRITE-->
+
+<div class="ds-shell">
+  <div class="ds-drawer" id="ds-drawer">
+    <aside class="cz-sidebar is-collapsed ds-rail" id="ds-rail" aria-label="Grupos">
+      <div class="cz-sidebar-head"><a href="#inicio" aria-label="Início do design system">{{sym}}</a></div>
+      <!--RAIL-->
+    </aside>
+    <nav class="ds-nav" id="ds-nav" aria-label="Páginas do grupo">
+      <!--NAV-->
+    </nav>
+  </div>
+  <div class="ds-nav-scrim" id="ds-nav-scrim" hidden></div>
+  <div class="ds-body">
+    <header class="ds-top">
+      <button class="cz-icon-btn ds-menu-btn" id="ds-menu" aria-label="Abrir navegação" aria-expanded="false" aria-controls="ds-drawer">{{i:menu}}</button>
+      <div class="ds-top-actions">
+        <button class="cz-cmd-trigger ds-search-btn" id="ds-search-open" aria-label="Buscar no design system, atalho Ctrl K"><span class="lbl">Buscar componente</span><kbd>Ctrl K</kbd>{{i:search}}</button>
+        <button class="cz-icon-btn" id="ds-theme" data-theme-toggle aria-label="Alternar tema claro e escuro"><span data-theme-icon="light">{{i:moon}}</span><span data-theme-icon="dark" hidden>{{i:sun}}</span></button>
+      </div>
+    </header>
+    <main class="ds-main" id="ds-main" tabindex="-1">
+<!--PAGES-->
+    </main>
+  </div>
+</div>
+<div class="ds-tip" id="ds-tip" role="tooltip" hidden></div>
+
+<div class="cz-toast-region" id="cz-toasts" aria-live="polite"></div>
+
+<script>
+/*KIT*/
+</script>
+<script>
+/*DOCS*/
+</script>

@@ -1,0 +1,339 @@
+<section class="ds-page" id="dashboard" data-title="Painel da loja" data-group="Padrões de tela" data-keys="dashboard painel home admin visão geral tela completa funil kpi" hidden>
+  <p class="ds-crumb">Padrões de tela</p>
+  <h1>Painel da loja</h1>
+  <p class="ds-lead">A primeira tela do lojista: quanto vendeu, como está a conversão e o que precisa de ação agora. Troque o período e passe o mouse pelos gráficos; tudo aqui é montado com componentes do kit.</p>
+
+  <div class="dash" data-dash>
+    <aside class="cz-sidebar" data-sidebar aria-label="Menu principal">
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button data-collapse aria-label="Recolher menu" aria-expanded="true">{{i:sidebar}}</button></div>
+      <button class="cz-side-item" aria-current="page">{{i:home}}<span class="lbl">Início</span></button>
+      <button class="cz-side-item">{{i:box}}<span class="lbl">Catálogo</span></button>
+      <button class="cz-side-item">{{i:cart}}<span class="lbl">Vendas</span><span class="cz-badge cz-badge--brand">11</span></button>
+      <button class="cz-side-item">{{i:card}}<span class="lbl">Pagamentos</span></button>
+      <button class="cz-side-item">{{i:truck}}<span class="lbl">Logística</span></button>
+      <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+      <button class="cz-side-item">{{i:percent}}<span class="lbl">Marketing</span></button>
+      <button class="cz-side-item">{{i:file}}<span class="lbl">Conteúdo</span></button>
+      <div class="cz-sidebar-spacer"></div>
+      <button class="cz-side-item">{{i:sliders}}<span class="lbl">Configurações</span></button>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-top">
+        <button class="cz-cmd-trigger dash-search" data-dash-search aria-label="Pesquisar no sistema"><span class="lbl">Pesquisar no sistema</span>{{i:search}}</button>
+        <div class="dash-top-actions">
+          <button class="cz-btn cz-btn--tonal cz-btn--sm dash-hide-sm">Ver a loja{{i:external:i-sm}}</button>
+          <button class="cz-btn cz-btn--tonal cz-btn--sm dash-hide-sm">{{i:chat:i-sm}}Chat</button>
+          <button class="cz-btn cz-btn--tonal cz-btn--sm dash-hide-sm">{{i:help:i-sm}}Ajuda</button>
+          <div class="cz-pop">
+            <button class="dash-account" data-menu-trigger aria-haspopup="menu" aria-expanded="false"><span class="cz-avatar cz-avatar--brand" style="--s:30px">IO</span><span class="dash-hide-sm">Izaque</span>{{i:chev-down:i-sm}}</button>
+            <div class="cz-menu right" role="menu" hidden>
+              <button class="cz-menu-item" role="menuitem">{{i:user}}Minha conta</button>
+              <button class="cz-menu-item" role="menuitem">{{i:store}}Trocar de loja</button>
+              <div class="cz-menu-sep"></div>
+              <button class="cz-menu-item" role="menuitem">{{i:logout}}Sair</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dash-body">
+        <div class="dash-head">
+          <div>
+            <p class="dash-date" data-dash-date>Quinta, 24 de setembro, 14h02</p>
+            <h2>Visão geral</h2>
+          </div>
+          <div class="dash-filters">
+            <div class="cz-segmented" data-dash-period aria-label="Período">
+              <button aria-pressed="true" data-p="hoje">Hoje</button><button aria-pressed="false" data-p="7">7 dias</button><button aria-pressed="false" data-p="30">30 dias</button>
+            </div>
+            <select class="cz-select dash-compare" data-dash-compare aria-label="Comparação">
+              <option value="on">Comparar com ontem até 14h</option>
+              <option value="off">Sem comparação</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cz-alert cz-alert--info">{{i:calendar}}<div><strong>Feriado de 12 de outubro</strong>No dia, o suporte responde só chamados urgentes. Pedidos e pagamentos seguem normais.</div><button class="close" aria-label="Fechar aviso" data-dismiss>{{i:x:i-sm}}</button></div>
+
+        <div class="dash-kpis">
+          <div class="cz-stat" data-kpi="receita"><span class="lbl">Receita</span><span class="val num"></span><span class="cz-delta"></span></div>
+          <div class="cz-stat" data-kpi="pedidos"><span class="lbl">Pedidos</span><span class="val num"></span><span class="cz-delta"></span></div>
+          <div class="cz-stat" data-kpi="ticket"><span class="lbl">Ticket médio</span><span class="val num"></span><span class="cz-delta"></span></div>
+          <div class="cz-stat" data-kpi="sessoes"><span class="lbl">Sessões</span><span class="val num"></span><span class="cz-delta"></span></div>
+          <div class="cz-stat" data-kpi="conv"><span class="lbl">Conversão</span><span class="val num"></span><span class="cz-delta"></span></div>
+        </div>
+
+        <div class="dash-grid">
+          <div class="dash-col">
+            <div class="dash-charts">
+              <section class="dash-card">
+                <div class="dash-card-head"><h3>Pedidos</h3><div class="dash-legend" data-legend="pedidos"></div></div>
+                <div class="dash-chart" data-dash-chart="pedidos" tabindex="0"></div>
+              </section>
+              <section class="dash-card">
+                <div class="dash-card-head"><h3>Taxa de conversão</h3><div class="dash-legend" data-legend="conv"></div></div>
+                <div class="dash-chart" data-dash-chart="conv" tabindex="0"></div>
+              </section>
+            </div>
+
+            <section class="dash-card">
+              <div class="dash-card-head"><h3>Funil de vendas</h3><span class="cz-help">Percentual sobre o total de sessões</span></div>
+              <ol class="dash-funnel" data-dash-funnel></ol>
+            </section>
+          </div>
+
+          <aside class="dash-side">
+            <section class="dash-card">
+              <div class="dash-card-head"><h3>Notificações</h3><span class="dash-status"><span class="d"></span>Sistemas operando</span></div>
+              <ul class="dash-feed">
+                <li><span class="ic" style="--c:var(--info)">{{i:box:i-sm}}</span><div><p>18 produtos importados da planilha</p><small>Hoje, 07h45</small></div></li>
+                <li><span class="ic" style="--c:var(--accent-text)">{{i:percent:i-sm}}</span><div><p>Campanha “Dia das Crianças” ativada</p><small>Ontem, 22h30</small></div></li>
+                <li><span class="ic" style="--c:var(--success)">{{i:truck:i-sm}}</span><div><p>Integração com a Jadlog atualizada</p><small>Ontem, 18h12</small></div></li>
+              </ul>
+            </section>
+            <section class="dash-card">
+              <div class="dash-card-head"><h3>Requer sua atenção</h3></div>
+              <div class="dash-todo">
+                <button data-toast="info" data-title="Abrindo estoque" data-msg="4 produtos populares sem estoque.">{{i:alert:i-sm}}<span>Reponha 4 produtos populares sem estoque</span>{{i:chev-right:i-sm}}</button>
+                <button data-toast="info" data-title="Abrindo pedidos" data-msg="11 pedidos aguardando envio.">{{i:clock:i-sm}}<span>Processe 11 pedidos pendentes</span>{{i:chev-right:i-sm}}</button>
+                <button data-toast="info" data-title="Abrindo carrinhos" data-msg="44 carrinhos abandonados nas últimas 24h.">{{i:cart:i-sm}}<span>Recupere 44 carrinhos abandonados</span>{{i:chev-right:i-sm}}</button>
+                <button data-toast="info" data-title="Abrindo avaliações" data-msg="3 avaliações sem resposta.">{{i:star:i-sm}}<span>Responda 3 avaliações de clientes</span>{{i:chev-right:i-sm}}</button>
+              </div>
+              <h4 class="dash-sub">Configuração pendente</h4>
+              <div class="dash-todo">
+                <button data-toast="info" data-title="Análise de risco" data-msg="Abrindo as configurações de pagamento.">{{i:shield:i-sm}}<span>Configure a análise de risco de pedidos</span>{{i:chev-right:i-sm}}</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Peças usadas</h2>
+  <p>Sidebar do kit (<code>cz-sidebar</code>, recolhe para o rail de 52 px), botões tonais pequenos na barra superior, controle segmentado para o período, alerta informativo, cartões de métrica com <code>cz-delta</code>, gráficos com crosshair e a busca (<code>cz-cmd</code>).</p>
+
+</section>
+
+<section class="ds-page" id="biblioteca" data-title="Biblioteca de mídia" data-group="Padrões de tela" data-keys="biblioteca midia arquivos rail sidebar compacta 52px pill badge" hidden>
+  <p class="ds-crumb">Padrões de tela</p>
+  <h1>Biblioteca de mídia</h1>
+  <p class="ds-lead">Uma tela densa em arquivos pede uma sidebar mais discreta: rail de 52px, só ícones, com divisória sutil por pseudo-elemento em vez de borda. Abas, busca, favoritos e alternância de visualização ficam numa barra compacta de 32px.</p>
+  <div class="demo-app" style="margin-top:24px;min-height:600px">
+    <aside class="cz-sidebar is-collapsed" data-sidebar>
+      <div class="cz-sidebar-head">{{logo}}{{sym}}<button aria-label="Expandir menu" data-collapse aria-expanded="false">{{i:sidebar}}</button></div>
+      <button class="cz-side-item">{{i:home}}<span class="lbl">Início</span></button>
+      <button class="cz-side-item" aria-current="page">{{i:catalog}}<span class="lbl">Biblioteca</span></button>
+      <button class="cz-side-item">{{i:bag}}<span class="lbl">Pedidos</span><span class="cz-badge cz-badge--brand">12</span></button>
+      <button class="cz-side-item">{{i:users}}<span class="lbl">Clientes</span></button>
+      <button class="cz-side-item">{{i:analytics}}<span class="lbl">Relatórios</span></button>
+      <div class="cz-sidebar-spacer"></div>
+      <button class="cz-sidebar-foot" aria-label="Marina Prado, Ateliê Forma"><span class="cz-avatar cz-avatar--brand">MP</span><div>Marina Prado<small>Ateliê Forma · Pro</small></div>{{i:chev-down}}</button>
+    </aside>
+    <main>
+      <div class="content" style="gap:18px;padding-top:28px">
+        <div class="ds-row" style="justify-content:space-between;align-items:flex-start">
+          <h2 class="cz-lib-title">Biblioteca</h2>
+          <button class="cz-lib-new" type="button">{{i:upload:i-sm}}Novo arquivo</button>
+        </div>
+        <div class="ds-row" style="gap:8px;flex-wrap:wrap">
+          <div class="cz-lib-tabs" role="tablist" aria-label="Tipo de arquivo">
+            <button class="cz-lib-tab" role="tab" aria-selected="true">Todos</button>
+            <button class="cz-lib-tab" role="tab" aria-selected="false">Imagens</button>
+            <button class="cz-lib-tab" role="tab" aria-selected="false">Vídeos</button>
+            <button class="cz-lib-tab" role="tab" aria-selected="false">Banners</button>
+          </div>
+          <div class="grow"></div>
+          <label class="cz-lib-search">{{i:search}}<input type="search" placeholder="Buscar arquivo" aria-label="Buscar arquivo"></label>
+          <button class="cz-lib-fav" type="button" aria-pressed="false" aria-label="Favoritos">{{i:star:i-sm}}</button>
+          <div class="cz-lib-view" role="group" aria-label="Visualização">
+            <button type="button" aria-pressed="true" aria-label="Grade">{{i:grid:i-sm}}</button>
+            <button type="button" aria-pressed="false" aria-label="Lista">{{i:list:i-sm}}</button>
+          </div>
+        </div>
+        <div class="cz-lib-empty">
+          <span class="box">{{i:box}}</span>
+          <h4>Nada na biblioteca ainda</h4>
+          <p>Envie fotos de produto, banners e vídeos para usar em páginas e campanhas.</p>
+        </div>
+        <div>
+          <p class="ds-label" style="margin-bottom:8px">Marcadores</p>
+          <div class="cz-pill-group">
+            <span class="cz-pill">{{sym}}Convertize</span>
+            <span class="cz-pill">{{i:tag:i-sm}}Conteúdo</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="ds-page" id="login" data-title="Entrar" data-group="Padrões de tela" data-keys="login entrar autenticação senha cadastro" hidden>
+  <p class="ds-crumb">Padrões de tela</p>
+  <h1>Entrar</h1>
+  <p class="ds-lead">A tela de acesso usa a imagem escultórica da marca de um lado e um formulário curto do outro. Em telas pequenas, a imagem vira faixa no topo.</p>
+  <div class="demo-auth" style="margin-top:24px">
+    <div class="art"><img src="{{img:img-escultura.webp}}" alt=""><div style="position:relative;display:grid;gap:14px">{{logo-inverse}}<p>Seu comércio inteiro, em um só lugar.</p></div></div>
+    <form data-validate novalidate>
+      <div style="display:grid;gap:6px"><h3>Entrar</h3><p class="cz-help">Novo por aqui? <a class="cz-link" href="#formulario">Crie sua loja grátis</a></p></div>
+      <div class="cz-field"><label for="lg-email">E-mail</label><input class="cz-input cz-input--lg" id="lg-email" type="email" required autocomplete="email" data-msg="Use o e-mail cadastrado, como nome@loja.com.br."></div>
+      <div class="cz-field"><div class="ds-row" style="justify-content:space-between"><label for="lg-pass" class="cz-label">Senha</label><a class="cz-link" style="font-size:13px" href="#login">Esqueci a senha</a></div><div class="cz-input-wrap"><input class="cz-input cz-input--lg" id="lg-pass" type="password" required autocomplete="current-password" data-msg="Digite sua senha."><button class="cz-clear" type="button" data-reveal="lg-pass" aria-label="Mostrar senha">{{i:eye:i-sm}}</button></div></div>
+      <label class="cz-check"><input type="checkbox" checked><span>Manter conectado neste computador</span></label>
+      <button class="cz-btn cz-btn--lg cz-btn--block" type="submit">Entrar</button>
+      <div class="cz-divider-label">ou</div>
+      <button class="cz-btn cz-btn--secondary cz-btn--lg cz-btn--block" type="button">{{i:mail:i-sm}}Receber link de acesso por e-mail</button>
+    </form>
+  </div>
+</section>
+
+<section class="ds-page" id="mobile" data-title="App mobile" data-group="Padrões de tela" data-keys="mobile app celular telas vendedor" hidden>
+  <p class="ds-crumb">Padrões de tela</p>
+  <h1>App mobile</h1>
+  <p class="ds-lead">O app do vendedor usa os mesmos componentes em alvos maiores: barra superior simples, cards empilhados e navegação inferior.</p>
+  <div class="ds-row" style="margin-top:24px;gap:24px;align-items:flex-start;justify-content:center">
+    <div class="demo-phone">
+      <div class="bar"><span>9:41</span><span>{{i:globe:i-sm}}</span></div>
+      <div class="cz-topbar" style="height:52px"><span style="font:400 22px var(--font-display);flex:1">Pedidos</span><button class="cz-icon-btn" aria-label="Buscar">{{i:search}}</button><button class="cz-icon-btn" aria-label="Filtrar">{{i:filter}}</button></div>
+      <div class="scr">
+        <div class="cz-tabs cz-tabs--pill" role="tablist" aria-label="Status"><button class="cz-tab" role="tab" aria-selected="true">A enviar · 12</button><button class="cz-tab" role="tab" aria-selected="false">Enviados</button></div>
+        <div class="cz-card"><div class="cz-card-body" style="gap:10px"><div class="ds-row" style="justify-content:space-between"><b class="num">#CV-2051</b><span class="cz-badge cz-badge--success"><span class="d"></span>Pago</span></div><div class="cz-list-item" style="padding:0;border:0"><span class="lead"><img src="{{img:prod-vase.webp}}" alt=""></span><div class="body"><b>Vaso Terra</b><small>Ana Beatriz Lima · há 12 min</small></div></div><button class="cz-btn cz-btn--sm cz-btn--block">{{i:tag:i-sm}}Gerar etiqueta</button></div></div>
+        <div class="cz-card"><div class="cz-card-body" style="gap:10px"><div class="ds-row" style="justify-content:space-between"><b class="num">#CV-2049</b><span class="cz-badge cz-badge--success"><span class="d"></span>Pago</span></div><div class="cz-list-item" style="padding:0;border:0"><span class="lead"><img src="{{img:prod-lamp.webp}}" alt=""></span><div class="body"><b>Luminária Círculo</b><small>Rafael Souza · há 1 h</small></div></div><button class="cz-btn cz-btn--sm cz-btn--block">{{i:tag:i-sm}}Gerar etiqueta</button></div></div>
+      </div>
+      <nav class="cz-bottom-nav" data-bottom-nav aria-label="Principal"><button><span class="ind">{{i:home}}</span>Início</button><button aria-current="page"><span class="ind">{{i:bag}}</span>Pedidos</button><button><span class="ind">{{i:catalog}}</span>Catálogo</button><button><span class="ind">{{i:chat}}</span>Chat</button><button><span class="ind">{{i:user}}</span>Conta</button></nav>
+    </div>
+    <div class="demo-phone" style="background:#1c1917;color:#f5f5f5">
+      <div class="bar" style="background:#1c1917"><span>9:41</span><span>{{i:globe:i-sm}}</span></div>
+      <div class="scr" style="align-content:start;gap:18px">
+        <div style="display:flex;align-items:center;gap:10px">{{sym}}<b>Ateliê Forma</b></div>
+        <p style="font:700 28px/1.1 var(--font-ui);letter-spacing:-.01em">R$ 3.184</p>
+        <p style="color:#c9c4bd;font-size:13px;margin-top:-12px">vendidos hoje · 18 pedidos</p>
+        <svg class="spark" data-spark="4,6,5,9,8,12,11,15,14,18" data-color="#ff5e2c" viewBox="0 0 200 44" preserveAspectRatio="none" style="width:100%;height:60px" aria-hidden="true"></svg>
+        <div class="cz-card" style="background:#292524;border-color:#3a3532;color:#f5f5f5"><div class="cz-card-body"><b>Estoque baixo</b><p style="color:#d6d3d1">Vaso Terra tem 2 unidades.</p></div></div>
+        <button class="cz-fab" style="justify-self:end">{{i:plus}}Novo pedido</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-page" id="logotipo" data-title="Logotipo" data-group="Marca" data-keys="logo logotipo marca símbolo brand" hidden>
+  <p class="ds-crumb">Marca</p>
+  <h1>Logotipo</h1>
+  <p class="ds-lead">O logotipo oficial combina o símbolo em laranja #ff5e2c com o nome em carvão. Em fundos escuros, use a versão branca ou, sobre preto, o símbolo laranja com o nome em branco; em espaços compactos, apenas o símbolo.</p>
+  <div class="ds-grid" style="margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center" style="min-height:200px;background:#fff;color:#262626">{{logo}}</div><div class="ds-cap"><span>Principal · fundo claro</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center dark" style="min-height:200px">{{logo-inverse}}</div><div class="ds-cap"><span>Branca · fundo escuro</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center" style="min-height:200px;background:#000;color:#fff">{{logo}}</div><div class="ds-cap"><span>Nome branco · fundo preto</span><b>Fundo #000</b></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center" style="min-height:200px;background:#ff5e2c;color:#fff">{{logo-inverse}}</div><div class="ds-cap"><span>Branca · fundo laranja (campanhas)</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center" style="min-height:200px;background:var(--canvas)"><span style="width:96px;height:96px;display:block">{{sym}}</span></div><div class="ds-cap"><span>Símbolo · avatares, favicon</span></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center" style="min-height:200px;background:var(--canvas)"><span style="width:112px;height:112px;display:grid;place-items:center;border-radius:22px;background:#000"><span style="width:64px;height:64px;display:block">{{sym}}</span></span></div><div class="ds-cap"><span>Ícone de app · símbolo laranja sobre preto</span><b>Raio 20% do lado</b></div></div>
+  </div>
+  <h2>Uso</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Área de respiro igual à altura do “c” em volta do logo.</li><li>Tamanho mínimo: 96 px de largura para o logo, 16 px para o símbolo.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Recolorir o símbolo, aplicar sombra ou contorno.</li><li>Logo principal (carvão) sobre fundo escuro ou foto sem painel.</li><li>Nome da marca em laranja: o nome é sempre carvão ou branco; o laranja fica só no símbolo.</li></ul></div>
+  </div>
+</section>
+
+<section class="ds-page" id="ilustracoes" data-title="Ilustrações e patterns" data-group="Marca" data-keys="ilustração pattern grafismo iconografia ícones da marca padrões" hidden>
+  <p class="ds-crumb">Marca</p>
+  <h1>Ilustrações e patterns</h1>
+  <p class="ds-lead">A iconografia da marca em carvão, laranja e branco, os patterns e o fundo de barras: o material para capas, apresentações, site e campanhas.</p>
+  <h2>Fundo de barras</h2>
+  <p>Barras em gradiente de laranja para transparente sobre preto, mais altas nas bordas, pulsando em sequência. Serve para capas, telas de entrada e momentos de campanha, com texto branco por cima. Com movimento reduzido ativado, as barras ficam paradas.</p>
+  <div class="ds-grid two" style="margin-top:18px">
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center cz-bars-bg" style="min-height:280px;flex-direction:column;gap:10px;text-align:center">
+      <div class="cz-bars" data-bars-bg="15" aria-hidden="true"></div>
+      <span style="width:44px;height:44px;display:block">{{sym}}</span>
+      <p style="font:400 30px/1.1 var(--font-display);max-width:14ch">Sua loja em todos os canais</p>
+    </div><div class="ds-cap"><span>15 barras, pulso de 2 s</span><b>data-bars-bg="15"</b></div></div>
+    <div class="ds-spec" style="margin:0"><div class="ds-stage center cz-bars-bg" style="min-height:280px;flex-direction:column;gap:14px;text-align:center">
+      <div class="cz-bars cz-bars--soft" data-bars-bg="7" aria-hidden="true" style="--bars-dur:3s"></div>
+      <p style="font:400 30px/1.1 var(--font-display);max-width:14ch">Black Friday começa em 3 dias</p>
+      <button class="cz-btn" style="background:#fff;color:#1c1917">Preparar campanha</button>
+    </div><div class="ds-cap"><span>7 barras, versão suave, pulso de 3 s</span><b>cz-bars--soft</b></div></div>
+  </div>
+  <script type="text/plain" class="ds-snippet"><section class="cz-bars-bg">
+  <div class="cz-bars" data-bars-bg="15" aria-hidden="true"></div>
+  <h2>Sua loja em todos os canais</h2>
+</section>
+<!-- data-bars-bg: número de barras; --bars-from: cor da base; --bars-to: cor do fundo; --bars-dur: duração do pulso --></script>
+
+  <h2>Iconografia da marca</h2>
+  <p>Oito ícones de traço único, com cortes retos e pontas arredondadas, desenhados para peças da marca: capas, apresentações, site e campanhas. Use a partir de 48 px, em carvão ou laranja no claro e em branco ou laranja no escuro. Na interface do produto, use os ícones da biblioteca (veja Iconografia).</p>
+  <div class="ds-spec"><div class="ds-stage ds-brand-icons on-light">
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/conversa.svg}}</span><figcaption>Conversa</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/crescimento.svg}}</span><figcaption>Crescimento</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/avancar.svg}}</span><figcaption>Avançar</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/configuracoes.svg}}</span><figcaption>Configurações</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/seguranca.svg}}</span><figcaption>Segurança</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/loja.svg}}</span><figcaption>Loja</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/destaque.svg}}</span><figcaption>Destaque</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#292524"><span>{{svg:brand-icons/pessoa.svg}}</span><figcaption>Pessoa</figcaption></figure>
+  </div><div class="ds-cap"><span>Carvão · fundo claro</span><b>brand-icons/*.svg · fill currentColor</b></div></div>
+  <div class="ds-spec"><div class="ds-stage ds-brand-icons on-light">
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/conversa.svg}}</span><figcaption>Conversa</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/crescimento.svg}}</span><figcaption>Crescimento</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/avancar.svg}}</span><figcaption>Avançar</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/configuracoes.svg}}</span><figcaption>Configurações</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/seguranca.svg}}</span><figcaption>Segurança</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/loja.svg}}</span><figcaption>Loja</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/destaque.svg}}</span><figcaption>Destaque</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#ff5e2c"><span>{{svg:brand-icons/pessoa.svg}}</span><figcaption>Pessoa</figcaption></figure>
+  </div><div class="ds-cap"><span>Laranja · destaque</span><b>Um por composição</b></div></div>
+  <div class="ds-spec"><div class="ds-stage dark ds-brand-icons">
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/conversa.svg}}</span><figcaption>Conversa</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/crescimento.svg}}</span><figcaption>Crescimento</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/avancar.svg}}</span><figcaption>Avançar</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/configuracoes.svg}}</span><figcaption>Configurações</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/seguranca.svg}}</span><figcaption>Segurança</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/loja.svg}}</span><figcaption>Loja</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/destaque.svg}}</span><figcaption>Destaque</figcaption></figure>
+    <figure class="ds-brand-icon" style="color:#fff"><span>{{svg:brand-icons/pessoa.svg}}</span><figcaption>Pessoa</figcaption></figure>
+  </div><div class="ds-cap"><span>Branco · fundo escuro</span><b>Laranja também vale no escuro</b></div></div>
+
+  <h2>Patterns</h2>
+  <p>Dois patterns, cada um em versão clara e escura. Fluxo, de traços finos, dá textura a fundos de apresentação e site sem competir com o texto. Setas, em grade de traço fino, marca capas e momentos de crescimento.</p>
+  <div class="ds-grid two">
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" style="aspect-ratio:3/2" src="{{img:support/pattern-fluxo-v3-claro.svg}}" alt="Pattern de fluxo, versão clara"><figcaption class="cz-card-body"><b>Fluxo · claro</b><span class="cz-help">Fundos de slides e seções do site</span></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" style="aspect-ratio:3/2" src="{{img:support/pattern-fluxo-v3.svg}}" alt="Pattern de fluxo, versão escura"><figcaption class="cz-card-body"><b>Fluxo · escuro</b><span class="cz-help">Capas e seções escuras</span></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" style="aspect-ratio:3/2" src="{{img:support/pattern-setas-claro.svg}}" alt="Pattern de setas, versão clara"><figcaption class="cz-card-body"><b>Setas · claro</b><span class="cz-help">Capas e destaques de crescimento</span></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" style="aspect-ratio:3/2" src="{{img:support/pattern-setas-escuro.svg}}" alt="Pattern de setas, versão escura"><figcaption class="cz-card-body"><b>Setas · escuro</b><span class="cz-help">Capas escuras e campanhas</span></figcaption></figure>
+  </div>
+  <h2>Fundos da marca</h2>
+  <div class="ds-grid three">
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:bg-luz.webp}}" alt="Faixas de luz laranja"><figcaption class="cz-card-body"><b>Faixas de luz</b><span class="cz-help">Campanhas e lançamentos</span></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:bg-aurora.webp}}" alt="Aurora de luz difusa"><figcaption class="cz-card-body"><b>Aurora</b><span class="cz-help">Novidades e experiências digitais</span></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:bg-ondas.webp}}" alt="Ondas orgânicas"><figcaption class="cz-card-body"><b>Ondas</b><span class="cz-help">Conteúdo editorial</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="ds-page" id="imagens" data-title="Direção de imagens" data-group="Marca" data-keys="fotografia imagem prompt direção de arte pessoas escultura" hidden>
+  <p class="ds-crumb">Marca</p>
+  <h1>Direção de imagens</h1>
+  <p class="ds-lead">Material, humana e clara. A fita laranja, o vidro translúcido, a pedra clara e a luz natural ligam as imagens abstratas, as cenas com pessoas e as apresentações da interface.</p>
+  <div class="ds-grid two" style="margin-top:24px">
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:img-escultura.webp}}" alt="Escultura de fita laranja atravessando painéis de vidro"><figcaption class="cz-card-body"><b>Escultura material</b><p>Linguagem principal. Capas, campanhas e momentos de marca.</p></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:img-pessoas.webp}}" alt="Duas empreendedoras preparando pedidos em um estúdio"><figcaption class="cz-card-body"><b>Pessoas em ação</b><p>Quem vende, cria e compra, em gestos reais e luz natural.</p></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:img-equipe.webp}}" alt="Equipe trabalhando em mesa de expedição"><figcaption class="cz-card-body"><b>Equipe</b><p>Operação acontecendo. O elemento escultórico aparece como elo, sem competir.</p></figcaption></figure>
+    <figure class="cz-card" style="margin:0"><img class="cz-card-media" src="{{img:bg-aurora.webp}}" alt="Fundo atmosférico em tons suaves"><figcaption class="cz-card-body"><b>Atmosfera sutil</b><p>Planos e linhas de baixo contraste para dar profundidade a capturas de tela.</p></figcaption></figure>
+  </div>
+  <h2>Regras de produção</h2>
+  <div class="ds-guides">
+    <div class="ds-guide do"><h3>{{i:check}}Faça</h3><ul><li>Reserve uma área calma para título e botões.</li><li>Mestres horizontais em 16:9 ou 2:1, cards em 4:3.</li><li>Laranja em um único elemento de foco.</li><li>Use fotos autorizadas e capturas reais em peças sobre clientes e funcionalidades.</li></ul></div>
+    <div class="ds-guide dont"><h3>{{i:x}}Evite</h3><ul><li>Poses genéricas e clichês turísticos.</li><li>Imitação de obras e artistas.</li><li>Telas geradas com texto fictício.</li><li>Laranja cobrindo toda a imagem.</li></ul></div>
+  </div>
+  <h2>Prompt-base</h2>
+  <p>Ponto de partida para gerar novas imagens. Troque só o assunto, o enquadramento e o formato.</p>
+  <script type="text/plain" class="ds-snippet">Use case: [product-mockup | photorealistic-natural | ui-mockup]
+Asset type: imagem para a Convertize
+Primary request: [descreva o assunto principal]
+Scene/backdrop: ambiente contemporâneo brasileiro, claro e arquitetônico
+Style/medium: fotografia editorial refinada, realista e humana
+Composition/framing: [widescreen 16:9 | quadrado 1:1 | vertical 4:5], reservar área calma para texto
+Lighting/mood: luz natural suave, sombra discreta, sensação de clareza e criatividade
+Color palette: laranja Convertize #ff5e2c em um único elemento de foco; Oat, pedra clara, carvão, oliva suave e vidro translúcido
+Materials/textures: fita laranja, vidro, pedra, cerâmica, papel ou madeira natural quando fizer sentido
+Constraints: sem texto na imagem, sem logos, sem marcas d'água, sem interfaces inventadas; pessoas em gestos reais e diversos
+Avoid: poses genéricas, clichês turísticos, excesso de laranja, fundos carregados</script>
+</section>
