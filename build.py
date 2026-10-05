@@ -40,8 +40,16 @@ def brand_svg(name, cls):
     return txt.replace("<svg ", f'<svg class="{cls}" role="img" aria-label="Convertize" ', 1)
 
 
+SITE_ASSETS = None  # pasta de destino quando o build gera o site em arquivos separados
+
+
 def data_uri(name):
     p = os.path.join(ASSETS, name)
+    if SITE_ASSETS:
+        dest = os.path.join(SITE_ASSETS, name)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copy(p, dest)
+        return "assets/" + name
     ext = name.rsplit(".", 1)[-1]
     mime = {"webp": "image/webp", "png": "image/png", "svg": "image/svg+xml", "jpg": "image/jpeg"}[ext]
     return f"data:{mime};base64," + base64.b64encode(open(p, "rb").read()).decode()
@@ -260,6 +268,53 @@ def build_skill():
     print(f"{skill} — {len(texts) + 5} arquivos; {zpath}")
 
 
+def build_site(shell, pages):
+    """dist/site/: a documentação em index.html + css/ + js/ + assets/, e dist/ui-convertize-v2.zip."""
+    global SITE_ASSETS
+    site = os.path.join(ROOT, "dist", "site")
+    if os.path.isdir(site):
+        shutil.rmtree(site)
+    for d in ("css", "js", "assets"):
+        os.makedirs(os.path.join(site, d))
+    SITE_ASSETS = os.path.join(site, "assets")
+    try:
+        head, rest = shell.split("<style>\n/*STYLES*/\n</style>", 1)
+        rest = re.sub(r"<script>\n/\*KIT\*/\n</script>", '<script src="js/convertize.js"></script>', rest)
+        rest = re.sub(r"<script>\n/\*DOCS\*/\n</script>", '<script src="js/docs.js"></script>', rest)
+        html = ('<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
+                '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+                + head + '<link rel="stylesheet" href="css/convertize.css">\n<link rel="stylesheet" href="css/docs.css">\n'
+                + '</head>\n<body>\n' + rest.replace("<!--SPRITE-->", sprite()).replace("<!--PAGES-->", pages) + '\n</body>\n</html>\n')
+        html = expand(html)
+    finally:
+        SITE_ASSETS = None
+    files = {
+        "index.html": html,
+        "css/convertize.css": BANNER + read(os.path.join(SRC, "kit.css")),
+        "css/docs.css": read(os.path.join(SRC, "docs.css")),
+        "js/convertize.js": BANNER + kit_js(with_sprite=False),
+        "js/docs.js": read(os.path.join(SRC, "docs.js")),
+        "README.txt": ("UI Convertize V2 — documentação do Convertize Design System " + VERSION + "\n\n"
+                       "Abra index.html no navegador. Precisa de internet para as fontes (Google Fonts)\n"
+                       "e para os ícones da biblioteca Convertize (jsDelivr). Ícones da sidebar e imagens vêm junto.\n\n"
+                       "css/convertize.css e js/convertize.js: o kit (componentes cz-*)\n"
+                       "css/docs.css e js/docs.js: só a navegação e as demos desta documentação\n"
+                       "assets/: imagens, ilustrações e patterns\n"),
+    }
+    for rel, txt in files.items():
+        with open(os.path.join(site, rel), "w", encoding="utf-8") as f:
+            f.write(txt)
+    zpath = os.path.join(ROOT, "dist", "ui-convertize-v2.zip")
+    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+        for dirpath, _, names in sorted(os.walk(site)):
+            for n in sorted(names):
+                full = os.path.join(dirpath, n)
+                info = zipfile.ZipInfo("ui-convertize-v2/" + os.path.relpath(full, site), date_time=(2026, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                z.writestr(info, open(full, "rb").read())
+    print(f"{site} — site em arquivos; {zpath} ({os.path.getsize(zpath) // 1024} KB)")
+
+
 def main():
     pages = "\n".join(read(p) for p in sorted(glob.glob(os.path.join(SRC, "pages", "*.html"))))
     # id vira data-page para o navegador não rolar até a seção ao abrir um link com #
@@ -282,6 +337,7 @@ def main():
     pages = re.sub(r'(<p class="ds-crumb">.*?</p>\s*<h1>.*?</h1>\s*<p class="ds-lead">.*?</p>)',
                    r'<header class="ds-head">\1</header>', pages, flags=re.S)
     pages = pages.replace(' data-group="Começar" data-keys="home capa início overview" hidden>', ' data-group="Começar" data-keys="home capa início overview">', 1)
+    build_site(shell, pages)
     out = (shell
            .replace("/*STYLES*/", read(os.path.join(SRC, "kit.css")) + "\n" + read(os.path.join(SRC, "docs.css")))
            .replace("<!--SPRITE-->", sprite())

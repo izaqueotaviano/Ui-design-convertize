@@ -5282,7 +5282,7 @@ Avoid: poses genéricas, clichês turísticos, excesso de laranja, fundos carreg
     ['Fita de Papel', 'FRM-015', 'Embalagens', 18.5, 4, '09/09', 'box'], ['Agenda 2027', 'FRM-016', 'Papelaria', 89, 60, '08/09', 'box']
   ].map(function (r) { return { name: r[0], sku: r[1], cat: r[2], price: r[3], stock: r[4], updated: r[5], img: r[6] }; });
   var imgSrc = {};
-  $$('img[src^="data:image/webp"]').forEach(function (im) {
+  $$('img[src^="data:image/webp"], img[src$=".webp"]').forEach(function (im) {
     var a = im.getAttribute('alt') || '';
     if (/Vaso|vaso|cerâmica/.test(a) && !imgSrc.vase) imgSrc.vase = im.src;
     if (/Luminária|luminária/.test(a) && !imgSrc.lamp) imgSrc.lamp = im.src;

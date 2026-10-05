@@ -45,7 +45,7 @@ Regra da divisão: o que um protótipo precisa vai em `kit.css` e `convertize.js
 para apresentar o kit (navegação da documentação, textos e dados das demos) vai em `docs.*`.
 As demos reagem ao kit pelos eventos `cz:*`, sem mudar o comportamento dele.
 
-Para gerar de novo: `python3 build.py`. Para publicar como artifact: `python3 publish.py <clone de izaqueotaviano/icons> <saída>`, que embute os ícones só na cópia publicada.
+Para gerar de novo: `python3 build.py`. Ele também gera `dist/site/` (index.html + css/ + js/ + assets/) e `dist/ui-convertize-v2.zip`. Para publicar como artifact: `python3 publish.py <clone de izaqueotaviano/icons> <saída>`, que embute os ícones só na cópia publicada.
 
 Marcadores aceitos nas páginas: `{{i:nome}}` (ícone), `{{img:arquivo}}` (imagem embutida),
 `{{svg:caminho}}` (SVG inline), `{{logo}}`, `{{logo-inverse}}` e `{{sym}}`.
